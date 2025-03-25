@@ -153,7 +153,7 @@ export const DATA = {
       location: "Delhi, India",
       title: "React Native Intern",
       logoUrl:
-        "https://media.licdn.com/dms/image/v2/C4D0BAQGEv_D_mg4Gog/company-logo_200_200/company-logo_200_200/0/1672379720968/root_and_leaves_logo?e=1748476800&v=beta&t=-hBSKAmQ7OyMjzx69dJ74IVihciV8zp5W17_dN2dyR0",
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1742894669/Portfolio/wcfeca0inhuy7pqtwu7n.jpg",
       start: "August 2023",
       end: "September 2023",
       description: [

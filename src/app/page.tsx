@@ -32,7 +32,15 @@ export default function Page() {
                 text={DATA.description}
               />
               <BlurFade delay={BLUR_FADE_DELAY}>
-                <Button size="sm" className="flex gap-3">
+                <Button
+                  onClick={() =>
+                    window.open(
+                      "https://drive.google.com/drive/u/0/folders/1fPOYCJ1ZkfHCWeW1OdxzXnuhkbguE8sC"
+                    )
+                  }
+                  size="sm"
+                  className="flex gap-3"
+                >
                   Resume <Download width={20} />{" "}
                 </Button>
               </BlurFade>
