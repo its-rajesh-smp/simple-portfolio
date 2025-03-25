@@ -6,7 +6,7 @@ export const DATA = {
   initials: "RSMP",
   url: "https://dillion.io",
   location: "West Bengal, INDIA",
-  locationLink: "https://maps.app.goo.gl/uJLLEH3cgNdVoBvf7",
+  locationLink: "https://maps.app.goo.gl/AzdkQXmuVYt8XsQj7",
   description:
     "Software Engineer & Mentor. I like to build, debug & fix things. Very active on Linkedin.",
   summary:
@@ -95,7 +95,7 @@ export const DATA = {
     {
       company: "Sharpener",
       href: "https://www.sharpener.tech/",
-      badges: [],
+      badges: ["Founding Engineer"],
       location: "Bangalore, India",
       title: "SDE 1",
       logoUrl:
@@ -156,7 +156,7 @@ export const DATA = {
       company: "Anand CY Limited (ACYM)",
       href: "https://www.anandgroupindia.com/acymautomotive/",
       badges: [],
-      location: "San Jose, CA",
+      location: "Delhi, India",
       title: "Mechanical Engineer Intern",
       logoUrl:
         "https://www.anandgroupindia.com/wp-content/uploads/2017/12/acym.png",
@@ -178,17 +178,19 @@ export const DATA = {
     },
     {
       school: "Raipur Government Polytechnic",
-      href: "https://uwaterloo.ca",
+      href: "https://polytechnic.wbtetsd.gov.in/raipurgovpoly/",
       degree: "Diploma in Mechanical Engineering",
-      logoUrl: "/waterloo.png",
+      logoUrl:
+        "https://upload.wikimedia.org/wikipedia/en/f/ff/Logo_of_Raipur_Government_Polytechnic.png",
       start: "2018",
       end: "2021",
     },
     {
       school: "Simlapal M.M High School",
-      href: "https://wlu.ca",
+      href: "https://www.justdial.com/Bankura/Simlapal-M-M-High-School-Simlapal/9999P3242-3242-180821025658-N8Y6_BZDET",
       degree: "Higher Secondary Education (10+2) Science",
-      logoUrl: "/laurier.png",
+      logoUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdyjCF6BQdTsrd4Fgmb3viW4WcvzzqX2qIfQ&s",
       start: "2018",
       end: "2018",
     },
