@@ -1,12 +1,11 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
+import ResumeButton from "@/components/resume-button";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
-import { Download } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -32,17 +31,7 @@ export default function Page() {
                 text={DATA.description}
               />
               <BlurFade delay={BLUR_FADE_DELAY}>
-                <Button
-                  onClick={() =>
-                    window.open(
-                      "https://drive.google.com/drive/u/0/folders/1fPOYCJ1ZkfHCWeW1OdxzXnuhkbguE8sC"
-                    )
-                  }
-                  size="sm"
-                  className="flex gap-3"
-                >
-                  Resume <Download width={20} />{" "}
-                </Button>
+                <ResumeButton />
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
