@@ -106,7 +106,7 @@ export const DATA = {
     {
       company: "Sharpener",
       href: "https://www.sharpener.tech/",
-      badges: ["Founding Engineer"],
+      badges: [],
       location: "Bangalore, India",
       title: "SDE 1",
       logoUrl:
