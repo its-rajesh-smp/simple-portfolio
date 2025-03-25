@@ -1,10 +1,10 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon } from "lucide-react";
 
 export const DATA = {
   name: "Rajesh Singha Mahapatra",
   initials: "RSMP",
-  url: "https://dillion.io",
+  url: "its.rajeshsmp@gmail.com",
   location: "West Bengal, INDIA",
   locationLink: "https://maps.app.goo.gl/AzdkQXmuVYt8XsQj7",
   description:
