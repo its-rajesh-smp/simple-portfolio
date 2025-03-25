@@ -198,7 +198,7 @@ export const DATA = {
   projects: [
     {
       title: "message-broker-util",
-      href: "https://chatcollect.com",
+      href: "https://www.npmjs.com/package/message-broker-util",
       dates: "Jan 2024 - Feb 2024",
       active: true,
       description:
@@ -207,17 +207,17 @@ export const DATA = {
       links: [
         {
           type: "NPM",
-          href: "https://github.com/its-rajesh-smp/blinkit",
+          href: "https://www.npmjs.com/package/message-broker-util",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      image:
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1742887160/Portfolio/s94mswykoavk75y1dp3i.png",
+      video: "",
     },
     {
       title: "ProfilePad",
-      href: "https://chatcollect.com",
+      href: "https://github.com/its-rajesh-smp?tab=repositories&q=profilepad&type=&language=&sort=",
       dates: "Jan 2024 - Feb 2024",
       active: true,
       description:
@@ -234,17 +234,17 @@ export const DATA = {
       links: [
         {
           type: "Source",
-          href: "https://github.com/its-rajesh-smp/blinkit",
+          href: "https://github.com/its-rajesh-smp?tab=repositories&q=profilepad&type=&language=&sort=",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      image:
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1742887139/Portfolio/htfjzy6eqzzbut1unmpv.jpg",
+      video: "",
     },
     {
       title: "BlinkIt Clone",
-      href: "https://chatcollect.com",
+      href: "https://www.youtube.com/watch?v=wCWGeTGMYWg",
       dates: "Jan 2024 - Feb 2024",
       active: true,
       description:
@@ -279,9 +279,9 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      image:
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1742886229/Portfolio/mnbrkzuv7pvo4whbc6w7.png",
+      video: "",
     },
     {
       title: "TrackyFy",
@@ -301,50 +301,47 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://magicui.design",
+          href: "https://trackyfi.netlify.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
+          href: "https://github.com/its-rajesh-smp/TrackyFi",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      image:
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1742886360/Portfolio/p9npqhxu4ixfdasmxaq3.png",
+      video: "",
     },
-    {
-      title: "BuddyBook",
-      href: "https://llm.report",
-      dates: "April 2023 - September 2023",
-      active: true,
-      description:
-        "BodyBook is a social media platform with all essential P0 features, enabling users to engage in real-time interactions. It includes features like real-time data fetching, a feed for posting text and images, liking and commenting on posts, finding and connecting with friends through friend requests, online and offline user status, a built-in messenger, and indicators for typing, message sent, and unseen status.",
-      technologies: [
-        "React",
-        "SCSS",
-        "Firebase",
-        "Redux",
-        "React Router",
-        "Vite",
-        "Firebase Events",
-        "Firebase Realtime Database",
-        "Firebase Storage",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://llm.report",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
-    },
+    // {
+    //   title: "BuddyBook",
+    //   href: "https://github.com/its-rajesh-smp/BodyBook",
+    //   dates: "April 2023 - September 2023",
+    //   active: true,
+    //   description:
+    //     "BodyBook is a social media platform with all essential P0 features, enabling users to engage in real-time interactions. It includes features like real-time data fetching, a feed for posting text and images, liking and commenting on posts, finding and connecting with friends through friend requests, online and offline user status, a built-in messenger, and indicators for typing, message sent, and unseen status.",
+    //   technologies: [
+    //     "React",
+    //     "SCSS",
+    //     "Firebase",
+    //     "Redux",
+    //     "React Router",
+    //     "Vite",
+    //     "Firebase Events",
+    //     "Firebase Realtime Database",
+    //     "Firebase Storage",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/its-rajesh-smp/BodyBook",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image:
+    //     "https://res.cloudinary.com/dtgoeupid/image/upload/v1742886482/Portfolio/u4uuueeaglmwt5yxa1ht.png",
+    //   video: "",
+    // },
   ],
 } as const;
