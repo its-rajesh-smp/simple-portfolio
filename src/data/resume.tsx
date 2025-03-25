@@ -199,7 +199,7 @@ export const DATA = {
     {
       title: "message-broker-util",
       href: "https://www.npmjs.com/package/message-broker-util",
-      dates: "Jan 2024 - Feb 2024",
+      dates: "March 2025 - Present",
       active: true,
       description:
         "The MessageBroker package provides an abstraction layer over RabbitMQ, enabling easy message publishing, consuming, and RPC request-response communication. This package simplifies interaction with RabbitMQ using TypeScript and amqplib.",
@@ -218,7 +218,7 @@ export const DATA = {
     {
       title: "ProfilePad",
       href: "https://github.com/its-rajesh-smp?tab=repositories&q=profilepad&type=&language=&sort=",
-      dates: "Jan 2024 - Feb 2024",
+      dates: "Dec 2024 - Feb 2025",
       active: true,
       description:
         "ProfilePad is a web application designed to help users create and manage professional portfolio websites effortlessly. It includes features like customizable templates, real-time editing, project showcasing, social media integration, and SEO optimization to enhance online presence. The platform ensures a seamless user experience with a focus on performance and accessibility.",
@@ -245,7 +245,7 @@ export const DATA = {
     {
       title: "BlinkIt Clone",
       href: "https://www.youtube.com/watch?v=wCWGeTGMYWg",
-      dates: "Jan 2024 - Feb 2024",
+      dates: "July 2023 - July 2023",
       active: true,
       description:
         "Designed a clone of BlinkIt.com with all the P0 features, including user authentication, cart management, order processing, Google Maps-based address selection, order tracking, downloadable invoices, and secure payments.",
@@ -286,7 +286,7 @@ export const DATA = {
     {
       title: "TrackyFy",
       href: "https://trackyfi.netlify.app/",
-      dates: "June 2023 - Present",
+      dates: "June 2023 - June 2023",
       active: true,
       description:
         "TrackyFy is a web application designed to efficiently manage daily credit and expenses. It offers features like user authentication with Google Auth, the ability to add, remove, edit, search, and filter transactions, a dashboard with categorized expense charts, and downloadable expense and credit reports. Additionally, it includes exclusive VIP features for advanced financial tracking.",
@@ -314,34 +314,5 @@ export const DATA = {
         "https://res.cloudinary.com/dtgoeupid/image/upload/v1742886360/Portfolio/p9npqhxu4ixfdasmxaq3.png",
       video: "",
     },
-    // {
-    //   title: "BuddyBook",
-    //   href: "https://github.com/its-rajesh-smp/BodyBook",
-    //   dates: "April 2023 - September 2023",
-    //   active: true,
-    //   description:
-    //     "BodyBook is a social media platform with all essential P0 features, enabling users to engage in real-time interactions. It includes features like real-time data fetching, a feed for posting text and images, liking and commenting on posts, finding and connecting with friends through friend requests, online and offline user status, a built-in messenger, and indicators for typing, message sent, and unseen status.",
-    //   technologies: [
-    //     "React",
-    //     "SCSS",
-    //     "Firebase",
-    //     "Redux",
-    //     "React Router",
-    //     "Vite",
-    //     "Firebase Events",
-    //     "Firebase Realtime Database",
-    //     "Firebase Storage",
-    //   ],
-    //   links: [
-    //     {
-    //       type: "Source",
-    //       href: "https://github.com/its-rajesh-smp/BodyBook",
-    //       icon: <Icons.github className="size-3" />,
-    //     },
-    //   ],
-    //   image:
-    //     "https://res.cloudinary.com/dtgoeupid/image/upload/v1742886482/Portfolio/u4uuueeaglmwt5yxa1ht.png",
-    //   video: "",
-    // },
   ],
 } as const;
