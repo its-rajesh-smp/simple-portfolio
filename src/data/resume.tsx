@@ -66,13 +66,6 @@ export const DATA = {
 
         navbar: true,
       },
-      // Resume: {
-      //   name: "Resume",
-      //   url: "https://github.com/its-rajesh-smp",
-      //   icon: Icons.paper,
-
-      //   navbar: true,
-      // },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/rajeshsmp/",
@@ -158,9 +151,9 @@ export const DATA = {
       end: "September 2023",
       description: [
         "Worked on monorepo architecture and created 20+ mobile screens using React Native CLI.",
-        "Integrated graphql apis using apollo client",
-        "Used stylesheets for styling the screens",
-        "Used redux-toolkit for state management",
+        "Integrated graphql apis using apollo client.",
+        "Used stylesheets for styling the screens.",
+        "Used redux-toolkit for state management.",
       ] as string[],
     },
     {
