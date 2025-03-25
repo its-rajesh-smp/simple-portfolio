@@ -1,10 +1,10 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon } from "lucide-react";
+import { HomeIcon, Newspaper } from "lucide-react";
 
 export const DATA = {
   name: "Rajesh Singha Mahapatra",
   initials: "RSMP",
-  url: "its.rajeshsmp@gmail.com",
+  url: "https://itsrajesh.online",
   location: "West Bengal, INDIA",
   locationLink: "https://maps.app.goo.gl/AzdkQXmuVYt8XsQj7",
   description:
@@ -49,7 +49,11 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    {
+      href: "https://drive.google.com/drive/u/0/folders/1fPOYCJ1ZkfHCWeW1OdxzXnuhkbguE8sC",
+      icon: Newspaper,
+      label: "Resume",
+    },
   ],
   contact: {
     email: "its.rajeshsmp@gmail.com",
@@ -62,6 +66,13 @@ export const DATA = {
 
         navbar: true,
       },
+      // Resume: {
+      //   name: "Resume",
+      //   url: "https://github.com/its-rajesh-smp",
+      //   icon: Icons.paper,
+
+      //   navbar: true,
+      // },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/rajeshsmp/",
