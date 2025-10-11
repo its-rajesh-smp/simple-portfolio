@@ -8,9 +8,9 @@ export const DATA = {
   location: "West Bengal, INDIA",
   locationLink: "https://maps.app.goo.gl/AzdkQXmuVYt8XsQj7",
   description:
-    "Software Engineer & Mentor. I like to build, debug & fix things. Very active on Linkedin.",
+    "Software Engineer at VAll. I like to build, debug & fix things.",
   summary:
-    "At the mid of 2022, I quit my job as a mechanical engineer to learn web-development, I joined [Sharpener](https://www.sharpener.tech/) to take help of mentors and learn web development, later become a software engineer & most helpful mentor at [Sharpener](https://www.sharpener.tech/).",
+    "At the mid of 2022, I quit my job as a mechanical engineer to learn web-development, I joined [Sharpener](https://www.sharpener.tech/) to take help of mentors and learn web development, later become a software engineer & most helpful mentor at [Sharpener](https://www.sharpener.tech/). Right now building [VAll✌️](https://vallindia.com/).",
   avatarUrl:
     "https://res.cloudinary.com/dtgoeupid/image/upload/v1742881766/Portfolio/dp.jpg",
   skills: [
@@ -97,6 +97,24 @@ export const DATA = {
 
   work: [
     {
+      company: "VAll",
+      href: "https://vallindia.com/",
+      badges: [],
+      location: "Remote",
+      title: "Senior Software Engineer",
+      logoUrl:
+        "https://content.vallindia.com/wp-content/uploads/2024/12/vall-logo.png?w=768&h=666",
+      start: "June 2025",
+      end: "Present",
+      description: [
+        "Architecting and developing vallindia.com, the company's primary web platform, end-to-end — from design prototyping (Lovable) to backend development, infrastructure setup, and deployment.",
+        "Mentoring and guiding two software engineers, ensuring code quality, scalable architecture, and best engineering practices.",
+        "Migrated data infrastructure from DynamoDB to PostgreSQL, leading the development of Backend v2 and successfully managing the full migration.",
+        "Set up Testcontainer and Jest for integration testing to ensure API stability and reliability.",
+        "Set up Playwright end-to-end test automation to ensure a seamless and bug-free user experience.",
+      ] as string[],
+    },
+    {
       company: "Sharpener",
       href: "https://www.sharpener.tech/",
       badges: [],
@@ -105,18 +123,17 @@ export const DATA = {
       logoUrl:
         "https://sharpener.blob.core.windows.net/landing/logo/sharpenerLogo.png",
       start: "March 2024",
-      end: "Present",
+      end: "June 2025",
       description: [
-        "Creating an AI agent using Langchain, Langraph, Langsmith, and Gemini to strategically attack inactive players and create accounts to reduce initial user shortage.",
-        "Fine-tuned an AI model on 100+ Clash of Clans bases to generate strategic base layouts.",
-        "Implemented a microservice architecture, used fire-and-forget and RPC pattern to communicate between Sharpener backend and game backend using RabbitMQ as a queue.",
-        "Developed core game mechanics, including A* & flow-field pathfinding, a dynamic wall system, onboarding guides, target prioritization, building unlocks & upgrades, and game replay.",
-        "Implemented CI/CD pipeline using GitHub Actions for easy deployment of game build.",
-        "Developed a platform guide mechanism using Shepherd.js to replace Usetiful.com guides from all the products and save around $800 annually.",
-        "Created a communication task using Whisper & ChatGPT API that replaced Elsa AI and saved around $199 per year.",
+        "Worked on a Unity based game, BOMB. Developed core game mechanics, including A* & flow-field pathfinding, a dynamic wall system, onboarding guides, target prioritization, building unlocks & upgrades, and game replay.",
+        "Prototyped an AI assistant for multi-language conversation, instant doubt support, and instant mock interviews using google’s text to speech, gemini, speech to text. Which can reduce the overall human interaction and human cost by 40%.",
+        "Implemented CICD pipeline using GitHub Actions and Blue/green deployment using Nginx for easy deployment.",
+        "Developed a platform guide mechanism using shephard.js to replace usetiful.com guides from all the products and save around $800 annually.",
+        "Created communication task using Whisper & ChatGPT API that replaced Elsa AI and saved around $199 per year.",
         "Created Snapit AI, used Gemini API for checking grammar and spelling, resume improvement suggestions, and full resume scan based on job role.",
-        "Integrated Razorpay payment gateway with Snapit AI, setting up multiple monthly plans and using webhooks for real-time payment processing and updates, generating around $200 in revenue.",
-        "Completed the first set of code reviews, fixed bugs, improved existing features, implemented new features, and worked on manual testing.",
+        "Extended Snapit AI to ask questions to the user based on the job role and resume, and provide the user review with the best possible answer.",
+        "Integrated Razorpay payment gateway with SnapitAI, setting up multiple monthly plans and using webhooks for real-time payment processing and updates, generating around $200 in revenue.",
+        "Delivered multiple features, performed manual/smoke testing, and conducted final code reviews to ensure quality and reliability.",
       ] as string[],
     },
     {
@@ -134,26 +151,8 @@ export const DATA = {
         "Designed a progress report page to track student’s progression based on different parameters.",
         "Improved the landing page website performance from 55% to 85% by using Azure CDN, removing unwanted code, NPM packages, lazy loading images and pages.",
         "Implemented a coupon system and UTM parameters to help the company run different campaigns.",
-        "Re-designed the admin dashboard (31 Pages) using Tailwind CSS and Material UI.",
-        "Re-designed the student dashboard using Tailwind CSS and Material UI.",
+        "Re-designed the admin and student dashboard (31 Pages) using Tailwind CSS and Material UI.",
         "Fixed bugs, improved existing features, implemented new features, worked on manual testing and smoke testing.",
-      ] as string[],
-    },
-    {
-      company: "Root and leaves",
-      href: "https://rootandleaves.com/",
-      badges: [],
-      location: "Delhi, India",
-      title: "React Native Intern",
-      logoUrl:
-        "https://res.cloudinary.com/dtgoeupid/image/upload/v1742894669/Portfolio/wcfeca0inhuy7pqtwu7n.jpg",
-      start: "August 2023",
-      end: "September 2023",
-      description: [
-        "Worked on monorepo architecture and created 20+ mobile screens using React Native CLI.",
-        "Integrated graphql apis using apollo client.",
-        "Used stylesheets for styling the screens.",
-        "Used redux-toolkit for state management.",
       ] as string[],
     },
     {
