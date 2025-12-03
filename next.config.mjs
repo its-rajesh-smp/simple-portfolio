@@ -2,7 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["res.cloudinary.com"], // ✅ Add Cloudinary domain
+    remotePatterns: [
+      {
+        hostname: "res.cloudinary.com",
+      },
+    ], // ✅ Add Cloudinary domain
   },
 };
 
