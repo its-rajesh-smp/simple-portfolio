@@ -8,7 +8,7 @@ export const DATA = {
   location: "West Bengal, INDIA",
   locationLink: "https://maps.app.goo.gl/AzdkQXmuVYt8XsQj7",
   description:
-    "Software Engineer at VAll. I like to build, debug & fix things.",
+    "Full Stack Developer at VAll. I like to build, debug & fix things.",
   summary:
     "At the mid of 2022, I quit my job as a mechanical engineer to learn web-development, I joined [Sharpener](https://www.sharpener.tech/) to take help of mentors and learn web development, later become a software engineer & most helpful mentor at [Sharpener](https://www.sharpener.tech/). Right now building [VAll✌️](https://vallindia.com/).",
   avatarUrl:
