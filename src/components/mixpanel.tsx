@@ -4,7 +4,7 @@ const token = process.env.NEXT_PUBLIC_MIXPANEL_TOKEN;
 
 export const MixpanelProvider = () => {
   if (!token) {
-    console.warn("Missing mixpanel token");
+    console.warn("[HEY] Missing mixpanel token");
     return null;
   }
 
