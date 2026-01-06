@@ -1,3 +1,4 @@
+"use client";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
@@ -9,6 +10,7 @@ import {
 } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
+import mixpanel from "mixpanel-browser";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -26,6 +28,14 @@ export default function Navbar() {
                     buttonVariants({ variant: "ghost", size: "icon" }),
                     "size-12"
                   )}
+                  target="_blank"
+                  onClick={() => {
+                    mixpanel.track("Resume Downloaded", {
+                      source: "Nav Button",
+                      link: item.href,
+                      name: item.label,
+                    });
+                  }}
                 >
                   <item.icon className="size-4" />
                 </Link>
@@ -49,6 +59,14 @@ export default function Navbar() {
                       buttonVariants({ variant: "ghost", size: "icon" }),
                       "size-12"
                     )}
+                    target="_blank"
+                    onClick={() => {
+                      mixpanel.track("Nav Link Clicked", {
+                        source: "Nav Button",
+                        link: social.url,
+                        name: social.name,
+                      });
+                    }}
                   >
                     <social.icon className="size-4" />
                   </Link>

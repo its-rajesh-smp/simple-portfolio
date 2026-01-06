@@ -1,8 +1,10 @@
+"use client";
+
 import mixpanel from "mixpanel-browser";
 
-const token = process.env.NEXT_PUBLIC_MIXPANEL_TOKEN;
-
 export const MixpanelProvider = () => {
+  const token = process.env.NEXT_PUBLIC_MIXPANEL_TOKEN;
+
   if (!token) {
     console.warn("[HEY] Missing mixpanel token");
     return null;
@@ -14,5 +16,6 @@ export const MixpanelProvider = () => {
     api_host: "https://api-eu.mixpanel.com",
     autotrack: true,
   });
+
   return null;
 };

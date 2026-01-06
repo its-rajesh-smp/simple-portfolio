@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, Newspaper } from "lucide-react";
+import { Newspaper } from "lucide-react";
 
 export const DATA = {
   name: "Rajesh Singha Mahapatra",
@@ -48,7 +48,6 @@ export const DATA = {
     "Prompt Engineering",
   ],
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
     {
       href: "https://drive.google.com/drive/u/0/folders/1fPOYCJ1ZkfHCWeW1OdxzXnuhkbguE8sC",
       icon: Newspaper,
