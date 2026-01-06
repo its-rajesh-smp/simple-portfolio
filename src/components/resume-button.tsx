@@ -1,16 +1,18 @@
 "use client";
 
 import { Download } from "lucide-react";
+import mixpanel from "mixpanel-browser";
 import { Button } from "./ui/button";
 
 function ResumeButton() {
   return (
     <Button
-      onClick={() =>
+      onClick={() => {
+        mixpanel.track("Resume Downloaded", { source: "Resume Button" });
         window.open(
           "https://drive.google.com/drive/u/0/folders/1fPOYCJ1ZkfHCWeW1OdxzXnuhkbguE8sC"
-        )
-      }
+        );
+      }}
       size="sm"
       className="flex gap-3"
     >
