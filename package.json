@@ -21,6 +21,7 @@
     "framer-motion": "^11.2.10",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.395.0",
+    "mixpanel-browser": "^2.73.0",
     "next": "14.2.4",
     "next-themes": "^0.3.0",
     "pnpm": "^9.15.4",
