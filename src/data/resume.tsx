@@ -18,6 +18,33 @@ I’ve worked across the stack while **mentoring engineers** and improving **sys
 I enjoy building **scalable systems** and breaking them down to understand how they **fail and improve**.`,
   avatarUrl:
     "https://res.cloudinary.com/dtgoeupid/image/upload/v1742881766/Portfolio/dp.jpg",
+
+  recommendations: [
+    {
+      name: "Aneesh Relan",
+      role: "Principal Software Engineer at Atlassian",
+      imageUrl: "https://i.pravatar.cc/160?img=12",
+      linkedinUrl: "https://www.linkedin.com/in/aneesh-relan-046737119/",
+      relation: "Rajesh's senior & mentor at VAll",
+      recommendation: `
+      I’ve had the pleasure of working with Rajesh, and what stands out most is his ability to quickly adapt and thrive in new and evolving areas. He has taken on AI-first projects and ramped up impressively, demonstrating strong curiosity and a willingness to learn. 
+
+      Rajesh is highly dependable when it comes to driving projects end-to-end.  
+      
+      He manages multiple features with ownership, handles changing requirements with ease, and consistently delivers with responsibility and focus.
+      
+      He would be a valuable asset to any team looking for someone who combines adaptability, learning agility, and execution excellence.`,
+    },
+    {
+      name: "Abhishek Mishra",
+      role: "Software Developer at WagerGeeks",
+      imageUrl: "https://i.pravatar.cc/160?img=32",
+      linkedinUrl: "https://www.linkedin.com/in/abhishekmishra77",
+      relation: "Senior to Abhishek but didn’t manage Abhishek directly",
+      recommendation:
+        'I first met Rajesh during a live class at Sharpener, where he was showcasing one of the projects he had built. Not only was the project impressive in terms of design and functionality, but what really stood out to me was how effortlessly he explained every detail, from the logic behind the features to how he deployed the app. I remember thinking, "This guy really knows his stuff and he genuinely enjoys sharing it."\n\nSome time later, we connected on LinkedIn, and to my surprise, Rajesh reached out and asked, "Would you like to work with me at Sharpener as a mentor?" It was a moment I won\'t forget because mentoring and helping others grow is something I\'ve always loved. And thanks to Rajesh, I got that opportunity.\n\nDuring our time working together at Sharpener, he as a full-time mentor and software developer, and I as a part-time mentor, Rajesh supported me every step of the way. Whether it was understanding the structure, managing sessions, or simply being there to guide me through, he never hesitated to help.\n\nHe’s not just a talented developer. He’s someone who uplifts others, shares his knowledge generously, and leads with humility. Working with Rajesh was truly a privilege, and anyone who gets the chance to work alongside him is in for an inspiring journey.',
+    },
+  ],
   skills: {
     Languages: {
       core: ["TypeScript", "JavaScript"],

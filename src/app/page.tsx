@@ -1,6 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
+import { RecommendationsSection } from "@/components/recommendations-section";
 import ResumeButton from "@/components/resume-button";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -53,6 +54,10 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
+
+      <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
+        <RecommendationsSection recommendations={DATA.recommendations} />
+      </BlurFade>
 
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
