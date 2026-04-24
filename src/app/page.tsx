@@ -59,12 +59,36 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">🛠 My Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
+          <div className="flex flex-col gap-3">
+            {Object.entries(DATA.skills).map(
+              ([category, { core, others }], id) => (
+                <BlurFade
+                  key={category}
+                  delay={BLUR_FADE_DELAY * 10 + id * 0.05}
+                >
+                  <div className="flex flex-col gap-1">
+                    <h3 className="text-sm font-medium text-muted-foreground">
+                      {category}
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {core.map((skill) => (
+                        <Badge
+                          key={skill}
+                          className="bg-primary/10 hover:bg-none!  text-primary border-primary/20"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                      {others.map((skill) => (
+                        <Badge key={skill} variant="outline">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                </BlurFade>
+              ),
+            )}
           </div>
         </div>
       </section>
@@ -77,24 +101,30 @@ export default function Page() {
               💼 Work Experience & Training
             </h2>
           </BlurFade>
-          {DATA.work.map((work, id) => (
-            <BlurFade
-              key={work.company}
-              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-            >
-              <ResumeCard
+          <div className="gap-5 flex flex-col">
+            {DATA.work.map((work, id) => (
+              <BlurFade
                 key={work.company}
-                logoUrl={work.logoUrl}
-                altText={work.company}
-                title={work.company}
-                subtitle={work.title}
-                href={work.href}
-                badges={work.badges}
-                period={`${work.start} - ${work.end ?? "Present"}`}
-                description={work.description}
-              />
-            </BlurFade>
-          ))}
+                delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+                className=""
+              >
+                <ResumeCard
+                  key={work.company}
+                  logoUrl={work.logoUrl}
+                  altText={work.company}
+                  title={work.company}
+                  subtitle={work.title}
+                  href={work.href}
+                  badges={work.badges}
+                  period={`${work.start} - ${work.end ?? "Present"}`}
+                  description={work.description}
+                  classNames={{
+                    ul: "gap-2 flex flex-col",
+                  }}
+                />
+              </BlurFade>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -107,7 +137,7 @@ export default function Page() {
                   🏗️ My Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
+                  Check out some of my personal projects
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve worked on a variety of projects, from simple

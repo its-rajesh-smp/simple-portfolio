@@ -3,6 +3,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -15,6 +16,9 @@ interface ResumeCardProps {
   badges?: readonly string[];
   period: string;
   description?: string | string[];
+  classNames?: {
+    ul: string;
+  };
 }
 export const ResumeCard = ({
   logoUrl,
@@ -25,25 +29,30 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  classNames,
 }: ResumeCardProps) => {
   return (
-    <Link href={href || "#"} className="block cursor-pointer">
+    <div className="block">
       <Card className="flex">
         <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
-            <AvatarImage
-              src={logoUrl}
-              alt={altText}
-              className="object-contain"
-            />
-            <AvatarFallback>{altText[0]}</AvatarFallback>
-          </Avatar>
+          <Link href={href || "#"} className="cursor-pointer">
+            <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+              <AvatarImage
+                src={logoUrl}
+                alt={altText}
+                className="object-contain"
+              />
+              <AvatarFallback>{altText[0]}</AvatarFallback>
+            </Avatar>
+          </Link>
         </div>
         <div className="flex-grow ml-4 items-center flex-col group">
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
-                {title}
+                <Link href={href || "#"} className="cursor-pointer">
+                  {title}
+                </Link>
                 {badges && (
                   <span className="inline-flex gap-x-1">
                     {badges.map((badge, index) => (
@@ -64,6 +73,7 @@ export const ResumeCard = ({
             </div>
             {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
           </CardHeader>
+
           {description && (
             <motion.div
               transition={{
@@ -73,9 +83,12 @@ export const ResumeCard = ({
               className="mt-2 text-xs sm:text-sm"
             >
               {Array.isArray(description) ? (
-                <ul className="list-disc pl-4">
+                <ul className={cn("list-disc pl-4", classNames?.ul)}>
                   {description.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <li
+                      key={index}
+                      dangerouslySetInnerHTML={{ __html: item }}
+                    />
                   ))}
                 </ul>
               ) : (
@@ -85,6 +98,6 @@ export const ResumeCard = ({
           )}
         </div>
       </Card>
-    </Link>
+    </div>
   );
 };

@@ -7,46 +7,59 @@ export const DATA = {
   url: "https://itsrajeshsmp.online",
   location: "West Bengal, INDIA",
   locationLink: "https://maps.app.goo.gl/AzdkQXmuVYt8XsQj7",
-  description:
-    "Full Stack Developer at VAll. I like to build, debug & fix things.",
-  summary:
-    "At the mid of 2022, I quit my job as a mechanical engineer to learn web-development, I joined [Sharpener](https://www.sharpener.tech/) to take help of mentors and learn web development, later become a software engineer & most helpful mentor at [Sharpener](https://www.sharpener.tech/). Right now building [VAll✌️](https://vallindia.com/).",
+  description: "Full Stack Developer at VAll. Building AI SaaS products.",
+  summary: `I transitioned from **mechanical engineering** to **software development** in 2022 and now have **2.5 years of experience** building **production systems**.
+
+At **VAll**, currently working as a **full stack engineer**, shipping **AI-driven products**, designing **backend systems**, and managing **infrastructure and deployments**.
+
+I’ve worked across the stack while **mentoring engineers** and improving **system reliability**.
+
+I enjoy building **scalable systems** and breaking them down to understand how they **fail and improve**.`,
   avatarUrl:
     "https://res.cloudinary.com/dtgoeupid/image/upload/v1742881766/Portfolio/dp.jpg",
-  skills: [
-    "JavaScript",
-    "TypeScript",
-    "HTML",
-    "CSS",
-    "React",
-    "Next",
-    "Node",
-    "Postgres",
-    "Docker",
-    "MySQL",
-    "C#",
-    "SCSS",
-    "Tailwind CSS",
-    "Material UI",
-    "Redux",
-    "Redux Toolkit",
-    "React Router",
-    "React Native",
-    "Express",
-    "Nest",
-    "Firebase",
-    "MongoDB",
-    "Prisma",
-    "GraphQL",
-    "RabbitMQ",
-    "AWS (EC2, ECS, ECR, Lambda, S3, API Gateway, Cognito, Cloudfront, DynamoDB)",
-    "CICD (Github Actions)",
-    "Nginx",
-    "Git",
-    "GitHub",
-    "Googling",
-    "Prompt Engineering",
-  ],
+  skills: {
+    Languages: {
+      core: ["TypeScript", "JavaScript"],
+      others: ["C#", "HTML", "CSS", "SCSS"],
+    },
+    Frontend: {
+      core: ["React", "Next.js", "Tailwind CSS"],
+      others: [
+        "React Native",
+        "Redux",
+        "Redux Toolkit",
+        "React Router",
+        "Material UI",
+      ],
+    },
+    Backend: {
+      core: ["Node.js", "NestJS", "Express"],
+      others: ["GraphQL", "RabbitMQ", "Firebase"],
+    },
+    Databases: {
+      core: ["PostgreSQL", "Prisma"],
+      others: ["MySQL", "MongoDB"],
+    },
+    AWS: {
+      core: ["EC2", "S3", "Lambda", "ECS"],
+      others: [
+        "ECR",
+        "API Gateway",
+        "Cognito",
+        "IAM",
+        "CloudWatch",
+        "CloudFront",
+      ],
+    },
+    DevOps: {
+      core: ["Docker", "GitHub Actions", "Nginx"],
+      others: ["Git", "GitHub", "Pulumi"],
+    },
+    AI: {
+      core: ["Prompt Engineering", "Claude"],
+      others: ["Cursor"],
+    },
+  },
   navbar: [
     {
       href: "https://drive.google.com/drive/u/0/folders/1fPOYCJ1ZkfHCWeW1OdxzXnuhkbguE8sC",
@@ -106,12 +119,21 @@ export const DATA = {
       start: "June 2025",
       end: "Present",
       description: [
-        "Building QuestCraftAI, an agentic AI prototype for NGOs that uses AI to generate quests and personalized recommendations, implemented with Supabase, Lovable, and the OpenAI SDK.",
-        "Building vallindia.com, the company’s primary web platform, end-to-end — from design prototyping (Lovable) to backend development, infrastructure setup, and deployment.",
-        "Mentoring and guiding two software engineers, ensuring code quality, scalable architecture, and best engineering practices.",
-        "Migrated data infrastructure from DynamoDB to PostgreSQL, leading the development of Backend v2 and successfully managing the full migration.",
-        "Integrated Testcontainer and Jest for integration testing to ensure API stability and reliability.",
-        "Integrated Playwright end-to-end test automation to ensure a seamless and bug-free user experience.",
+        "Building <b>QuestCraftAI</b> from scratch, an <b>agentic AI platform</b> for NGOs, leveraging <b>multi-agent architecture</b>, <b>RAG (pgvector)</b>, and <b>memory systems</b> to enable automated quest generation and personalized recommendations.",
+
+        "Designed and implemented <b>agentic workflows</b> using OpenAI Agent Builder, Gemini Gems, and Claude Code, orchestrated via internal <b>MCP infrastructure</b>.",
+
+        "Developed and deployed a custom <b>MCP (Model Context Protocol) server</b> over HTTP, enabling <b>LLMs and agents</b> to access structured NGO data, tools, and workflows.",
+
+        "Leading <b>end-to-end development</b> of VallIndia’s primary platform, covering <b>backend architecture</b>, <b>infrastructure</b>, and <b>production deployment</b>.",
+
+        "Mentored and guided 2 software engineers, improving code quality, scalable architecture, and engineering best practices.",
+
+        "Led data infrastructure migration from DynamoDB to PostgreSQL, designing Backend v2 and executing production migration with minimal downtime.",
+
+        "Implemented <b>integration testing</b> using <b>Testcontainers</b> and <b>Jest</b>, improving API reliability and catching environment-specific issues early.",
+
+        "Built <b>E2E test automation</b> using <b>Playwright</b>, reducing regression issues and ensuring consistent user experience.",
       ] as string[],
     },
     {
@@ -125,15 +147,21 @@ export const DATA = {
       start: "March 2024",
       end: "June 2025",
       description: [
-        "Prototyped an AI assistant for multi-language conversation, instant doubt support, and instant mock interviews using google’s text to speech, gemini, speech to text. Which can reduce the overall human interaction and human cost by 40%.",
-        "Worked on a Unity based game, BOMB. Developed core game mechanics, including A* & flow-field pathfinding, a dynamic wall system, onboarding guides, target prioritization, building unlocks & upgrades, and game replay.",
-        "Implemented CICD pipeline using GitHub Actions and Blue/green deployment using Nginx for easy deployment.",
-        "Developed a platform guide mechanism using shephard.js to replace usetiful.com guides from all the products and save around $800 annually.",
-        "Created communication task using Whisper & ChatGPT API that replaced Elsa AI and saved around $199 per year.",
-        "Created Snapit AI, used Gemini API for checking grammar and spelling, resume improvement suggestions, and full resume scan based on job role.",
-        "Extended Snapit AI to ask questions to the user based on the job role and resume, and provide the user review with the best possible answer.",
-        "Integrated Razorpay payment gateway with SnapitAI, setting up multiple monthly plans and using webhooks for real-time payment processing and updates, generating around $200 in revenue.",
-        "Delivered multiple features, performed manual/smoke testing, and conducted final code reviews to ensure quality and reliability.",
+        "Prototyped a <b>multilingual AI assistant</b> for real-time conversation, doubt resolution, and mock interviews using Gemini and speech APIs, reducing manual support effort through automation.",
+
+        "Designed and implemented <b>CI/CD pipelines</b> using <b>GitHub Actions</b> and <b>blue-green deployment</b> with Nginx, enabling <b>zero-downtime releases</b>.",
+
+        "Developed a custom <b>in-app onboarding system</b>, replacing a third-party tool and reducing annual costs by <b>~$300</b>.",
+
+        "Built an in-house <b>voice-based communication module</b> using <b>Whisper</b> and <b>OpenAI APIs</b>, replacing a paid solution and saving <b>~$200</b> annually.",
+
+        "Created <b>Snapit AI</b>, an AI-powered resume assistant for <b>analysis and role-specific recommendations</b>.",
+
+        "Extended Snapit AI with interactive mock interview capabilities, generating questions and evaluating responses for feedback.",
+
+        "Integrated <b>Razorpay payment gateway</b> with paid plans and <b>real-time webhook processing</b>.",
+
+        "Owned <b>end-to-end feature delivery</b>, including development, testing, and code reviews to maintain <b>production quality</b>.",
       ] as string[],
     },
     {
@@ -147,12 +175,17 @@ export const DATA = {
       start: "September 2023",
       end: "February 2024",
       description: [
-        "Automated the mock interview process by enhancing the appointment booking system, migrated from Zoom to Google Meet using Google API, and reduced costs by 60%. Used cron & implemented auto-scheduling, meeting link generation, automatic upload of recordings to Google Drive, etc.",
-        "Designed a progress report page to track student’s progression based on different parameters.",
-        "Improved the landing page website performance from 55% to 85% by using Azure CDN, removing unwanted code, NPM packages, lazy loading images and pages.",
-        "Implemented a coupon system and UTM parameters to help the company run different campaigns.",
-        "Re-designed the admin and student dashboard (31 Pages) using Tailwind CSS and Material UI.",
-        "Fixed bugs, improved existing features, implemented new features, worked on manual testing and smoke testing.",
+        "Automated <b>mock interview scheduling</b> by migrating from Zoom to Google Meet using APIs, implementing <b>cron-based workflows</b> and reducing costs by <b>~60%</b>.",
+
+        "Designed and developed a student <b>progress tracking system</b> for multi-parameter performance analysis.",
+
+        "Improved <b>landing page performance</b> from <b>55% to 85%</b> using Azure CDN, lazy loading, and optimization techniques.",
+
+        "Built a <b>coupon and UTM tracking system</b> enabling <b>attribution-based analytics</b>.",
+
+        "Re-designed <b>admin and student dashboards (31+ pages)</b>, improving <b>usability and consistency</b>.",
+
+        "Delivered multiple <b>end-to-end features</b>, ensuring <b>system reliability</b> and production readiness.",
       ] as string[],
     },
     {
