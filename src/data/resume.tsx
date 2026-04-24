@@ -2,6 +2,7 @@ import { Icons } from "@/components/icons";
 import { Newspaper } from "lucide-react";
 
 export const DATA = {
+  lastUpdatedAt: "24-April-2026",
   name: "Rajesh Singha Mahapatra",
   initials: "RSMP",
   url: "https://itsrajeshsmp.online",
@@ -121,15 +122,15 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       description: [
         "Building <b>QuestCraftAI</b> from scratch, an <b>agentic AI platform</b> for NGOs, leveraging <b>multi-agent architecture</b>, <b>RAG (pgvector)</b>, and <b>memory systems</b> to enable automated quest generation and personalized recommendations.",
 
-        "Designed and implemented <b>agentic workflows</b> using OpenAI Agent Builder, Gemini Gems, and Claude Code, orchestrated via internal <b>MCP infrastructure</b>.",
+        "Designed and implemented <b>agentic workflows</b> using OpenAI Agent Builder, Gemini Gems, and Claude Code, orchestrated via internal <b>MCP server</b>.",
 
-        "Developed and deployed a custom <b>MCP (Model Context Protocol) server</b> over HTTP, enabling <b>LLMs and agents</b> to access structured NGO data, tools, and workflows.",
+        "Developed and deployed a custom <b>MCP server</b> over HTTP, enabling LLMs and agents to access structured NGO data, tools, and workflows.",
 
         "Leading <b>end-to-end development</b> of VallIndia’s primary platform, covering <b>backend architecture</b>, <b>infrastructure</b>, and <b>production deployment</b>.",
 
         "Mentored and guided 2 software engineers, improving code quality, scalable architecture, and engineering best practices.",
 
-        "Led data infrastructure migration from DynamoDB to PostgreSQL, designing Backend v2 and executing production migration with minimal downtime.",
+        "Worked on data infrastructure migration from DynamoDB to PostgreSQL, designing Backend v2 and executing production migration with minimal downtime.",
 
         "Implemented <b>integration testing</b> using <b>Testcontainers</b> and <b>Jest</b>, improving API reliability and catching environment-specific issues early.",
 
@@ -147,13 +148,13 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       start: "March 2024",
       end: "June 2025",
       description: [
-        "Prototyped a <b>multilingual AI assistant</b> for real-time conversation, doubt resolution, and mock interviews using Gemini and speech APIs, reducing manual support effort through automation.",
+        "Prototyped a multilingual <b>AI assistant</b> for real-time conversation, doubt resolution, and mock interviews using <b>Gemini</b>, <b>Google TTS</b> and <b>Google STT</b>, reducing manual support effort through automation.",
 
         "Designed and implemented <b>CI/CD pipelines</b> using <b>GitHub Actions</b> and <b>blue-green deployment</b> with Nginx, enabling <b>zero-downtime releases</b>.",
 
         "Developed a custom <b>in-app onboarding system</b>, replacing a third-party tool and reducing annual costs by <b>~$300</b>.",
 
-        "Built an in-house <b>voice-based communication module</b> using <b>Whisper</b> and <b>OpenAI APIs</b>, replacing a paid solution and saving <b>~$200</b> annually.",
+        "Built an in-house voice-based <b>communication module</b> using <b>Whisper</b> and <b>OpenAI APIs</b>, replacing a paid solution and saving <b>~$200</b> annually.",
 
         "Created <b>Snapit AI</b>, an AI-powered resume assistant for <b>analysis and role-specific recommendations</b>.",
 
@@ -161,7 +162,7 @@ I enjoy building **scalable systems** and breaking them down to understand how t
 
         "Integrated <b>Razorpay payment gateway</b> with paid plans and <b>real-time webhook processing</b>.",
 
-        "Owned <b>end-to-end feature delivery</b>, including development, testing, and code reviews to maintain <b>production quality</b>.",
+        "Owned end-to-end feature delivery, including development, testing, and code reviews to maintain production quality.",
       ] as string[],
     },
     {
@@ -175,17 +176,17 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       start: "September 2023",
       end: "February 2024",
       description: [
-        "Automated <b>mock interview scheduling</b> by migrating from Zoom to Google Meet using APIs, implementing <b>cron-based workflows</b> and reducing costs by <b>~60%</b>.",
+        "Automated <b>appointment booking system</b> by migrating from Zoom to Google Meet, implementing <b>cron-based workflows</b> and reducing costs by <b>~60%</b>.",
 
         "Designed and developed a student <b>progress tracking system</b> for multi-parameter performance analysis.",
 
         "Improved <b>landing page performance</b> from <b>55% to 85%</b> using Azure CDN, lazy loading, and optimization techniques.",
 
-        "Built a <b>coupon and UTM tracking system</b> enabling <b>attribution-based analytics</b>.",
+        "Built a coupon and UTM tracking system enabling attribution-based analytics.",
 
-        "Re-designed <b>admin and student dashboards (31+ pages)</b>, improving <b>usability and consistency</b>.",
+        "Re-designed <b>admin dashboards (31+ pages)</b>, improving <b>usability and consistency</b>.",
 
-        "Delivered multiple <b>end-to-end features</b>, ensuring <b>system reliability</b> and production readiness.",
+        "Delivered multiple end-to-end features, ensuring system reliability and production readiness.",
       ] as string[],
     },
     {

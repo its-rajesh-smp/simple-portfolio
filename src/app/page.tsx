@@ -220,6 +220,7 @@ export default function Page() {
                   its.rajeshsmp@gmail.com
                 </Link>{" "}
               </p>
+              <p className="text-xs">Last Updated: {DATA.lastUpdatedAt}</p>
             </div>
           </BlurFade>
         </div>
