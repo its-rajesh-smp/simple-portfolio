@@ -315,7 +315,7 @@ I enjoy building **scalable systems** and breaking them down to understand how t
         },
       ],
       image:
-        "https://res.cloudinary.com/dtgoeupid/image/upload/v1742887160/Portfolio/s94mswykoavk75y1dp3i.png",
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1777099568/Attendly-04-25-2026_12_15_PM_ce6bi0.png",
       video: "",
     },
     {
