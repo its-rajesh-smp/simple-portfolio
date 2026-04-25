@@ -279,7 +279,7 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       links: [
         {
           type: "Source",
-          href: "https://github.com/its-rajesh-smp?tab=repositories&q=profilepad&type=&language=&sort=",
+          href: "https://github.com/its-rajesh-smp/profilepad-new",
           icon: <Icons.github className="size-3" />,
         },
       ],
