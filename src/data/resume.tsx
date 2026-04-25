@@ -261,25 +261,6 @@ I enjoy building **scalable systems** and breaking them down to understand how t
   ],
   projects: [
     {
-      title: "message-broker-util",
-      href: "https://www.npmjs.com/package/message-broker-util",
-      dates: "March 2025 - Present",
-      active: true,
-      description:
-        "The MessageBroker package provides an abstraction layer over RabbitMQ, enabling easy message publishing, consuming, and RPC request-response communication. This package simplifies interaction with RabbitMQ using TypeScript and amqplib.",
-      technologies: ["Node", "amqplib", "RabbitMQ", "TypeScript"],
-      links: [
-        {
-          type: "NPM",
-          href: "https://www.npmjs.com/package/message-broker-util",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image:
-        "https://res.cloudinary.com/dtgoeupid/image/upload/v1742887160/Portfolio/s94mswykoavk75y1dp3i.png",
-      video: "",
-    },
-    {
       title: "ProfilePad",
       href: "https://github.com/its-rajesh-smp?tab=repositories&q=profilepad&type=&language=&sort=",
       dates: "Dec 2024 - Feb 2025",
@@ -304,6 +285,37 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       ],
       image:
         "https://res.cloudinary.com/dtgoeupid/image/upload/v1742887139/Portfolio/htfjzy6eqzzbut1unmpv.jpg",
+      video: "",
+    },
+    {
+      title: "Attendly",
+      href: "https://attendly.itsrajesh.online",
+      dates: "Aug 2023 - Aug 2023",
+      active: true,
+      description:
+        "Attendly is an event discovery and community engagement platform that allows users to explore curated events, RSVP seamlessly, and stay connected with experiences that match their interests. The platform combines a modern frontend with a TypeScript-powered backend to support authentication, event management, attendee participation, and a smooth end-to-end event browsing experience.",
+      technologies: [
+        "React",
+        "Node",
+        "Tailwind CSS",
+        "PostgereSQL",
+        "Prisma",
+        "Express",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://attendly.itsrajesh.online",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/its-rajesh-smp/attendly",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image:
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1742887160/Portfolio/s94mswykoavk75y1dp3i.png",
       video: "",
     },
     {
