@@ -67,7 +67,7 @@ export function RecommendationsSection({
   return (
     <section id="recommendations" className="space-y-4">
       <div className="space-y-1">
-        <h2 className="text-xl font-bold">LinkedIn Recommendations</h2>
+        <h2 className="text-xl font-bold"> LinkedIn Recommendations</h2>
         <p className="text-sm text-muted-foreground">
           Feedback from people I&apos;ve worked with across teams and roles.
         </p>
@@ -106,16 +106,16 @@ export function RecommendationsSection({
 
                           <div className="min-w-0">
                             <div className="flex items-center gap-2">
-                              <p className="truncate font-semibold text-foreground">
-                                {item.name}
-                              </p>
                               {item.linkedinUrl && (
                                 <Link
                                   href={item.linkedinUrl}
                                   onClick={(event) => event.stopPropagation()}
-                                  className="text-muted-foreground transition-colors hover:text-foreground"
+                                  className="text-muted-foreground transition-colors hover:text-foreground flex items-center gap-1"
                                   aria-label={`${item.name} LinkedIn profile`}
                                 >
+                                  <p className="truncate font-semibold text-foreground">
+                                    {item.name}
+                                  </p>
                                   <Linkedin className="size-4 text-blue-500" />
                                 </Link>
                               )}
