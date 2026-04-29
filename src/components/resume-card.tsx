@@ -34,44 +34,51 @@ export const ResumeCard = ({
   return (
     <div className="block">
       <Card className="flex">
-        <div className="flex-none">
-          <Link href={href || "#"} className="cursor-pointer">
-            <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
-              <AvatarImage
-                src={logoUrl}
-                alt={altText}
-                className="object-contain"
-              />
-              <AvatarFallback>{altText[0]}</AvatarFallback>
-            </Avatar>
-          </Link>
-        </div>
         <div className="flex-grow ml-4 items-center flex-col group">
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
+              <div className="flex-none">
                 <Link href={href || "#"} className="cursor-pointer">
-                  {title}
+                  <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+                    <AvatarImage
+                      src={logoUrl}
+                      alt={altText}
+                      className="object-contain"
+                    />
+                    <AvatarFallback>{altText[0]}</AvatarFallback>
+                  </Avatar>
                 </Link>
-                {badges && (
-                  <span className="inline-flex gap-x-1">
-                    {badges.map((badge, index) => (
-                      <Badge
-                        variant="secondary"
-                        className="align-middle text-xs"
-                        key={index}
-                      >
-                        {badge}
-                      </Badge>
-                    ))}
-                  </span>
+              </div>
+              <div className="flex-grow flex-col">
+                <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
+                  <Link href={href || "#"} className="cursor-pointer">
+                    {title}
+                  </Link>
+                  {badges && (
+                    <span className="inline-flex gap-x-1">
+                      {badges.map((badge, index) => (
+                        <Badge
+                          variant="secondary"
+                          className="align-middle text-xs"
+                          key={index}
+                        >
+                          {badge}
+                        </Badge>
+                      ))}
+                    </span>
+                  )}
+                </h3>
+                {subtitle && (
+                  <div className="font-sans text-xs">{subtitle}</div>
                 )}
-              </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+                <div className="lg:hidden text-xs tabular-nums text-muted-foreground ">
+                  {period}
+                </div>
+              </div>
+              <div className="hidden lg:block text-xs tabular-nums text-muted-foreground ">
                 {period}
               </div>
             </div>
-            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
           </CardHeader>
 
           {description && (
@@ -80,7 +87,7 @@ export const ResumeCard = ({
                 duration: 0.7,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-2 text-xs sm:text-sm"
+              className="mt-2 text-xs sm:text-sm lg:ml-[3.5rem]"
             >
               {Array.isArray(description) ? (
                 <ul className={cn("list-disc pl-4", classNames?.ul)}>

@@ -90,48 +90,50 @@ export function RecommendationsSection({
               >
                 <CardContent className="p-4">
                   <div className="flex items-start gap-3">
-                    <Avatar className="size-12 border">
-                      <AvatarImage src={item.imageUrl} alt={item.name} />
-                      <AvatarFallback>
-                        {item.name
-                          .split(" ")
-                          .map((part) => part[0])
-                          .join("")
-                          .slice(0, 2)}
-                      </AvatarFallback>
-                    </Avatar>
-
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                        <div className="min-w-0">
-                          <div className="flex items-center gap-2">
-                            <p className="truncate font-semibold text-foreground">
-                              {item.name}
+                        <div className="flex items-center gap-3">
+                          <Avatar className="size-12 border">
+                            <AvatarImage src={item.imageUrl} alt={item.name} />
+                            <AvatarFallback>
+                              {item.name
+                                .split(" ")
+                                .map((part) => part[0])
+                                .join("")
+                                .slice(0, 2)}
+                            </AvatarFallback>
+                          </Avatar>
+
+                          <div className="min-w-0">
+                            <div className="flex items-center gap-2">
+                              <p className="truncate font-semibold text-foreground">
+                                {item.name}
+                              </p>
+                              {item.linkedinUrl && (
+                                <Link
+                                  href={item.linkedinUrl}
+                                  onClick={(event) => event.stopPropagation()}
+                                  className="text-muted-foreground transition-colors hover:text-foreground"
+                                  aria-label={`${item.name} LinkedIn profile`}
+                                >
+                                  <Linkedin className="size-4 text-blue-500" />
+                                </Link>
+                              )}
+                            </div>
+                            <p className="text-sm text-muted-foreground">
+                              {item.role}
                             </p>
-                            {item.linkedinUrl && (
-                              <Link
-                                href={item.linkedinUrl}
-                                onClick={(event) => event.stopPropagation()}
-                                className="text-muted-foreground transition-colors hover:text-foreground"
-                                aria-label={`${item.name} LinkedIn profile`}
-                              >
-                                <Linkedin className="size-4 text-blue-500" />
-                              </Link>
+                            {item.relation && (
+                              <p className="mt-1 text-xs text-muted-foreground/90">
+                                {item.relation}
+                              </p>
                             )}
                           </div>
-                          <p className="text-sm text-muted-foreground">
-                            {item.role}
-                          </p>
-                          {item.relation && (
-                            <p className="mt-1 text-xs text-muted-foreground/90">
-                              {item.relation}
-                            </p>
-                          )}
                         </div>
 
                         <div
                           className={cn(
-                            "inline-flex items-center gap-1 text-xs font-medium text-muted-foreground",
+                            "inline-flex items-center gap-1 text-xs font-medium text-muted-foreground self-end",
                           )}
                         >
                           <span>
@@ -147,8 +149,8 @@ export function RecommendationsSection({
 
                       {isExpanded && (
                         <div className="mt-4 border-t border-border/60 pt-4">
-                          <p className="whitespace-pre-line text-sm leading-6 text-muted-foreground">
-                            {formatRecommendationText(item.recommendation)}
+                          <p className="whitespace-pre-line text-sm leading-6 lg:ml-[3.8rem] text-muted-foreground">
+                            " {formatRecommendationText(item.recommendation)} "
                           </p>
                         </div>
                       )}

@@ -177,7 +177,7 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       title: "Full Stack Developer",
       logoUrl:
         "https://content.vallindia.com/wp-content/uploads/2024/12/vall-logo.png?w=768&h=666",
-      start: "June 2025",
+      start: "Jun 2025",
       end: "Present",
       description: [
         "Building <b>QuestCraftAI</b> from scratch, an <b>agentic AI platform</b> for NGOs, leveraging <b>multi-agent architecture</b>, <b>RAG (pgvector)</b>, and <b>memory systems</b> to enable automated quest generation and personalized recommendations.",
@@ -205,8 +205,8 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       title: "SDE 1",
       logoUrl:
         "https://sharpener.blob.core.windows.net/landing/logo/sharpenerLogo.png",
-      start: "March 2024",
-      end: "June 2025",
+      start: "Mar 2024",
+      end: "Jun 2025",
       description: [
         "Prototyped a multilingual <b>AI assistant</b> for real-time conversation, doubt resolution, and mock interviews using <b>Gemini</b>, <b>Google TTS</b> and <b>Google STT</b>, reducing manual support effort through automation.",
 
@@ -233,8 +233,8 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       title: "SDE Intern",
       logoUrl:
         "https://sharpener.blob.core.windows.net/landing/logo/sharpenerLogo.png",
-      start: "September 2023",
-      end: "February 2024",
+      start: "Sep 2023",
+      end: "Feb 2024",
       description: [
         "Automated <b>appointment booking system</b> by migrating from Zoom to Google Meet, implementing <b>cron-based workflows</b> and reducing costs by <b>~60%</b>.",
 
@@ -257,7 +257,7 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       title: "Mechanical Engineer Intern",
       logoUrl:
         "https://www.anandgroupindia.com/wp-content/uploads/2017/12/acym.png",
-      start: "December 2021",
+      start: "Dec 2021",
       end: "May 2022",
       description:
         "Worked on CNC programming and manufacturing of automobile parts.",
