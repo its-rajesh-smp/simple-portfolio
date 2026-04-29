@@ -150,7 +150,9 @@ export function RecommendationsSection({
                       {isExpanded && (
                         <div className="mt-4 border-t border-border/60 pt-4">
                           <p className="whitespace-pre-line text-sm leading-6 lg:ml-[3.8rem] text-muted-foreground">
-                            " {formatRecommendationText(item.recommendation)} "
+                            &quot;{" "}
+                            {formatRecommendationText(item.recommendation)}{" "}
+                            &quot;
                           </p>
                         </div>
                       )}
