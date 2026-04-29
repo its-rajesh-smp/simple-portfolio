@@ -23,7 +23,8 @@ I enjoy building **scalable systems** and breaking them down to understand how t
     {
       name: "Aneesh Relan",
       role: "Principal Software Engineer at Atlassian",
-      imageUrl: "https://i.pravatar.cc/160?img=12",
+      imageUrl:
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1777426333/aneesh_akvwty.jpg",
       linkedinUrl: "https://www.linkedin.com/in/aneesh-relan-046737119/",
       relation: "Rajesh's senior & mentor at VAll",
       recommendation: `
@@ -36,14 +37,46 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       He would be a valuable asset to any team looking for someone who combines adaptability, learning agility, and execution excellence.`,
     },
     {
-      name: "Abhishek Mishra",
-      role: "Software Developer at WagerGeeks",
-      imageUrl: "https://i.pravatar.cc/160?img=32",
-      linkedinUrl: "https://www.linkedin.com/in/abhishekmishra77",
-      relation: "Senior to Abhishek but didn’t manage Abhishek directly",
-      recommendation:
-        'I first met Rajesh during a live class at Sharpener, where he was showcasing one of the projects he had built. Not only was the project impressive in terms of design and functionality, but what really stood out to me was how effortlessly he explained every detail, from the logic behind the features to how he deployed the app. I remember thinking, "This guy really knows his stuff and he genuinely enjoys sharing it."\n\nSome time later, we connected on LinkedIn, and to my surprise, Rajesh reached out and asked, "Would you like to work with me at Sharpener as a mentor?" It was a moment I won\'t forget because mentoring and helping others grow is something I\'ve always loved. And thanks to Rajesh, I got that opportunity.\n\nDuring our time working together at Sharpener, he as a full-time mentor and software developer, and I as a part-time mentor, Rajesh supported me every step of the way. Whether it was understanding the structure, managing sessions, or simply being there to guide me through, he never hesitated to help.\n\nHe’s not just a talented developer. He’s someone who uplifts others, shares his knowledge generously, and leads with humility. Working with Rajesh was truly a privilege, and anyone who gets the chance to work alongside him is in for an inspiring journey.',
+      name: "Kapil Mohan",
+      role: "CTO at VAll, ex-LinkedIn",
+      imageUrl:
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1777426333/kapil_rsetgh.jpg",
+      linkedinUrl: "https://www.linkedin.com/in/kapilmohan/",
+      relation: "Kapil managed Rajesh directly at VAll",
+      recommendation: `
+      I had the pleasure of working closely with Rajesh as his manager at VAll. He stood out as a bright software engineer, quick learner, and swift executor. He has a strong bias for action — he looks at problems from multiple angles, evaluates trade-offs across complexity, cost, and maintainability, and persists until he finds a practical path forward. He is always curious, fearless in trying new approaches, and has a rare ability to think in systems rather than just isolated tasks.
+
+      One example that stood out was how quickly he picked up AI and agentic application development from scratch, almost entirely on his own, with very little prodding. That combination of self-learning, ownership, speed, and practical problem-solving is what makes him feel like a true 10x engineer. 
+      
+      He would be an asset to any team that values people who can understand quickly, execute fast, and get meaningful work done.
+      `,
     },
+    {
+      name: "Suresh A",
+      role: "Founding Engineer at Sharpener",
+      imageUrl:
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1777426333/suresh_hyzvae.jpg",
+      linkedinUrl: "https://www.linkedin.com/in/suresh-a/",
+      relation: "Suresh managed Rajesh directly at Sharpener",
+      recommendation: `
+      I worked with Rajesh when he was an SDE 1 on my team, and he’s a really solid engineer.
+
+      He has strong problem-solving skills, picks up new concepts quickly, and is comfortable working across the stack. Once he takes ownership of something, you can rely on him to get it done properly without much hand-holding.
+
+      He’s sharp, consistent, and keeps improving his technical skills with every task.
+
+      Would definitely recommend him for any engineering role.
+      `,
+    },
+    // {
+    //   name: "Abhishek Mishra",
+    //   role: "Software Developer at WagerGeeks",
+    //   imageUrl: "https://i.pravatar.cc/160?img=32",
+    //   linkedinUrl: "https://www.linkedin.com/in/abhishekmishra77",
+    //   relation: "Senior to Abhishek but didn’t manage Abhishek directly",
+    //   recommendation:
+    //     'I first met Rajesh during a live class at Sharpener, where he was showcasing one of the projects he had built. Not only was the project impressive in terms of design and functionality, but what really stood out to me was how effortlessly he explained every detail, from the logic behind the features to how he deployed the app. I remember thinking, "This guy really knows his stuff and he genuinely enjoys sharing it."\n\nSome time later, we connected on LinkedIn, and to my surprise, Rajesh reached out and asked, "Would you like to work with me at Sharpener as a mentor?" It was a moment I won\'t forget because mentoring and helping others grow is something I\'ve always loved. And thanks to Rajesh, I got that opportunity.\n\nDuring our time working together at Sharpener, he as a full-time mentor and software developer, and I as a part-time mentor, Rajesh supported me every step of the way. Whether it was understanding the structure, managing sessions, or simply being there to guide me through, he never hesitated to help.\n\nHe’s not just a talented developer. He’s someone who uplifts others, shares his knowledge generously, and leads with humility. Working with Rajesh was truly a privilege, and anyone who gets the chance to work alongside him is in for an inspiring journey.',
+    // },
   ],
   skills: {
     Languages: {

@@ -115,7 +115,7 @@ export function RecommendationsSection({
                                 className="text-muted-foreground transition-colors hover:text-foreground"
                                 aria-label={`${item.name} LinkedIn profile`}
                               >
-                                <Linkedin className="size-4" />
+                                <Linkedin className="size-4 text-blue-500" />
                               </Link>
                             )}
                           </div>
