@@ -11,10 +11,103 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
+const alternateNames = [
+  "Rajesh",
+  "Rajesh SMP",
+  "Rajesh Sinha",
+  "Rajesh Mahapatra",
+  "Rajesh Singha Maha Patra",
+  "Rajesh Sharpener",
+  "Rajesh VAll",
+  "Rajesh Software Engineer",
+  "Rajesh Singha Mahapatra",
+  "VAll",
+  "Sharpener",
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${DATA.url}/#person`,
+      name: DATA.name,
+      alternateName: alternateNames,
+      url: DATA.url,
+      image: DATA.avatarUrl,
+      jobTitle: "Full Stack Developer",
+      description: DATA.description,
+      email: DATA.contact.email,
+      telephone: DATA.contact.tel,
+      address: {
+        "@type": "PostalAddress",
+        addressRegion: "West Bengal",
+        addressCountry: "IN",
+      },
+      worksFor: {
+        "@type": "Organization",
+        name: "VAll",
+        url: "https://vallindia.com/",
+      },
+      alumniOf: DATA.education.map((education) => ({
+        "@type": "EducationalOrganization",
+        name: education.school,
+        url: education.href,
+      })),
+      knowsAbout: [
+        "Full Stack Development",
+        "Software Engineering",
+        "AI SaaS Products",
+        "React",
+        "Next.js",
+        "Node.js",
+        "NestJS",
+        "PostgreSQL",
+        "AWS",
+        "Docker",
+        "MCP servers",
+        "Agentic AI",
+      ],
+      sameAs: [
+        DATA.contact.social.GitHub.url,
+        DATA.contact.social.LinkedIn.url,
+      ],
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": `${DATA.url}/#profile-page`,
+      url: DATA.url,
+      name: `${DATA.name} - Full Stack Developer Portfolio`,
+      description: DATA.description,
+      about: {
+        "@id": `${DATA.url}/#person`,
+      },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: DATA.avatarUrl,
+      },
+      dateModified: "2026-04-24",
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${DATA.url}/#website`,
+      url: DATA.url,
+      name: DATA.name,
+      alternateName: alternateNames,
+      publisher: {
+        "@id": `${DATA.url}/#person`,
+      },
+    },
+  ],
+};
 
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
