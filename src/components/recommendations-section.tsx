@@ -147,15 +147,14 @@ export function RecommendationsSection({
                         </div>
                       </div>
 
-                      {isExpanded && (
-                        <div className="mt-4 border-t border-border/60 pt-4">
-                          <p className="whitespace-pre-line text-sm leading-6 lg:ml-[3.8rem] text-muted-foreground">
-                            &quot;{" "}
-                            {formatRecommendationText(item.recommendation)}{" "}
-                            &quot;
-                          </p>
-                        </div>
-                      )}
+                      <div
+                        className={`mt-4 border-t border-border/60 pt-4 ${isExpanded ? "block" : "hidden"}`}
+                      >
+                        <p className="whitespace-pre-line text-sm leading-6 lg:ml-[3.8rem] text-muted-foreground">
+                          &quot; {formatRecommendationText(item.recommendation)}{" "}
+                          &quot;
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
