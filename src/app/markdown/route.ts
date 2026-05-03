@@ -7,6 +7,8 @@ export function GET() {
     headers: {
       "Content-Type": "text/markdown; charset=utf-8",
       "Content-Signal": "ai-train=yes, search=yes, ai-input=yes",
+      "Access-Control-Allow-Origin": "*",
+      "X-Robots-Tag": "index, follow",
       Vary: "Accept",
     },
   });

@@ -82,6 +82,9 @@ const jsonLd = {
       about: {
         "@id": `${DATA.url}/#person`,
       },
+      mainEntity: {
+        "@id": `${DATA.url}/#person`,
+      },
       primaryImageOfPage: {
         "@type": "ImageObject",
         url: DATA.avatarUrl,

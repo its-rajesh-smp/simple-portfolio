@@ -5,7 +5,7 @@ export const DATA = {
   lastUpdatedAt: "24-April-2026",
   name: "Rajesh Singha Mahapatra",
   initials: "RSMP",
-  url: "https://itsrajeshsmp.online",
+  url: "https://www.itsrajeshsmp.online",
   location: "West Bengal, INDIA",
   locationLink: "https://maps.app.goo.gl/AzdkQXmuVYt8XsQj7",
   description: "Full Stack Developer at VAll. Building AI SaaS products.",
