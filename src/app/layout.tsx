@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   publisher: DATA.name,
   alternates: {
     canonical: "/",
+    types: {
+      "text/markdown": "/markdown",
+      "text/plain": "/llms.txt",
+    },
   },
   keywords: [
     "Rajesh",

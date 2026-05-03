@@ -98,6 +98,23 @@ const jsonLd = {
         "@id": `${DATA.url}/#person`,
       },
     },
+    {
+      "@type": "WebPage",
+      "@id": `${DATA.url}/#webpage`,
+      url: DATA.url,
+      name: `${DATA.name} - Full Stack Developer Portfolio`,
+      description: DATA.description,
+      isPartOf: {
+        "@id": `${DATA.url}/#website`,
+      },
+      about: {
+        "@id": `${DATA.url}/#person`,
+      },
+      inLanguage: "en",
+      encodingFormat: "text/html",
+      sameAs: [`${DATA.url}/markdown`, `${DATA.url}/llms.txt`],
+      dateModified: "2026-04-24",
+    },
   ],
 };
 

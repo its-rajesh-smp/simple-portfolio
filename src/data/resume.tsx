@@ -337,11 +337,6 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       ],
       links: [
         {
-          type: "Website",
-          href: "https://attendly.itsrajesh.online",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
           type: "Source",
           href: "https://github.com/its-rajesh-smp/attendly",
           icon: <Icons.github className="size-3" />,
