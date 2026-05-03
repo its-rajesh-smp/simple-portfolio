@@ -11,6 +11,7 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
+const DATE_MODIFIED = "2026-04-24T00:00:00+05:30";
 const alternateNames = [
   "Rajesh",
   "Rajesh SMP",
@@ -89,7 +90,7 @@ const jsonLd = {
         "@type": "ImageObject",
         url: DATA.avatarUrl,
       },
-      dateModified: "2026-04-24",
+      dateModified: DATE_MODIFIED,
     },
     {
       "@type": "WebSite",
@@ -116,7 +117,7 @@ const jsonLd = {
       inLanguage: "en",
       encodingFormat: "text/html",
       sameAs: [`${DATA.url}/markdown`, `${DATA.url}/llms.txt`],
-      dateModified: "2026-04-24",
+      dateModified: DATE_MODIFIED,
     },
   ],
 };
