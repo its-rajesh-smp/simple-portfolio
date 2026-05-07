@@ -292,6 +292,40 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       end: "2018",
     },
   ],
+  blogs: [
+    {
+      title: "Practical DB Indexing: 8sec to 80ms on 8 Million Rows",
+      href: "https://medium.com/@its.rajeshsmp/practical-db-indexing-8sec-to-80ms-on-8-million-rows-c859cc220537",
+      dates: "Medium Article",
+      description: "A practical breakdown of database indexing and query performance wins.",
+      technologies: ["PostgreSQL", "Indexing", "Performance"],
+      links: [
+        {
+          type: "Read",
+          href: "https://medium.com/@its.rajeshsmp/practical-db-indexing-8sec-to-80ms-on-8-million-rows-c859cc220537",
+          icon: <Newspaper className="size-3" />,
+        },
+      ],
+      image:
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1778151005/indexing_yx6t9l.webp",
+    },
+    {
+      title: "Sharding and Partitioning",
+      href: "https://medium.com/@its.rajeshsmp/sharding-and-partationing-161d489b8c3e",
+      dates: "Medium Article",
+      description: "A simple look at scaling databases with sharding and partitioning.",
+      technologies: ["Databases", "Sharding", "Partitioning"],
+      links: [
+        {
+          type: "Read",
+          href: "https://medium.com/@its.rajeshsmp/sharding-and-partationing-161d489b8c3e",
+          icon: <Newspaper className="size-3" />,
+        },
+      ],
+      image:
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1778151005/sharding_wfttct.webp",
+    },
+  ],
   projects: [
     {
       title: "ProfilePad",

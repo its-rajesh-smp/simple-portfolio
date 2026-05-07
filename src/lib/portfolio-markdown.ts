@@ -66,6 +66,18 @@ ${project.links.map((link) => `- [${link.type}](${link.href})`).join("\n")}`,
     )
     .join("\n\n");
 
+  const blogs = DATA.blogs
+    .map(
+      (blog) => `### ${blog.title}
+
+${blog.description}
+
+Tags: ${blog.technologies.join(", ")}
+
+[Read](${blog.href})`,
+    )
+    .join("\n\n");
+
   const education = DATA.education
     .map(
       (education) => `### ${education.school}
@@ -112,6 +124,10 @@ ${skills}
 ## Work Experience
 
 ${work}
+
+## Blogs
+
+${blogs}
 
 ## Projects
 
