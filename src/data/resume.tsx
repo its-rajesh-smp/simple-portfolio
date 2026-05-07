@@ -81,25 +81,19 @@ I enjoy building **scalable systems** and breaking them down to understand how t
   skills: {
     Languages: {
       core: ["TypeScript", "JavaScript"],
-      others: ["C#", "HTML", "CSS", "SCSS"],
+      others: ["HTML", "CSS", "SCSS"],
     },
     Frontend: {
       core: ["React", "Next.js", "Tailwind CSS"],
-      others: [
-        "React Native",
-        "Redux",
-        "Redux Toolkit",
-        "React Router",
-        "Material UI",
-      ],
+      others: ["Redux", "Redux Toolkit", "React Router", "Material UI"],
     },
     Backend: {
       core: ["Node.js", "NestJS", "Express"],
-      others: ["GraphQL", "RabbitMQ", "Firebase"],
+      others: ["Prisma", "Sequelize"],
     },
     Databases: {
-      core: ["PostgreSQL", "Prisma"],
-      others: ["MySQL", "MongoDB"],
+      core: ["PostgreSQL", "Firebase"],
+      others: ["Redis", "MySQL", "MongoDB"],
     },
     AWS: {
       core: ["EC2", "S3", "Lambda", "ECS"],
@@ -107,18 +101,20 @@ I enjoy building **scalable systems** and breaking them down to understand how t
         "ECR",
         "API Gateway",
         "Cognito",
-        "IAM",
+        "SQS",
+        "SNS",
+        "SES",
         "CloudWatch",
         "CloudFront",
       ],
     },
     DevOps: {
-      core: ["Docker", "GitHub Actions", "Nginx"],
-      others: ["Git", "GitHub", "Pulumi"],
+      core: ["Docker"],
+      others: ["GitHub Actions", "Nginx", "Git", "GitHub", "Pulumi"],
     },
     AI: {
-      core: ["Prompt Engineering", "Claude"],
-      others: ["Cursor"],
+      core: ["Prompt Engineering", "MCP", "Langchain", "Agent SDK"],
+      others: ["RAG", "Gemini", "Cursor"],
     },
   },
   navbar: [
@@ -180,21 +176,25 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       start: "Jun 2025",
       end: "Present",
       description: [
-        "Building <b>QuestCraftAI</b> from scratch, an <b>agentic AI platform</b> for NGOs, leveraging <b>multi-agent architecture</b>, <b>RAG (pgvector)</b>, and <b>memory systems</b> to enable automated quest generation and personalized recommendations.",
+        " Built <b>QuestCraftAI</b>, an agentic AI platform serving <b>40+ NGOs</b>, using a <b>3-agent</b> architecture with <b>RAG (pgvector)</b> and memory systems to automate internship and quest generation — eliminating manual research effort per NGO.",
 
         "Designed and implemented <b>agentic workflows</b> using OpenAI Agent Builder, Gemini Gems, and Claude Code, orchestrated via internal <b>MCP server</b>.",
 
         "Developed and deployed a custom <b>MCP server</b> over HTTP, enabling LLMs and agents to access structured NGO data, tools, and workflows.",
 
-        "Leading <b>end-to-end development</b> of VallIndia’s primary platform, covering <b>backend architecture</b>, <b>infrastructure</b>, and <b>production deployment</b>.",
+        "Built an <b>event booking system</b>, solving double booking using <b>Redis atomic operations</b> and <b>SQS</b>, validated under load with <b>k6</b> handling <b>100 concurrent users.</b>",
 
-        "Mentored and guided 2 software engineers, improving code quality, scalable architecture, and engineering best practices.",
+        "Worked on end-to-end development of </b>VallIndia’s primary platform</b> using <b>React, Express, PostgreSQL and AWS.</b>",
 
-        "Worked on data infrastructure migration from DynamoDB to PostgreSQL, designing Backend v2 and executing production migration with minimal downtime.",
+        "Improved fundraiser transaction API response time from <b>6s to 2s</b> by adding a composite <b>B-tree index.</b>",
 
-        "Implemented <b>integration testing</b> using <b>Testcontainers</b> and <b>Jest</b>, improving API reliability and catching environment-specific issues early.",
+        "Designed a <b>distributed locking mechanism</b> using <b>Redis TTL</b> to prevent duplicate job execution across <b>2 EC2 servers</b>, eliminating race conditions where both servers would pick up the same job simultaneously",
 
-        "Built <b>E2E test automation</b> using <b>Playwright</b>, reducing regression issues and ensuring consistent user experience.",
+        "Implemented <b>integration testing</b> using <b>Testcontainers</b> and <b>Jest</b>, covering <b>40+ APIs</b> with automated runs on every PR via <b>CI pipeline</b>, catching environment-specific issues before production.",
+
+        "<b>Migrated</b> data infrastructure from <b>DynamoDB to PostgreSQL</b>, leading the development of <b>API v2</b> and successfully managing the full production migration with minimal downtime.",
+
+        "<b>Mentored</b> 2 software engineers on code quality, scalable architecture, and engineering best practices.",
       ] as string[],
     },
     {
@@ -244,7 +244,7 @@ I enjoy building **scalable systems** and breaking them down to understand how t
 
         "Built a coupon and UTM tracking system enabling attribution-based analytics.",
 
-        "Re-designed <b>admin dashboards (31+ pages)</b>, improving <b>usability and consistency</b>.",
+        "<b>Re-designed</b> the admin & student dashboard <b>(31 Pages)</b> using <b>Tailwind CSS</b> and <b>Material UI.</b>",
 
         "Delivered multiple end-to-end features, ensuring system reliability and production readiness.",
       ] as string[],
