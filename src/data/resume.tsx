@@ -360,7 +360,7 @@ I enjoy building **scalable systems** and breaking them down to understand how t
   projects: [
     {
       title: "ProfilePad",
-      href: "https://github.com/its-rajesh-smp?tab=repositories&q=profilepad&type=&language=&sort=",
+      href: "https://github.com/its-rajesh-smp/profilepad-new",
       dates: "Dec 2024 - Feb 2025",
       active: true,
       description:
@@ -382,7 +382,7 @@ I enjoy building **scalable systems** and breaking them down to understand how t
         },
       ],
       image:
-        "https://res.cloudinary.com/dtgoeupid/image/upload/v1742887139/Portfolio/htfjzy6eqzzbut1unmpv.jpg",
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1778432506/ProfilePad-05-10-2026_10_27_PM_wkfsbs.png",
       video: "",
     },
     {
