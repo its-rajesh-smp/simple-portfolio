@@ -221,4 +221,14 @@ export const Icons = {
       />
     </svg>
   ),
+  medium: () => {
+    return (
+      <img
+        width={"20px"}
+        height={"20px"}
+        src="https://res.cloudinary.com/dtgoeupid/image/upload/v1778430710/5d8de952517e8160e40ef9841c781cdc14a5db313057fa3c3de41c6f5b494b19_v0uojw.png"
+        alt="M"
+      />
+    );
+  },
 };

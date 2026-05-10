@@ -85,7 +85,13 @@ I enjoy building **scalable systems** and breaking them down to understand how t
     },
     Frontend: {
       core: ["React", "Next.js", "Tailwind CSS"],
-      others: ["Redux", "Redux Toolkit", "React Router", "Material UI"],
+      others: [
+        "Redux",
+        "Redux Toolkit",
+        "React Router",
+        "Material UI",
+        "Tanstack Query",
+      ],
     },
     Backend: {
       core: ["Node.js", "NestJS", "Express"],
@@ -161,6 +167,12 @@ I enjoy building **scalable systems** and breaking them down to understand how t
         icon: Icons.email,
         navbar: true,
       },
+      medium: {
+        name: "Medium Blogs",
+        url: "https://medium.com/@its.rajeshsmp",
+        icon: Icons.medium,
+        navbar: true,
+      },
     },
   },
 
@@ -182,9 +194,9 @@ I enjoy building **scalable systems** and breaking them down to understand how t
 
         "Developed and deployed a custom <b>MCP server</b> over HTTP, enabling LLMs and agents to access structured NGO data, tools, and workflows.",
 
-        "Built an <b>event booking system</b>, solving double booking using <b>Redis atomic operations</b> and <b>SQS</b>, validated under load with <b>k6</b> handling <b>100 concurrent users.</b>",
+        "Designed a <b>fault-tolerant</b> event booking flow using <b>Razorpay</b> webhooks, <b>SQS</b>, <b>Lambda</b>, and <b>DLQ</b> based recovery to handle missed webhooks and payment failures. Validated under load with <b>k6</b> handling 100 concurrent users.",
 
-        "Worked on end-to-end development of </b>VallIndia’s primary platform</b> using <b>React, Express, PostgreSQL and AWS.</b>",
+        "Built an end-to-end <b>user quest creation workflow</b> using <b>React, Tailwind CSS, shadcn/ui</b>, enabling users to create and manage quests through a responsive, validated interface.",
 
         "Improved fundraiser transaction API response time from <b>6s to 2s</b> by adding a composite <b>B-tree index.</b>",
 
@@ -297,7 +309,8 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       title: "Practical DB Indexing: 8sec to 80ms on 8 Million Rows",
       href: "https://medium.com/@its.rajeshsmp/practical-db-indexing-8sec-to-80ms-on-8-million-rows-c859cc220537",
       dates: "Medium Article",
-      description: "A practical breakdown of database indexing and query performance wins.",
+      description:
+        "A practical breakdown of database indexing and query performance wins.",
       technologies: ["PostgreSQL", "Indexing", "Performance"],
       links: [
         {
@@ -310,10 +323,28 @@ I enjoy building **scalable systems** and breaking them down to understand how t
         "https://res.cloudinary.com/dtgoeupid/image/upload/v1778151005/indexing_yx6t9l.webp",
     },
     {
+      title: "A distributed locking mechanism",
+      href: "https://medium.com/@its.rajeshsmp/create-a-distributed-locking-mechanism-6612b95fc8b7",
+      dates: "Medium Article",
+      description:
+        "A practical implementation of a distributed cron locking mechanism.",
+      technologies: ["Cron", "Distributed System", "Locking Mechanism"],
+      links: [
+        {
+          type: "Read",
+          href: "https://medium.com/@its.rajeshsmp/create-a-distributed-locking-mechanism-6612b95fc8b7",
+          icon: <Newspaper className="size-3" />,
+        },
+      ],
+      image:
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1778430335/destributes_locking_mechanism_zoepic.webp",
+    },
+    {
       title: "Sharding and Partitioning",
       href: "https://medium.com/@its.rajeshsmp/sharding-and-partationing-161d489b8c3e",
       dates: "Medium Article",
-      description: "A simple look at scaling databases with sharding and partitioning.",
+      description:
+        "A simple look at scaling databases with sharding and partitioning.",
       technologies: ["Databases", "Sharding", "Partitioning"],
       links: [
         {
