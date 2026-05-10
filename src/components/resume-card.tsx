@@ -34,7 +34,7 @@ export const ResumeCard = ({
   return (
     <div className="block">
       <Card className="flex">
-        <div className="flex-grow ml-4 items-center flex-col group">
+        <div className="flex-grow md:ml-4 items-center flex-col group">
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
               <div className="flex-none">
