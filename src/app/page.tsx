@@ -11,7 +11,7 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
-const DATE_MODIFIED = "2026-04-24T00:00:00+05:30";
+const DATE_MODIFIED = "2026-05-12T00:00:00+05:30";
 const alternateNames = [
   "Rajesh",
   "Rajesh SMP",

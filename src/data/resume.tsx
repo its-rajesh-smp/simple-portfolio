@@ -2,7 +2,7 @@ import { Icons } from "@/components/icons";
 import { Newspaper } from "lucide-react";
 
 export const DATA = {
-  lastUpdatedAt: "24-April-2026",
+  lastUpdatedAt: "12-May-2026",
   name: "Rajesh Singha Mahapatra",
   initials: "RSMP",
   url: "https://www.itsrajeshsmp.online",
@@ -119,8 +119,12 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       others: ["GitHub Actions", "Nginx", "Git", "GitHub", "Pulumi"],
     },
     AI: {
-      core: ["Prompt Engineering", "MCP", "Langchain", "Agent SDK"],
-      others: ["RAG", "Gemini", "Cursor"],
+      core: ["Prompt Engineering", "MCP", "LangChain", "Agent SDK"],
+      others: ["RAG", "Gemini API", "OpenAI API", "Cursor"],
+    },
+    Testing: {
+      core: ["Jest", "Testcontainers"],
+      others: ["Playwright"],
     },
   },
   navbar: [
@@ -188,21 +192,21 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       start: "Jun 2025",
       end: "Present",
       description: [
-        " Built <b>QuestCraftAI</b>, an agentic AI platform serving <b>40+ NGOs</b>, using a <b>3-agent</b> architecture with <b>RAG (pgvector)</b> and memory systems to automate internship and quest generation — eliminating manual research effort per NGO.",
+        "Building <b>QuestCraftAI</b> from scratch, an agentic AI platform serving <b>40+ NGOs</b>. Designed and developed a <b>3-agent</b> architecture using <b>React, Node.js, PostgreSQL, pgvector, RAG</b>, and <b>OpenAI Agent SDK</b> to automate internship and quest generation workflows, significantly reducing manual research effort.",
 
         "Designed and implemented <b>agentic workflows</b> using OpenAI Agent Builder, Gemini Gems, and Claude Code, orchestrated via internal <b>MCP server</b>.",
 
-        "Developed and deployed a custom <b>MCP server</b> over HTTP, enabling LLMs and agents to access structured NGO data, tools, and workflows.",
+        "Created and deployed a custom <b>MCP server</b> on <b>ECS</b>, exposing <b>4 tools</b> over VAllIndia's data, powering QuestCraftAI agents and an <b>OpenAI-based chatbot</b> that recommends NGO opportunities based on user resumes.",
 
-        "Designed a <b>fault-tolerant</b> event booking flow using <b>Razorpay</b> webhooks, <b>SQS</b>, <b>Lambda</b>, and <b>DLQ</b> based recovery to handle missed webhooks and payment failures. Validated under load with <b>k6</b> handling 100 concurrent users.",
+        "Designed an event booking system for NGOs using <b>Razorpay</b> webhooks, <b>SQS</b>, <b>Lambda</b>, and <b>DLQ-based</b> recovery workflows to handle failed webhook events and prevent duplicate bookings. Validated under load with <b>k6</b> handling 100 concurrent users.",
 
-        "Built an end-to-end <b>user quest creation workflow</b> using <b>React, Tailwind CSS, shadcn/ui</b>, enabling users to create and manage quests through a responsive, validated interface.",
+        "Owned and shipped the <b>BYOQ</b> collaboration module, enabling users to create quests, invite participants, and review team submissions through a responsive, validated interface built with <b>React, Tailwind CSS</b>, and <b>shadcn/ui</b>.",
 
         "Improved fundraiser transaction API response time from <b>6s to 2s</b> by adding a composite <b>B-tree index.</b>",
 
-        "Designed a <b>distributed locking mechanism</b> using <b>Redis TTL</b> to prevent duplicate job execution across <b>2 EC2 servers</b>, eliminating race conditions where both servers would pick up the same job simultaneously",
+        "Designed a <b>distributed locking mechanism</b> using <b>S3 conditional writes</b> to prevent duplicate job execution across <b>2 EC2 servers</b>, eliminating race conditions where both servers would pick up the same job simultaneously.",
 
-        "Implemented <b>integration testing</b> using <b>Testcontainers</b> and <b>Jest</b>, covering <b>40+ APIs</b> with automated runs on every PR via <b>CI pipeline</b>, catching environment-specific issues before production.",
+        "Implemented <b>integration testing</b> workflow from scratch using <b>Testcontainers</b> and <b>Jest</b>, covering <b>40+ APIs</b> with automated runs on every PR via <b>CI pipeline</b>, catching environment-specific issues before production.",
 
         "<b>Migrated</b> data infrastructure from <b>DynamoDB to PostgreSQL</b>, leading the development of <b>API v2</b> and successfully managing the full production migration with minimal downtime.",
 
@@ -220,21 +224,19 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       start: "Mar 2024",
       end: "Jun 2025",
       description: [
-        "Prototyped a multilingual <b>AI assistant</b> for real-time conversation, doubt resolution, and mock interviews using <b>Gemini</b>, <b>Google TTS</b> and <b>Google STT</b>, reducing manual support effort through automation.",
+        "Prototyped an <b>AI assistant</b> for multilingual conversation support, instant doubt resolution, and mock interviews using <b>Google TTS</b>, <b>Gemini</b>, and <b>STT</b> systems, reducing projected manual support effort by <b>50%</b>.",
 
         "Designed and implemented <b>CI/CD pipelines</b> using <b>GitHub Actions</b> and <b>blue-green deployment</b> with Nginx, enabling <b>zero-downtime releases</b>.",
 
-        "Developed a custom <b>in-app onboarding system</b>, replacing a third-party tool and reducing annual costs by <b>~$300</b>.",
+        "Built an in-house user onboarding and product guidance system using <b>Shepherd.js</b>, replacing an external platform and saving approximately <b>$900</b> annually in subscription costs.",
 
-        "Built an in-house voice-based <b>communication module</b> using <b>Whisper</b> and <b>OpenAI APIs</b>, replacing a paid solution and saving <b>~$200</b> annually.",
-
-        "Created <b>Snapit AI</b>, an AI-powered resume assistant for <b>analysis and role-specific recommendations</b>.",
+        "Created <b>Snapit AI</b>, an AI-powered resume analysis platform using <b>React, Tailwind CSS, NestJS, PostgreSQL</b>, and <b>Gemini API</b> to deliver grammar correction, resume enhancement suggestions, and role-specific resume evaluation.",
 
         "Extended Snapit AI with interactive mock interview capabilities, generating questions and evaluating responses for feedback.",
 
-        "Integrated <b>Razorpay payment gateway</b> with paid plans and <b>real-time webhook processing</b>.",
+        "Integrated <b>Razorpay</b> payment gateway with <b>SnapitAI</b>, setting up multiple monthly plans and using <b>webhooks</b> for real-time payment processing and updates, generating around <b>$200</b> in revenue.",
 
-        "Owned end-to-end feature delivery, including development, testing, and code reviews to maintain production quality.",
+        "Owned and delivered multiple features, performed manual/smoke testing, and conducted final code reviews to ensure quality and reliability.",
       ] as string[],
     },
     {
@@ -248,11 +250,11 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       start: "Sep 2023",
       end: "Feb 2024",
       description: [
-        "Automated <b>appointment booking system</b> by migrating from Zoom to Google Meet, implementing <b>cron-based workflows</b> and reducing costs by <b>~60%</b>.",
+        "Automated the mock interview process by enhancing the <b>appointment booking system</b>, migrating from Zoom to Google Meet using <b>Google API</b>, and reducing costs by <b>60%</b>. Used <b>cron</b> and implemented <b>auto-scheduling</b>, meeting link generation, and automatic upload of recordings to Google Drive.",
 
-        "Designed and developed a student <b>progress tracking system</b> for multi-parameter performance analysis.",
+        "Designed a <b>progress report page</b> to track student progress based on different parameters.",
 
-        "Improved <b>landing page performance</b> from <b>55% to 85%</b> using Azure CDN, lazy loading, and optimization techniques.",
+        "Improved the performance of the landing page website from <b>55% to 85%</b> by using <b>Cloudinary CDN</b>, removing unwanted code and NPM packages, and lazy loading images and pages.",
 
         "Built a coupon and UTM tracking system enabling attribution-based analytics.",
 
