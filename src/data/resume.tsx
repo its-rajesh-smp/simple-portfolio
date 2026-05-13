@@ -85,42 +85,27 @@ I enjoy building **scalable systems** and breaking them down to understand how t
     },
     Frontend: {
       core: ["React", "Next.js", "Tailwind CSS"],
-      others: [
-        "Redux",
-        "Redux Toolkit",
-        "React Router",
-        "Material UI",
-        "Tanstack Query",
-      ],
+      others: ["Redux Toolkit", "Tanstack Query", "Material UI"],
     },
     Backend: {
       core: ["Node.js", "NestJS", "Express"],
-      others: ["Prisma", "Sequelize"],
+      others: ["Prisma"],
     },
     Databases: {
       core: ["PostgreSQL", "Firebase"],
-      others: ["Redis", "MySQL", "MongoDB"],
+      others: ["MongoDB"],
     },
     AWS: {
       core: ["EC2", "S3", "Lambda", "ECS"],
-      others: [
-        "ECR",
-        "API Gateway",
-        "Cognito",
-        "SQS",
-        "SNS",
-        "SES",
-        "CloudWatch",
-        "CloudFront",
-      ],
+      others: ["ECR", "SQS"],
     },
     DevOps: {
       core: ["Docker"],
-      others: ["GitHub Actions", "Nginx", "Git", "GitHub", "Pulumi"],
+      others: ["GitHub Actions", "Pulumi"],
     },
     AI: {
       core: ["Prompt Engineering", "MCP", "LangChain", "Agent SDK"],
-      others: ["RAG", "Gemini API", "OpenAI API", "Cursor"],
+      others: ["RAG", "Gemini API", "OpenAI API"],
     },
     Testing: {
       core: ["Jest", "Testcontainers"],
@@ -389,7 +374,7 @@ I enjoy building **scalable systems** and breaking them down to understand how t
     },
     {
       title: "Attendly",
-      href: "https://attendly.itsrajesh.online",
+      href: "https://github.com/its-rajesh-smp/attendly",
       dates: "Aug 2023 - Aug 2023",
       active: true,
       description:
