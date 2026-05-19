@@ -29,6 +29,7 @@ export default function Navbar() {
                     "size-12"
                   )}
                   target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => {
                     mixpanel.track("Resume Downloaded", {
                       source: "Nav Button",
@@ -60,6 +61,7 @@ export default function Navbar() {
                       "size-12"
                     )}
                     target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => {
                       mixpanel.track("Nav Link Clicked", {
                         source: "Nav Button",

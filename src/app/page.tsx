@@ -11,7 +11,7 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
-const DATE_MODIFIED = "2026-05-12T00:00:00+05:30";
+const DATE_MODIFIED = "2026-05-19T00:00:00+05:30";
 const alternateNames = [
   "Rajesh",
   "Rajesh SMP",
@@ -68,6 +68,7 @@ const jsonLd = {
         "Docker",
         "MCP servers",
         "Agentic AI",
+        "Open Source",
       ],
       sameAs: [
         DATA.contact.social.GitHub.url,
@@ -262,24 +263,32 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1  gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.blogs.map((blog, id) => (
-              <BlurFade
-                key={blog.title}
-                delay={BLUR_FADE_DELAY * 11 + id * 0.05}
-              >
-                <ProjectCard
-                  href={blog.href}
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+            {DATA.blogs.map((blog, id) => {
+              const isLastOdd =
+                DATA.blogs.length % 2 === 1 && id === DATA.blogs.length - 1;
+
+              return (
+                <BlurFade
                   key={blog.title}
-                  title={blog.title}
-                  description={blog.description}
-                  dates={blog.dates}
-                  tags={blog.technologies}
-                  image={blog.image}
-                  links={blog.links}
-                />
-              </BlurFade>
-            ))}
+                  delay={BLUR_FADE_DELAY * 11 + id * 0.05}
+                  className={
+                    isLastOdd ? "sm:col-span-2 sm:mx-auto sm:w-1/2" : ""
+                  }
+                >
+                  <ProjectCard
+                    href={blog.href}
+                    key={blog.title}
+                    title={blog.title}
+                    description={blog.description}
+                    dates={blog.dates}
+                    tags={blog.technologies}
+                    image={blog.image}
+                    links={blog.links}
+                  />
+                </BlurFade>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -293,7 +302,7 @@ export default function Page() {
                   🏗️ My Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out some of my personal projects
+                  Check out some of my personal projects & contributions
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve worked on a variety of projects, from simple
@@ -304,24 +313,33 @@ export default function Page() {
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-              >
-                <ProjectCard
-                  href={project.href}
+            {DATA.projects.map((project, id) => {
+              const isLastOdd =
+                DATA.projects.length % 2 === 1 &&
+                id === DATA.projects.length - 1;
+
+              return (
+                <BlurFade
                   key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links}
-                />
-              </BlurFade>
-            ))}
+                  delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                  className={
+                    isLastOdd ? "sm:col-span-2 sm:mx-auto sm:w-1/2" : ""
+                  }
+                >
+                  <ProjectCard
+                    href={project.href}
+                    key={project.title}
+                    title={project.title}
+                    description={project.description}
+                    dates={project.dates}
+                    tags={project.technologies}
+                    image={project.image}
+                    video={project.video}
+                    links={project.links}
+                  />
+                </BlurFade>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -364,6 +382,8 @@ export default function Page() {
                 Want to chat? Just shoot me a dm{" "}
                 <Link
                   href={DATA.contact.social.LinkedIn.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-500 hover:underline"
                 >
                   with a direct question on Linkedin
@@ -371,6 +391,8 @@ export default function Page() {
                 and I&apos;ll respond whenever I can. You can also email me at{" "}
                 <Link
                   href={DATA.contact.social.email.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-500 hover:underline"
                 >
                   its.rajeshsmp@gmail.com

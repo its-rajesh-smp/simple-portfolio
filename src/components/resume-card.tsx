@@ -38,7 +38,12 @@ export const ResumeCard = ({
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
               <div className="flex-none">
-                <Link href={href || "#"} className="cursor-pointer">
+                <Link
+                  href={href || "#"}
+                  target={href ? "_blank" : undefined}
+                  rel={href ? "noopener noreferrer" : undefined}
+                  className="cursor-pointer"
+                >
                   <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
                     <AvatarImage
                       src={logoUrl}
@@ -51,7 +56,12 @@ export const ResumeCard = ({
               </div>
               <div className="flex-grow flex-col">
                 <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
-                  <Link href={href || "#"} className="cursor-pointer">
+                  <Link
+                    href={href || "#"}
+                    target={href ? "_blank" : undefined}
+                    rel={href ? "noopener noreferrer" : undefined}
+                    className="cursor-pointer"
+                  >
                     {title}
                   </Link>
                   {badges && (

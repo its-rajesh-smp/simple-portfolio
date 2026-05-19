@@ -2,18 +2,21 @@ import { Icons } from "@/components/icons";
 import { Newspaper } from "lucide-react";
 
 export const DATA = {
-  lastUpdatedAt: "12-May-2026",
+  lastUpdatedAt: "19-May-2026",
   name: "Rajesh Singha Mahapatra",
   initials: "RSMP",
   url: "https://www.itsrajeshsmp.online",
   location: "West Bengal, INDIA",
   locationLink: "https://maps.app.goo.gl/AzdkQXmuVYt8XsQj7",
-  description: "Full Stack Developer at VAll. Building AI SaaS products.",
+  description:
+    "Full Stack Developer at VAll. Open-source contributor building AI SaaS products.",
   summary: `I transitioned from **mechanical engineering** to **software development** in 2022 and now have **2.5 years of experience** building **production systems**.
 
 At **VAll**, currently working as a **full stack engineer**, shipping **AI-driven products**, designing **backend systems**, and managing **infrastructure and deployments**.
 
 I’ve worked across the stack while **mentoring engineers** and improving **system reliability**.
+
+I also contribute to **open source**, including debugging real-world issues, submitting PRs, and helping maintainers ship reliable fixes.
 
 I enjoy building **scalable systems** and breaking them down to understand how they **fail and improve**.`,
   avatarUrl:
@@ -345,6 +348,36 @@ I enjoy building **scalable systems** and breaking them down to understand how t
     },
   ],
   projects: [
+    {
+      title: "Reactive Resume Open Source Contribution",
+      href: "https://github.com/amruthpillai/reactive-resume/pull/3044",
+      dates: "May 2026",
+      active: true,
+      description:
+        "Investigated PDF template rendering bugs in Reactive Resume, submitted PR #3044 with a proposed fix and tests, and received maintainer acknowledgment when the issue was resolved in a later release.",
+      technologies: [
+        "Open Source",
+        "React",
+        "TypeScript",
+        "PDF Rendering",
+        "Testing",
+      ],
+      links: [
+        {
+          type: "PR",
+          href: "https://github.com/amruthpillai/reactive-resume/pull/3044",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Repository",
+          href: "https://github.com/amruthpillai/reactive-resume",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image:
+        "https://res.cloudinary.com/dtgoeupid/image/upload/v1779197740/Reactive-Resume-_-A-free-and-open-source-resume-builder-05-19-2026_07_02_PM_ehx79p.png",
+      video: "",
+    },
     {
       title: "ProfilePad",
       href: "https://github.com/its-rajesh-smp/profilepad-new",

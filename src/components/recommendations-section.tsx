@@ -109,6 +109,8 @@ export function RecommendationsSection({
                               {item.linkedinUrl && (
                                 <Link
                                   href={item.linkedinUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   onClick={(event) => event.stopPropagation()}
                                   className="text-muted-foreground transition-colors hover:text-foreground flex items-center gap-1"
                                   aria-label={`${item.name} LinkedIn profile`}
