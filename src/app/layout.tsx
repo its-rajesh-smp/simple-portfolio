@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: DATA.avatarUrl,
+        url: DATA.ogImage,
         width: 1200,
         height: 630,
         alt: DATA.name,
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     title: `${DATA.name} | Full Stack Developer at VAll`,
     description: DATA.description,
     card: "summary_large_image",
-    images: [DATA.avatarUrl],
+    images: [DATA.ogImage],
   },
   verification: {
     google: "",
@@ -100,7 +100,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <Analytics />

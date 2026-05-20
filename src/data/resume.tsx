@@ -19,6 +19,8 @@ I also contribute to **open source**, including debugging real-world issues, sub
 I enjoy building **scalable systems** and breaking them down to understand how they **fail and improve**.`,
   avatarUrl:
     "https://res.cloudinary.com/dtgoeupid/image/upload/v1742881766/Portfolio/dp.jpg",
+  ogImage:
+    "https://res.cloudinary.com/dtgoeupid/image/upload/v1779284973/og_qpzelk.webp",
 
   recommendations: [
     {

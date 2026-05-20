@@ -89,7 +89,7 @@ const jsonLd = {
       },
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: DATA.avatarUrl,
+        url: DATA.ogImage,
       },
       dateModified: DATE_MODIFIED,
     },
