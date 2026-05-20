@@ -216,6 +216,8 @@ I enjoy building **scalable systems** and breaking them down to understand how t
       description: [
         "Prototyped an <b>AI assistant</b> for multilingual conversation support, instant doubt resolution, and mock interviews using <b>Google TTS</b>, <b>Gemini</b>, and <b>STT</b> systems, reducing projected manual support effort by <b>50%</b>.",
 
+        "Built an in-house <b>Clash of Clans-style</b> multiplayer strategy game, <b>BOMB</b>, using Unity and C#. Designed and implemented the <b>in-game building placement and construction system</b>, including grid-based interactions and gameplay logic. Fine-tuned a Google <b>Gemini model</b> on <b>50+ Clash of Clans base layouts</b> to dynamically generate <b>intelligent bot bases</b> with varied defensive strategies.",
+
         "Designed and implemented <b>CI/CD pipelines</b> using <b>GitHub Actions</b> and <b>blue-green deployment</b> with Nginx, enabling <b>zero-downtime releases</b>.",
 
         "Built an in-house user onboarding and product guidance system using <b>Shepherd.js</b>, replacing an external platform and saving approximately <b>$900</b> annually in subscription costs.",
@@ -223,6 +225,8 @@ I enjoy building **scalable systems** and breaking them down to understand how t
         "Created <b>Snapit AI</b>, an AI-powered resume analysis platform using <b>React, Tailwind CSS, NestJS, PostgreSQL</b>, and <b>Gemini API</b> to deliver grammar correction, resume enhancement suggestions, and role-specific resume evaluation.",
 
         "Extended Snapit AI with interactive mock interview capabilities, generating questions and evaluating responses for feedback.",
+
+        "Created a new task type called <b>communication task</b>. Used openAI <b>whisper</b> to transcribe audio to text and generate feedback using gemini. Help students improve their communication skills while answering technical questions.",
 
         "Integrated <b>Razorpay</b> payment gateway with <b>SnapitAI</b>, setting up multiple monthly plans and using <b>webhooks</b> for real-time payment processing and updates, generating around <b>$200</b> in revenue.",
 
