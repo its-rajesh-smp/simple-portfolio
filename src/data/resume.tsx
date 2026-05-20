@@ -2,7 +2,7 @@ import { Icons } from "@/components/icons";
 import { Newspaper } from "lucide-react";
 
 export const DATA = {
-  lastUpdatedAt: "19-May-2026",
+  lastUpdatedAt: "20-May-2026",
   name: "Rajesh Singha Mahapatra",
   initials: "RSMP",
   url: "https://www.itsrajeshsmp.online",
@@ -10,11 +10,9 @@ export const DATA = {
   locationLink: "https://maps.app.goo.gl/AzdkQXmuVYt8XsQj7",
   description:
     "Full Stack Developer at VAll. Open-source contributor building AI SaaS products.",
-  summary: `I transitioned from **mechanical engineering** to **software development** in 2022 and now have **2.5 years of experience** building **production systems**.
+  summary: `Currently working as a **full stack engineer** at **VAll**, shipping **AI-driven products**, designing **backend systems**, and managing **infrastructure and deployments** with **2.5+ years of experience** building **production systems**.
 
-At **VAll**, currently working as a **full stack engineer**, shipping **AI-driven products**, designing **backend systems**, and managing **infrastructure and deployments**.
-
-I’ve worked across the stack while **mentoring engineers** and improving **system reliability**.
+I've worked across the stack while **mentoring engineers** and improving **system reliability**.
 
 I also contribute to **open source**, including debugging real-world issues, submitting PRs, and helping maintainers ship reliable fixes.
 
@@ -186,11 +184,13 @@ I enjoy building **scalable systems** and breaking them down to understand how t
 
         "Created and deployed a custom <b>MCP server</b> on <b>ECS</b>, exposing <b>4 tools</b> over VAllIndia's data, powering QuestCraftAI agents and an <b>OpenAI-based chatbot</b> that recommends NGO opportunities based on user resumes.",
 
-        "Designed an event booking system for NGOs using <b>Razorpay</b> webhooks, <b>SQS</b>, <b>Lambda</b>, and <b>DLQ-based</b> recovery workflows to handle failed webhook events and prevent duplicate bookings. Validated under load with <b>k6</b> handling 100 concurrent users.",
+        // "Designed an event booking system for NGOs using <b>Razorpay</b> webhooks, <b>SQS</b>, <b>Lambda</b>, and <b>DLQ-based</b> recovery workflows to handle failed webhook events and prevent duplicate bookings. Validated under load with <b>k6</b> handling 100 concurrent users.",
+
+        "Worked on end-to-end development of VAll India’s primary website, driving design and product discussions, using AI-first tools such as <b>Lovable</b>, <b>Cursor</b> and <b>Claude Code</b> for rapid development, and coordinating feature delivery and task delegation across the team.",
 
         "Owned and shipped the <b>BYOQ</b> collaboration module, enabling users to create quests, invite participants, and review team submissions through a responsive, validated interface built with <b>React, Tailwind CSS</b>, and <b>shadcn/ui</b>.",
 
-        "Improved fundraiser transaction API response time from <b>6s to 2s</b> by adding a composite <b>B-tree index.</b>",
+        // "Improved fundraiser transaction API response time from <b>6s to 2s</b> by adding a composite <b>B-tree index.</b>",
 
         "Designed a <b>distributed locking mechanism</b> using <b>S3 conditional writes</b> to prevent duplicate job execution across <b>2 EC2 servers</b>, eliminating race conditions where both servers would pick up the same job simultaneously.",
 
