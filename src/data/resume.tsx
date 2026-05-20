@@ -194,7 +194,7 @@ I enjoy building **scalable systems** and breaking them down to understand how t
 
         // "Improved fundraiser transaction API response time from <b>6s to 2s</b> by adding a composite <b>B-tree index.</b>",
 
-        "Designed a <b>distributed locking mechanism</b> using <b>S3 conditional writes</b> to prevent duplicate job execution across <b>2 EC2 servers</b>, eliminating race conditions where both servers would pick up the same job simultaneously.",
+        "Designed a <b>distributed locking mechanism</b> using <b>S3 conditional writes</b> to prevent duplicate job execution across <b>multiple machines</b>, eliminating race conditions where both servers would pick up the same job simultaneously.",
 
         "Implemented <b>integration testing</b> workflow from scratch using <b>Testcontainers</b> and <b>Jest</b>, covering <b>40+ APIs</b> with automated runs on every PR via <b>CI pipeline</b>, catching environment-specific issues before production.",
 
