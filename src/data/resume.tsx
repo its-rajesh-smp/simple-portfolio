@@ -20,7 +20,7 @@ I enjoy building **scalable systems** and breaking them down to understand how t
   avatarUrl:
     "https://res.cloudinary.com/dtgoeupid/image/upload/v1742881766/Portfolio/dp.jpg",
   ogImage:
-    "https://res.cloudinary.com/dtgoeupid/image/upload/v1779285292/og_i3zmwh.jpg",
+    "https://res.cloudinary.com/dtgoeupid/image/upload/v1779285598/og_2_fkh0mo.jpg",
 
   recommendations: [
     {
