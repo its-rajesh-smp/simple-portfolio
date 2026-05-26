@@ -10,7 +10,7 @@ export const DATA = {
   locationLink: "https://maps.app.goo.gl/AzdkQXmuVYt8XsQj7",
   description:
     "Full Stack Developer at VAll. Open-source contributor building AI SaaS products.",
-  summary: `Currently working as a **full stack engineer** at **VAll**, shipping **AI-driven products**, designing **backend systems**, and managing **infrastructure and deployments** with **2.5+ years of experience** building **production systems**.
+  summary: `Currently working as a **full stack engineer** at **VAll**, shipping **AI-driven products**, designing **backend systems**, and managing **infrastructure and deployments** with around **3 years of experience** building **production systems**.
 
 I've worked across the stack while **mentoring engineers** and improving **system reliability**.
 
