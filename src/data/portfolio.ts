@@ -7,11 +7,10 @@ import type {
   Project,
   Quote,
   SocialLink,
-  TechStackItem,
+  SkillGroup,
 } from "@/types/portfolio";
 
 const SKILL_ICON = "https://skillicons.dev/icons?i=";
-const SIMPLE_ICON = "https://cdn.simpleicons.org/";
 /** TODO(dummy): placeholder images from picsum.photos. */
 const placeholder = (seed: string, w: number, h: number) => `https://picsum.photos/seed/${seed}/${w}/${h}`;
 
@@ -32,7 +31,6 @@ export const PROFILE = {
   tel: "+918942908195",
   location: "West Bengal, India",
   currentCompany: { name: "VAll", url: "https://vallindia.com/" },
-  currentFocus: "Building QuestCraftAI at VAll",
   githubUsername: "its-rajesh-smp",
   footerTagline: "Open to collaborations",
   visitorCount: 1024, // TODO(dummy)
@@ -46,24 +44,6 @@ export const RESUME = {
   /** Where "Download" / "Open" point. */
   externalUrl: "https://drive.google.com/drive/u/0/folders/1fPOYCJ1ZkfHCWeW1OdxzXnuhkbguE8sC",
   summary: { before: "Full Stack Developer at VAll.", highlight: "AI-first products", after: ". Builder. One page." },
-};
-
-/** Live widgets — leave env vars unset to show the dummy fallbacks. */
-export const INTEGRATIONS = {
-  discordUserId: process.env.NEXT_PUBLIC_DISCORD_USER_ID ?? "",
-  spotifyApiUrl: process.env.NEXT_PUBLIC_SPOTIFY_API_URL ?? "",
-} as const;
-
-// TODO(dummy)
-export const CODE_TIME_FALLBACK = { hours: 0, minutes: 0 };
-
-// TODO(dummy)
-export const SPOTIFY_FALLBACK = {
-  name: "Lorem Ipsum",
-  artists: "Dolor, Sit Amet",
-  albumArt: placeholder("rajesh-album", 120, 120),
-  url: "https://open.spotify.com/",
-  isPlaying: false,
 };
 
 export const HERO_TECH = ["TypeScript", "React", "Next.js", "Node.js", "PostgreSQL"] as const;
@@ -92,40 +72,15 @@ export const NAV_LINKS = [
   { label: "Resume", href: "/resume" },
 ] as const;
 
-export const TECH_STACK: TechStackItem[] = [
-  { name: "JavaScript", icon: `${SKILL_ICON}js`, desc: "Language" },
-  { name: "TypeScript", icon: `${SKILL_ICON}ts`, desc: "Language" },
-  { name: "React", icon: `${SKILL_ICON}react`, desc: "UI Library" },
-  { name: "Next.js", icon: `${SKILL_ICON}next`, desc: "Framework" },
-  { name: "Tailwind", icon: `${SKILL_ICON}tailwind`, desc: "Styling" },
-  { name: "Redux", icon: `${SKILL_ICON}redux`, desc: "State" },
-  { name: "Node.js", icon: `${SKILL_ICON}nodejs`, desc: "Runtime" },
-  { name: "NestJS", icon: `${SKILL_ICON}nestjs`, desc: "Backend" },
-  { name: "Express.js", icon: `${SKILL_ICON}express`, desc: "Backend" },
-  { name: "PostgreSQL", icon: `${SKILL_ICON}postgres`, desc: "Database" },
-  { name: "MongoDB", icon: `${SKILL_ICON}mongodb`, desc: "Database" },
-  { name: "Firebase", icon: `${SKILL_ICON}firebase`, desc: "BaaS" },
-  { name: "Prisma", icon: `${SKILL_ICON}prisma`, desc: "ORM" },
-  { name: "AWS", icon: `${SKILL_ICON}aws`, desc: "EC2 · S3 · Lambda · ECS" },
-  { name: "Docker", icon: `${SKILL_ICON}docker`, desc: "Containerization" },
-  { name: "GitHub Actions", icon: `${SKILL_ICON}githubactions`, desc: "CI/CD" },
-  { name: "Nginx", icon: `${SKILL_ICON}nginx`, desc: "Web Server" },
-  {
-    name: "MCP",
-    icon: `${SIMPLE_ICON}modelcontextprotocol/white`,
-    iconLight: `${SIMPLE_ICON}modelcontextprotocol/black`,
-    desc: "AI Agents",
-  },
-  {
-    name: "LangChain",
-    icon: `${SIMPLE_ICON}langchain/white`,
-    iconLight: `${SIMPLE_ICON}langchain/black`,
-    desc: "LLM Framework",
-  },
-  { name: "Jest", icon: `${SKILL_ICON}jest`, desc: "Testing" },
-  { name: "Git", icon: `${SKILL_ICON}git`, desc: "Version Control" },
-  { name: "Vercel", icon: `${SKILL_ICON}vercel`, desc: "Deployment" },
-  { name: "Postman", icon: `${SKILL_ICON}postman`, desc: "API Testing" },
+export const SKILL_GROUPS: SkillGroup[] = [
+  { category: "Languages", core: ["TypeScript", "JavaScript"], others: ["HTML", "CSS", "SCSS"] },
+  { category: "Frontend", core: ["React", "Next.js", "Tailwind CSS"], others: ["Redux Toolkit", "Tanstack Query", "Material UI"] },
+  { category: "Backend", core: ["Node.js", "NestJS", "Express"], others: ["Prisma"] },
+  { category: "Databases", core: ["PostgreSQL", "Firebase"], others: ["MongoDB"] },
+  { category: "AWS", core: ["EC2", "S3", "Lambda", "ECS"], others: ["ECR", "SQS"] },
+  { category: "DevOps", core: ["Docker"], others: ["GitHub Actions", "Pulumi"] },
+  { category: "AI", core: ["Prompt Engineering", "MCP", "LangChain", "Agent SDK"], others: ["RAG", "Gemini API", "OpenAI API"] },
+  { category: "Testing", core: ["Jest", "Testcontainers"], others: ["Playwright"] },
 ];
 
 export const EXPERIENCES: Experience[] = [

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function AboutSection() {
   return (
-    <section aria-labelledby="about-heading" className="mx-auto w-full max-w-200 px-8 md:px-0">
+    <section aria-labelledby="about-heading" className="mx-auto w-full max-w-200 px-5 sm:px-8 md:px-0">
       <SectionHeading id="about-heading" eyebrow="About" title="Me" />
       <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
         <div className="bg-brand flex h-55 w-55 shrink-0 items-center justify-center overflow-hidden rounded-2xl">

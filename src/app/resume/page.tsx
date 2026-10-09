@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function ResumePage() {
   return (
     <Content>
-      <main id="main" className="mx-auto flex max-w-200 flex-col px-8 md:px-0">
+      <main id="main" className="mx-auto flex max-w-200 flex-col px-5 sm:px-8 md:px-0">
         <PageHeader title="Resume" before={RESUME.summary.before} highlight={RESUME.summary.highlight} after={RESUME.summary.after} />
         <ResumeViewer />
       </main>

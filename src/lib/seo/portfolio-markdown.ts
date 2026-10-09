@@ -1,5 +1,5 @@
 import { SORTED_POSTS } from "@/data/blogs";
-import { EXPERIENCES, PROFILE, PROJECTS, SOCIALS, TECH_STACK } from "@/data/portfolio";
+import { EXPERIENCES, PROFILE, PROJECTS, SKILL_GROUPS, SOCIALS } from "@/data/portfolio";
 
 const list = (items: readonly string[]) => items.map((item) => `- ${item}`).join("\n");
 
@@ -45,7 +45,7 @@ ${list(SOCIALS.filter((social) => social.kind !== "email").map((social) => `[${s
 
 ## Tech Stack
 
-${TECH_STACK.map((tech) => tech.name).join(", ")}
+${SKILL_GROUPS.map(({ category, core, others }) => `### ${category}\n\n${[...core, ...others].join(", ")}`).join("\n\n")}
 
 ## Experience
 

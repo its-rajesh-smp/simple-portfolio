@@ -1,25 +1,49 @@
 "use client";
 
 import { PROFILE } from "@/data/portfolio";
+import { NekoPortal, type NekoSpawn } from "@/features/neko/components/neko-portal";
 import { cn } from "@/lib/utils";
+import { hasFinePointer } from "@/utils/device";
+import { playMeow } from "@/utils/sound";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AvatarHint } from "./avatar-hint";
-import { PresencePopover } from "./presence-popover";
 
 const RIPPLE_DELAYS = [0, 0.15, 0.3];
+/** How far into the meow the cat pops out. */
+const NEKO_DELAY_MS = 380;
 
-/** Clickable avatar: ripple rings + a little "you found me!" easter egg. */
+/** Clickable avatar: ripple rings, a "you found my cat!" easter egg and a cat that follows the cursor. */
 export function HeroAvatar() {
   const [found, setFound] = useState(false);
   const [clicks, setClicks] = useState(0);
+  /** Where the cat pops out of the avatar; null when the cat is hidden. */
+  const [nekoStart, setNekoStart] = useState<NekoSpawn | null>(null);
+  const nekoTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const photoRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => () => clearTimeout(nekoTimer.current), []);
 
   return (
     <div className="relative z-10 -mt-26 sm:-mt-30">
       <motion.button
         type="button"
         onClick={() => {
+          clearTimeout(nekoTimer.current);
+
+          // The cursor-chasing cat only makes sense with a mouse/trackpad: meow, then it pops out.
+          if (!found && hasFinePointer()) {
+            playMeow();
+            nekoTimer.current = setTimeout(() => {
+              // Measured after the press/wiggle animations settle: always the photo's bottom-centre.
+              const photo = photoRef.current?.getBoundingClientRect();
+              if (!photo) return;
+              setNekoStart({ id: Date.now(), x: photo.left + photo.width / 2, y: photo.bottom });
+            }, NEKO_DELAY_MS);
+          } else {
+            setNekoStart(null);
+          }
           setFound((value) => !value);
           setClicks((count) => count + 1);
         }}
@@ -56,7 +80,7 @@ export function HeroAvatar() {
               />
             )}
           </AnimatePresence>
-          <span className="bg-brand relative flex size-25 shrink-0 overflow-hidden rounded-full">
+          <span ref={photoRef} className="bg-brand relative flex size-25 shrink-0 overflow-hidden rounded-full">
             <Image
               src={PROFILE.avatarUrl}
               alt={PROFILE.handle}
@@ -70,14 +94,14 @@ export function HeroAvatar() {
 
         <AnimatePresence mode="wait">
           {found ? (
-            <AvatarHint key="found" text="you found me!" delay={0.25} className="text-content-muted" />
+            <AvatarHint key="found" text="you found my cat!" delay={0.25} className="text-content-muted" />
           ) : (
-            <AvatarHint key="hint" text="psst, click me!" delay={0.8} className="text-content-subtle" />
+            <AvatarHint key="hint" text="click me!" delay={0.8} className="text-content-subtle" />
           )}
         </AnimatePresence>
 
-        <PresencePopover />
       </motion.button>
+      <NekoPortal start={nekoStart} />
     </div>
   );
 }

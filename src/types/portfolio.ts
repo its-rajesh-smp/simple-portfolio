@@ -8,12 +8,12 @@ export interface SocialLink {
   preview?: string;
 }
 
-export interface TechStackItem {
-  name: string;
-  desc: string;
-  icon: string;
-  /** Light-mode override for monochrome brand marks. */
-  iconLight?: string;
+export interface SkillGroup {
+  category: string;
+  /** Primary skills — shown as filled chips. */
+  core: string[];
+  /** Secondary skills — shown as outlined chips. */
+  others: string[];
 }
 
 export type ExperienceLogo = "briefcase" | "github" | "building";

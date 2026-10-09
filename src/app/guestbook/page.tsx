@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function GuestbookPage() {
   return (
     <Content>
-      <main id="main" className="mx-auto flex max-w-200 flex-col px-8 md:px-0">
+      <main id="main" className="mx-auto flex max-w-200 flex-col px-5 sm:px-8 md:px-0">
         <PageHeader title="Guestbook" before={description} highlight="Feedback, a question, or just a simple hello" />
         <SignInCard />
         <PaginatedEntries />

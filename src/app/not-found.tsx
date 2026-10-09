@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Page not found", robots: { index: fa
 export default function NotFound() {
   return (
     <Content>
-      <main id="main" className="mx-auto flex min-h-[50vh] max-w-200 flex-col items-start justify-center gap-4 px-8 md:px-0">
+      <main id="main" className="mx-auto flex min-h-[50vh] max-w-200 flex-col items-start justify-center gap-4 px-5 sm:px-8 md:px-0">
         <p className="text-content-muted font-mono text-sm">404</p>
         <h1 className="text-content text-4xl font-bold tracking-tight">This page wandered off.</h1>
         <p className="text-content-secondary">The page you&apos;re looking for doesn&apos;t exist or has moved.</p>

@@ -8,7 +8,7 @@ import { ArticleBlock } from "./article-block";
 export function Article({ post }: { post: BlogPost }) {
   return (
     <div className="editorial min-h-screen">
-      <main id="main" className="mx-auto max-w-200 px-6 pt-12 pb-24 md:px-0">
+      <main id="main" className="mx-auto max-w-200 px-5 pt-12 pb-24 sm:px-8 md:px-0">
         <nav className="mb-10" aria-label="Breadcrumb">
           <Link href="/blogs" className="ed-link-quiet ed-meta">
             All posts

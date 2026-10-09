@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function BlogsPage() {
   return (
     <Content>
-      <main id="main" className="mx-auto flex max-w-200 flex-col px-8 md:px-0">
+      <main id="main" className="mx-auto flex max-w-200 flex-col px-5 sm:px-8 md:px-0">
         <JsonLd data={getBlogIndexJsonLd()} />
         <PageHeader title="Blogs" before="Thoughts and tutorials on" highlight="engineering and programming" after="." />
         <BlogIndex posts={SORTED_POSTS} />

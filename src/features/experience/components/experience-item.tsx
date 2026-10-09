@@ -40,7 +40,7 @@ export function ExperienceItem({ item, open, onToggle, mergedCount, recentMerged
         aria-expanded={open}
         aria-controls={panelId}
         className={cn(
-          "hover:bg-surface-strong/15 flex w-full cursor-pointer items-center gap-4 px-5 py-5 text-left transition-colors sm:px-6",
+          "hover:bg-surface-strong/15 flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left transition-colors sm:gap-4 sm:px-6 sm:py-5",
           open && "bg-surface-strong/10",
         )}
       >
@@ -73,7 +73,7 @@ export function ExperienceItem({ item, open, onToggle, mergedCount, recentMerged
             exit={{ height: 0, opacity: 0, transition: { height: { duration: 0.2, ease: EASE }, opacity: { duration: 0.15, ease: EASE } } }}
             className="bg-surface-strong/10 overflow-hidden"
           >
-            <div className="px-5 pb-6 sm:px-6 sm:pl-20">
+            <div className="px-4 pb-5 sm:px-6 sm:pb-6 sm:pl-20">
               <ul className="space-y-3">
                 {item.livePrs && mergedCount > 0 && (
                   <Highlight>

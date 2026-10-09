@@ -10,7 +10,7 @@ export function SignInCard() {
   const [notice, setNotice] = useState(false);
 
   return (
-    <div className="border-line bg-surface rounded-2xl border p-6">
+    <div className="border-line bg-surface rounded-2xl border p-5 sm:p-6">
       <div className="flex flex-col items-center justify-center gap-4 py-6 text-center">
         <p className="text-content-secondary">Sign in to leave a comment on my guestbook!</p>
         <button

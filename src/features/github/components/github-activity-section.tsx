@@ -9,7 +9,7 @@ interface GithubActivitySectionProps {
 
 export function GithubActivitySection({ calendar }: GithubActivitySectionProps) {
   return (
-    <section aria-labelledby="github-activity-heading" className="mx-auto w-full max-w-200 px-8 md:px-0">
+    <section aria-labelledby="github-activity-heading" className="mx-auto w-full max-w-200 px-5 sm:px-8 md:px-0">
       <SectionHeading id="github-activity-heading" eyebrow="Open Source" title="GitHub Activity" />
 
       <div

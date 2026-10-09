@@ -50,7 +50,7 @@ export function GoogleIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-/** Hand-drawn curved arrow pointing at the avatar ("psst, click me!"). */
+/** Hand-drawn curved arrow pointing at the avatar ("click me!"). */
 export function ScribbleArrow(props: SVGProps<SVGSVGElement>) {
   return (
     <svg width="28" height="16" viewBox="0 0 28 16" aria-hidden="true" {...props}>

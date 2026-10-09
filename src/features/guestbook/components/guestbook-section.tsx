@@ -9,7 +9,7 @@ const PREVIEW_COUNT = 3;
 
 export function GuestbookSection() {
   return (
-    <section id="comments" aria-labelledby="guestbook-heading" className="mx-auto w-full max-w-200 scroll-mt-24 px-8 md:px-0">
+    <section id="comments" aria-labelledby="guestbook-heading" className="mx-auto w-full max-w-200 scroll-mt-24 px-5 sm:px-8 md:px-0">
       <SectionHeading id="guestbook-heading" eyebrow="Guestbook" title="Leave a message" />
       <SignInCard />
       <EntryList entries={GUESTBOOK_ENTRIES.slice(0, PREVIEW_COUNT)} />

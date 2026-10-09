@@ -10,11 +10,11 @@ interface AvatarHintProps {
   className?: string;
 }
 
-/** Handwritten note next to the avatar with a curved arrow pointing at it. */
+/** Handwritten note next to the avatar with a curved arrow pointing at it (mouse/trackpad devices only). */
 export function AvatarHint({ text, delay, className }: AvatarHintProps) {
   return (
     <motion.div
-      className="pointer-events-none absolute top-1/2 left-[115%] flex -translate-y-1/2 items-center sm:right-[115%] sm:left-auto"
+      className="pointer-events-none absolute top-1/2 left-[115%] hidden -translate-y-1/2 items-center sm:right-[115%] sm:left-auto sm:pointer-fine:flex"
       initial={{ opacity: 0, x: 8 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 8 }}

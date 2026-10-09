@@ -9,7 +9,7 @@ const githubUrl = SOCIALS.find((social) => social.kind === "github")?.href ?? "h
 
 export function ProjectsSection() {
   return (
-    <section id="projects" aria-labelledby="projects-heading" className="mx-auto w-full max-w-200 px-8 md:px-0">
+    <section id="projects" aria-labelledby="projects-heading" className="mx-auto w-full max-w-200 px-5 sm:px-8 md:px-0">
       <SectionHeading
         id="projects-heading"
         eyebrow="Featured"

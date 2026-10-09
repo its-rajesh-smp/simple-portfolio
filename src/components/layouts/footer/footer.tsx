@@ -9,7 +9,7 @@ const hrefOf = (kind: string) => SOCIALS.find((social) => social.kind === kind)?
 
 export function Footer() {
   return (
-    <footer className="mx-auto max-w-200 px-8 md:px-0">
+    <footer className="mx-auto max-w-200 px-5 sm:px-8 md:px-0">
       <div className="flex flex-col items-center gap-8">
         <div className="flex w-full flex-col items-center justify-between gap-8 md:flex-row">
           <div className="text-center md:text-left">

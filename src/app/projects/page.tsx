@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <Content>
-      <main id="main" className="mx-auto flex max-w-200 flex-col px-8 md:px-0">
+      <main id="main" className="mx-auto flex max-w-200 flex-col px-5 sm:px-8 md:px-0">
         <PageHeader title="Projects" before="Things I've built —" highlight="AI-powered tools" after=", SaaS platforms, and developer infrastructure." />
         <ProjectGrid projects={PROJECTS} />
       </main>

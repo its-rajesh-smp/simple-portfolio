@@ -8,7 +8,7 @@ import { ThemeToggle } from "./theme-toggle";
 export function Navbar() {
   return (
     <header className="border-guide sticky top-0 z-100 border-b border-dashed">
-      <nav aria-label="Primary" className="relative mx-auto flex w-full max-w-165 items-center justify-between px-8 pt-2 pb-1 md:px-0">
+      <nav aria-label="Primary" className="relative mx-auto flex w-full max-w-165 items-center justify-between px-5 pt-2 pb-1 sm:px-8 md:px-0">
         <div aria-hidden="true" className="bg-surface/10 absolute inset-0 top-0 -z-99 mask-[linear-gradient(to_bottom,black_50%,transparent)] backdrop-blur-[5px]" />
         <div className="flex items-center justify-between gap-3">
           <Link

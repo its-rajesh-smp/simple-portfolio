@@ -39,7 +39,7 @@ export function MobileMenu() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="bg-surface-float absolute top-full right-8 mt-2 w-48 overflow-hidden rounded-xl border p-1 shadow-lg md:hidden"
+            className="bg-surface-float absolute top-full right-5 mt-2 sm:right-8 w-48 overflow-hidden rounded-xl border p-1 shadow-lg md:hidden"
           >
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
