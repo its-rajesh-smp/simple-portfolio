@@ -1,5 +1,5 @@
 /** Pixel grid of the hero GIF (see scripts/generate-hero-gif.py). */
-const SCENE = { width: 256, height: 108 };
+const SCENE = { width: 288, height: 108 };
 
 /**
  * Blossom branches in the scene, in scene pixels. `drift` is the horizontal direction
@@ -7,7 +7,7 @@ const SCENE = { width: 256, height: 108 };
  */
 const BRANCHES = [
   { x0: 0, x1: 70, y0: 0, y1: 32, drift: 1, weight: 0.65 },
-  { x0: 212, x1: 256, y0: 0, y1: 24, drift: -1, weight: 0.35 },
+  { x0: 244, x1: 288, y0: 0, y1: 24, drift: -1, weight: 0.35 },
 ];
 
 export const PETAL_COLORS = ["#f9c6d3", "#f39ab4", "#ffe1e8", "#e47a9a"];

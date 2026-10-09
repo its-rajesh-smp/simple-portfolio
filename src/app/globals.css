@@ -210,6 +210,12 @@
   }
 }
 
+/* Fades an element out at the bottom so it melts into the page background. */
+@utility mask-fade-bottom {
+  mask-image: linear-gradient(to bottom, black 55%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent);
+}
+
 /* Ripple ring + "easter egg" outline on the hero avatar */
 @utility ring-ripple {
   border: 2px solid var(--ripple);

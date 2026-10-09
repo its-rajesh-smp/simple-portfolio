@@ -26,7 +26,7 @@ export function HeroAvatar() {
   useEffect(() => () => clearTimeout(nekoTimer.current), []);
 
   return (
-    <div className="relative z-10 -mt-26 sm:-mt-30">
+    <div className="relative z-10 -mt-12 sm:-mt-30">
       <motion.button
         type="button"
         onClick={() => {

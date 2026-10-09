@@ -8,7 +8,9 @@ import sys
 
 from PIL import Image
 
-W, H = 256, 108
+W, H = 288, 108
+# The scene was designed on a 256px-wide canvas; centre pieces shift right to stay centred.
+DX = (W - 256) // 2
 FRAMES = 128
 FRAME_MS = 90
 # Clouds repeat every CLOUD_PERIOD pixels and move 1px per frame, so after FRAMES frames
@@ -87,7 +89,7 @@ for y in range(HORIZON):
         px[x, y] = sky_color(x, y)
 
 # Retro sun with horizontal cut stripes
-SUN_C, SUN_R = ((116, 50), 19) if NIGHT else ((112, 26), 13)
+SUN_C, SUN_R = ((116 + DX, 50), 19) if NIGHT else ((112 + DX, 26), 13)
 for y in range(SUN_C[1] - SUN_R, SUN_C[1] + SUN_R + 1):
     for x in range(SUN_C[0] - SUN_R, SUN_C[0] + SUN_R + 1):
         d = math.hypot(x - SUN_C[0], y - SUN_C[1])
@@ -110,7 +112,7 @@ for cx, cy, length in CLOUDS:
             cloud_pixels.append((x % CLOUD_PERIOD, cy + row, CLOUD_ALPHA[row]))
 
 # Mt. Fuji
-PEAK = (176, 30)
+PEAK = (176 + DX, 30)
 for y in range(PEAK[1], HORIZON):
     half = (y - PEAK[1]) * 1.9 + 6
     for x in range(int(PEAK[0] - half), int(PEAK[0] + half) + 1):
@@ -145,7 +147,7 @@ def rect(img, x0, y0, x1, y1, color):
             p[x, y] = color
 
 # Torii gate standing in the water (left third)
-TX = 46
+TX = 46 + DX
 rect(base, TX + 4, 46, TX + 8, 92, TORII)            # left pillar
 rect(base, TX + 30, 46, TX + 34, 92, TORII)          # right pillar
 rect(base, TX + 7, 46, TX + 8, 92, TORII_DARK)
@@ -272,7 +274,7 @@ for f in range(FRAMES):
 
     # bobbing boat
     bob = round(math.sin(2 * math.pi * t * 2))
-    bx, by = 196, 90 + bob
+    bx, by = 196 + DX, 90 + bob
     rect(img, bx, by, bx + 14, by + 2, BOAT)
     rect(img, bx + 2, by + 2, bx + 12, by + 3, BOAT)
     rect(img, bx + 6, by - 7, bx + 7, by, BOAT)            # mast
