@@ -1,20 +1,24 @@
 "use client";
 
+import { useThemeTransition } from "@/hooks/use-theme-transition";
 import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+
+const icon = "absolute inset-0 transition-[rotate,scale,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]";
 
 export function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { toggleTheme } = useThemeTransition();
 
   return (
     <button
       type="button"
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      onClick={toggleTheme}
       className="btn-chunky text-content-muted cursor-pointer rounded-lg p-3 sm:p-[10px]"
       aria-label="Toggle theme"
     >
-      <Sun size={18} className="hidden dark:block" />
-      <Moon size={18} className="dark:hidden" />
+      <span className="relative block size-[18px]">
+        <Sun size={18} className={`${icon} scale-0 -rotate-90 opacity-0 dark:scale-100 dark:rotate-0 dark:opacity-100`} />
+        <Moon size={18} className={`${icon} scale-100 rotate-0 opacity-100 dark:scale-0 dark:rotate-90 dark:opacity-0`} />
+      </span>
     </button>
   );
 }

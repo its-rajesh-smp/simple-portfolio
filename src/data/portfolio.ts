@@ -26,7 +26,8 @@ export const PROFILE = {
   bio: "I'm a Full Stack developer at VAll, shipping AI-driven products, designing backend systems, and managing infrastructure. I love building scalable systems and breaking them down to understand how they fail and improve.",
   avatarUrl: "https://res.cloudinary.com/dtgoeupid/image/upload/v1742881766/Portfolio/dp.jpg",
   ogImage: "https://res.cloudinary.com/dtgoeupid/image/upload/v1779285598/og_2_fkh0mo.jpg",
-  heroImage: placeholder("rajesh-hero", 1600, 640), // TODO(dummy)
+  /** Original pixel-art scenes per theme (regenerate with scripts/generate-hero-gif.py). */
+  heroImage: { day: "/hero-pixel-day.gif", night: "/hero-pixel-night.gif" },
   email: "its.rajeshsmp@gmail.com",
   tel: "+918942908195",
   location: "West Bengal, India",
