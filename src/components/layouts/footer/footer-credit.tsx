@@ -24,7 +24,7 @@ export function FooterCredit() {
   );
 
   return (
-    <p className="text-content-secondary text-xs">
+    <p className="text-content-secondary text-sm">
       © {new Date().getFullYear()} <RichText value={CREDITS[index]} boldClassName="text-content font-semibold" />
     </p>
   );

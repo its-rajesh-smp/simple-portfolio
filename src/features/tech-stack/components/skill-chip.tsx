@@ -10,7 +10,7 @@ export function SkillChip({ name, core = false }: SkillChipProps) {
   return (
     <li
       className={cn(
-        "text-content rounded-md border px-2.5 py-0.5 text-xs font-medium",
+        "text-content rounded-md border px-2.5 py-0.5 text-[13px] font-medium",
         core ? "bg-surface-strong/60 border-line-strong" : "bg-surface border-line",
       )}
     >

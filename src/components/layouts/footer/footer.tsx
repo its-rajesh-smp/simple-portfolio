@@ -43,7 +43,7 @@ export function Footer() {
           <VisitorCount />
         </div> */}
         <FooterCredit />
-        <p className="text-content-muted mt-1 text-[10px]">Last updated {formatDayMonthYear(PROFILE.lastUpdatedAt)}</p>
+        <p className="text-content-muted mt-1 text-xs">Last updated {formatDayMonthYear(PROFILE.lastUpdatedAt)}</p>
       </div>
 
       {/* Closing band — flush with the very bottom of the page */}

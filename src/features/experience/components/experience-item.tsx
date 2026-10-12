@@ -16,7 +16,7 @@ interface ExperienceItemProps {
 
 function Highlight({ text }: { text: string }) {
   return (
-    <li className="text-content-secondary flex gap-3 text-sm leading-relaxed">
+    <li className="text-content-secondary flex gap-3 text-[15px] leading-relaxed">
       <span className="bg-content-subtle mt-2 size-1 shrink-0 rounded-full" aria-hidden="true" />
       <span>
         <RichText value={text} boldClassName="text-content font-semibold" />
@@ -41,17 +41,17 @@ export function ExperienceItem({ item, open, onToggle }: ExperienceItemProps) {
           <Image src={item.logoUrl} alt={`${item.org} logo`} width={40} height={40} className="h-full w-full object-cover" />
         </span>
         <span className="min-w-0 flex-1">
-          <span className="text-content block text-[15px] leading-snug font-bold">{item.org}</span>
-          <span className="text-content-muted mt-0.5 block text-sm leading-snug">{item.role}</span>
+          <span className="text-content block text-base leading-snug font-bold">{item.org}</span>
+          <span className="text-content-muted mt-0.5 block text-[15px] leading-snug">{item.role}</span>
           <span className="mt-2 flex items-center gap-2 sm:hidden">
-            <span className="text-content-subtle font-mono text-[9px] tracking-widest uppercase">{item.location}</span>
+            <span className="text-content-subtle font-mono text-[10px] tracking-widest uppercase">{item.location}</span>
             <span className="bg-line h-3 w-px" aria-hidden="true" />
-            <span className="text-content-secondary text-[11px] whitespace-nowrap">{item.period}</span>
+            <span className="text-content-secondary text-xs whitespace-nowrap">{item.period}</span>
           </span>
         </span>
         <span className="hidden shrink-0 flex-col items-end text-right sm:flex">
-          <span className="text-content-secondary text-sm whitespace-nowrap">{item.period}</span>
-          <span className="text-content-subtle mt-0.5 font-mono text-[10px] tracking-widest uppercase">{item.location}</span>
+          <span className="text-content-secondary text-[15px] whitespace-nowrap">{item.period}</span>
+          <span className="text-content-subtle mt-0.5 font-mono text-[11px] tracking-widest uppercase">{item.location}</span>
         </span>
         <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2, ease: EASE }} className="text-content-muted shrink-0">
           <ChevronDown size={16} />
@@ -78,7 +78,7 @@ export function ExperienceItem({ item, open, onToggle }: ExperienceItemProps) {
                   href={item.link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group text-content-muted hover:text-content mt-5 inline-flex items-center gap-1 font-mono text-[10px] font-bold tracking-widest uppercase transition-colors"
+                  className="group text-content-muted hover:text-content mt-5 inline-flex items-center gap-1 font-mono text-[11px] font-bold tracking-widest uppercase transition-colors"
                 >
                   {item.link.label}
                   <ArrowUpRight size={12} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

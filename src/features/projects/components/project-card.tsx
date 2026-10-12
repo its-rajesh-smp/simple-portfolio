@@ -43,11 +43,11 @@ export function ProjectCard({ project }: { project: Project }) {
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">
             <h3 className="text-content text-xl font-bold transition-colors">{project.name}</h3>
-            <p className="text-content-muted mt-1 text-sm">{project.tagline}</p>
+            <p className="text-content-muted mt-1 text-[15px]">{project.tagline}</p>
           </div>
           <ProjectStatus status={project.status} />
         </div>
-        <p className="text-content-secondary mt-4 line-clamp-3 text-sm leading-relaxed">{project.description}</p>
+        <p className="text-content-secondary mt-4 line-clamp-3 text-[15px] leading-relaxed">{project.description}</p>
         <div className="mt-auto flex items-center justify-between gap-3 pt-6">
           <ProjectTech tech={project.tech} />
           <div className="flex items-center gap-2">

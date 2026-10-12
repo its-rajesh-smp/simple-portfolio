@@ -15,7 +15,7 @@ export function HeroIntro() {
         </span>
         <span className="text-content-subtle block max-w-full">{PROFILE.title}</span>
       </h1>
-      <div className="text-content-muted space-y-3 px-1 pt-5 text-base leading-relaxed">
+      <div className="text-content-muted space-y-3 px-1 pt-5 text-base leading-relaxed sm:text-lg">
         {HERO_ABOUT.map((paragraph) => (
           <p key={paragraph}>
             <RichText value={paragraph} boldClassName="text-content font-medium" />

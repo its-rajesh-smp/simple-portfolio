@@ -17,14 +17,14 @@ export function RecommendationItem({ recommendation }: { recommendation: Recomme
             href={recommendation.linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-content text-sm font-semibold hover:underline hover:underline-offset-4"
+            className="text-content text-[15px] font-semibold hover:underline hover:underline-offset-4"
           >
             {recommendation.name}
           </a>
-          <span className="text-content-muted text-[10px]">{recommendation.headline}</span>
+          <span className="text-content-muted text-xs">{recommendation.headline}</span>
         </div>
-        <p className="text-content-subtle mt-0.5 text-[10px]">{recommendation.relation}</p>
-        <div className="text-content-secondary mt-2 space-y-2 rounded-xl border px-3.5 py-3 text-xs leading-relaxed">
+        <p className="text-content-subtle mt-0.5 text-xs">{recommendation.relation}</p>
+        <div className="text-content-secondary mt-2 space-y-2 rounded-xl border px-4 py-3.5 text-sm leading-relaxed">
           {recommendation.message.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
