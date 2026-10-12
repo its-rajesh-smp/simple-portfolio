@@ -37,7 +37,7 @@ export function ExperienceItem({ item, open, onToggle }: ExperienceItemProps) {
         aria-controls={panelId}
         className="flex w-full cursor-pointer items-center gap-3 py-3 text-left sm:gap-4"
       >
-        <span className="border-line h-10 w-10 shrink-0 overflow-hidden rounded-full border">
+        <span className="border-line h-10 w-10 shrink-0 overflow-hidden rounded-full border bg-white">
           <Image src={item.logoUrl} alt={`${item.org} logo`} width={40} height={40} className="h-full w-full object-cover" />
         </span>
         <span className="min-w-0 flex-1">

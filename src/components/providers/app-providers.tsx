@@ -11,7 +11,7 @@ export function AppProviders({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} storageKey="theme" disableTransitionOnChange>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="theme" disableTransitionOnChange>
       <MotionConfig reducedMotion="user">{children}</MotionConfig>
     </ThemeProvider>
   );
