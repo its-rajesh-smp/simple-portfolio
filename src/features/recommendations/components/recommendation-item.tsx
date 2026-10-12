@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function RecommendationItem({ recommendation }: { recommendation: Recommendation }) {
   return (
-    <li>
+    <>
       <div className="flex gap-3">
         <Image
           src={recommendation.image}
@@ -34,6 +34,6 @@ export function RecommendationItem({ recommendation }: { recommendation: Recomme
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
-    </li>
+    </>
   );
 }
