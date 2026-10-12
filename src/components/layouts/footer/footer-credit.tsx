@@ -24,7 +24,9 @@ export function FooterCredit() {
   );
 
   return (
-    <p className="text-content-secondary text-sm">
+    // Mobile: scale with the viewport so the longest credit (~34em incl. bold) fits on one line
+    // inside the footer's 20px side padding; normal size from sm up.
+    <p className="text-content-secondary text-[clamp(9px,calc((100vw-40px)/34),14px)] sm:text-sm">
       © {new Date().getFullYear()} <RichText value={CREDITS[index]} boldClassName="text-content font-semibold" />
     </p>
   );
