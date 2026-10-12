@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import { BLOG_POSTS } from "./src/data/blogs";
 import { RESUME } from "./src/data/portfolio";
+import { CONTENT_SIGNAL, NOINDEX, X_ROBOTS_TAG } from "./src/lib/seo/indexing";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -18,7 +19,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Content-Signal",
-            value: "ai-train=yes, search=yes, ai-input=yes",
+            value: CONTENT_SIGNAL,
           },
           {
             key: "Link",
@@ -27,6 +28,8 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // Test/preview deployments: tell crawlers to skip every response, not just HTML pages.
+      ...(NOINDEX ? [{ source: "/:path*", headers: [{ key: "X-Robots-Tag", value: X_ROBOTS_TAG }] }] : []),
     ];
   },
   images: {

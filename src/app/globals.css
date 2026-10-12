@@ -121,7 +121,6 @@
   --color-overlay: var(--overlay);
   --color-ripple: var(--ripple);
   --color-ripple-active: var(--ripple-active);
-  --color-contribution: #39d353;
 
   --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;

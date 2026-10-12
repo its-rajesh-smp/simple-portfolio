@@ -31,6 +31,8 @@ lastUpdated: ${PROFILE.lastUpdatedAt}
 
 ${PROFILE.description}
 
+Also known as: ${PROFILE.alternateNames.join(", ")}
+
 Location: ${PROFILE.location}
 
 ## About

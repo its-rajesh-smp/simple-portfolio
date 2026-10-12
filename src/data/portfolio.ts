@@ -18,6 +18,22 @@ export const PROFILE = {
   name: "Rajesh Singha Mahapatra",
   firstName: "Rajesh",
   handle: "@rajeshsmp",
+  /** Name spellings people search for — fed to meta keywords, JSON-LD `alternateName` and /llms.txt. */
+  alternateNames: [
+    "Rajesh",
+    "Rajesh SMP",
+    "Rajesh S.M. Patra",
+    "Rajesh SM Patra",
+    "Rajesh Sinha",
+    "Rajesh Mahapatra",
+    "Rajesh Maha Patra",
+    "Rajesh Singhamahapatra",
+    "Rajesh Singha Mahapatra",
+    "Rajesh Singha Maha Patra",
+    "Rajesh Sinha Mahapatra",
+    "Rajesh Sinha Maha Patra",
+    "itsrajeshsmp",
+  ],
   title: "A Software Engineer.",
   role: "Full Stack Developer",
   url: "https://www.itsrajeshsmp.online",
@@ -58,7 +74,6 @@ export const SOCIALS: SocialLink[] = [
 export const NAV_LINKS = [
   { label: "Projects", href: "/projects" },
   { label: "Blogs", href: "/blogs" },
-  // { label: "GuestBook", href: "/guestbook" },
   { label: "Resume", href: RESUME.url, external: true },
 ] as const;
 

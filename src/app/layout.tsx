@@ -7,6 +7,7 @@ import { QuoteCard } from "@/components/layouts/quote-card";
 import { SectionDivider } from "@/components/layouts/section-divider";
 import { AppProviders } from "@/components/providers/app-providers";
 import { PROFILE } from "@/data/portfolio";
+import { NOINDEX } from "@/lib/seo/indexing";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { Caveat, Geist, Geist_Mono, Hanken_Grotesk } from "next/font/google";
@@ -32,12 +33,7 @@ export const metadata: Metadata = {
     types: { "text/markdown": "/markdown", "text/plain": "/llms.txt" },
   },
   keywords: [
-    "Rajesh",
-    "Rajesh SMP",
-    "Rajesh Sinha",
-    "Rajesh Mahapatra",
-    "Rajesh Singha Maha Patra",
-    "Rajesh Singha Mahapatra",
+    ...PROFILE.alternateNames,
     "Rajesh Sharpener",
     "Rajesh VAll",
     "Rajesh Software Engineer",
@@ -60,11 +56,13 @@ export const metadata: Metadata = {
     images: [{ url: PROFILE.ogImage, width: 1200, height: 630, alt: PROFILE.name }],
   },
   twitter: { card: "summary_large_image", title, description: PROFILE.description, images: [PROFILE.ogImage] },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
-  },
+  robots: NOINDEX
+    ? { index: false, follow: false, googleBot: { index: false, follow: false } }
+    : {
+        index: true,
+        follow: true,
+        googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
+      },
 };
 
 export const viewport: Viewport = {

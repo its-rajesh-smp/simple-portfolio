@@ -2,17 +2,7 @@ import { SORTED_POSTS as BLOG_POSTS } from "@/data/blogs";
 import { PROFILE, PROJECTS, SOCIALS } from "@/data/portfolio";
 import type { BlogPost } from "@/types/blog";
 
-const ALTERNATE_NAMES = [
-  "Rajesh",
-  "Rajesh SMP",
-  "Rajesh Sinha",
-  "Rajesh Mahapatra",
-  "Rajesh Singha Maha Patra",
-  "Rajesh Singha Mahapatra",
-  "Rajesh Sharpener",
-  "Rajesh VAll",
-  "Rajesh Software Engineer",
-];
+const ALTERNATE_NAMES = PROFILE.alternateNames;
 
 const id = (fragment: string) => `${PROFILE.url}/#${fragment}`;
 const dateModified = `${PROFILE.lastUpdatedAt}T00:00:00+05:30`;
@@ -28,8 +18,16 @@ const person = {
   description: PROFILE.description,
   email: PROFILE.email,
   telephone: PROFILE.tel,
-  address: { "@type": "PostalAddress", addressRegion: "West Bengal", addressCountry: "IN" },
-  worksFor: { "@type": "Organization", name: PROFILE.currentCompany.name, url: PROFILE.currentCompany.url },
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "West Bengal",
+    addressCountry: "IN",
+  },
+  worksFor: {
+    "@type": "Organization",
+    name: PROFILE.currentCompany.name,
+    url: PROFILE.currentCompany.url,
+  },
   knowsAbout: [
     "Full Stack Development",
     "Software Engineering",
@@ -45,7 +43,28 @@ const person = {
     "Agentic AI",
     "Open Source",
   ],
-  sameAs: SOCIALS.filter((social) => social.kind !== "email").map((social) => social.href),
+  sameAs: SOCIALS.filter((social) => social.kind !== "email").map(
+    (social) => social.href,
+  ),
+};
+
+const projectList = {
+  "@type": "ItemList",
+  "@id": id("projects"),
+  name: `Projects by ${PROFILE.name}`,
+  itemListElement: PROJECTS.map((project, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "CreativeWork",
+      name: project.name,
+      description: project.description,
+      url: project.link ?? project.githubLink,
+      image: project.image,
+      author: { "@id": id("person") },
+      keywords: project.tech.join(", "),
+    },
+  })),
 };
 
 export function getHomeJsonLd() {
@@ -84,24 +103,7 @@ export function getHomeJsonLd() {
         sameAs: [`${PROFILE.url}/markdown`, `${PROFILE.url}/llms.txt`],
         dateModified,
       },
-      {
-        "@type": "ItemList",
-        "@id": id("projects"),
-        name: `Projects by ${PROFILE.name}`,
-        itemListElement: PROJECTS.map((project, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          item: {
-            "@type": "CreativeWork",
-            name: project.name,
-            description: project.description,
-            url: project.link ?? project.githubLink,
-            image: project.image,
-            author: { "@id": id("person") },
-            keywords: project.tech.join(", "),
-          },
-        })),
-      },
+      projectList,
     ],
   };
 }
@@ -142,4 +144,15 @@ export function getBlogPostJsonLd(post: BlogPost) {
 /** Safe JSON-LD serialisation for <script> (escapes `<`, per Next.js docs). */
 export function serializeJsonLd(data: unknown) {
   return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
+export function getProjectsJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `Projects by ${PROFILE.name}`,
+    url: `${PROFILE.url}/projects`,
+    author: person,
+    mainEntity: projectList,
+  };
 }

@@ -4,16 +4,12 @@ import { PageHeader } from "@/components/ui/page-header";
 import { SORTED_POSTS } from "@/data/blogs";
 import { BlogIndex } from "@/features/blogs/components/blog-index";
 import { getBlogIndexJsonLd } from "@/lib/seo/json-ld";
+import { pageMetadata } from "@/lib/seo/page-metadata";
 import type { Metadata } from "next";
 
 const description = "Thoughts and tutorials on engineering and programming.";
 
-export const metadata: Metadata = {
-  title: "Blogs",
-  description,
-  alternates: { canonical: "/blogs" },
-  openGraph: { title: "Blogs", description, url: "/blogs" },
-};
+export const metadata: Metadata = pageMetadata({ title: "Blogs", description, path: "/blogs" });
 
 export default function BlogsPage() {
   return (

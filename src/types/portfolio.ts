@@ -55,16 +55,6 @@ export interface Quote {
   author: string;
 }
 
-export interface GuestbookEntry {
-  id: string;
-  name: string;
-  message: string;
-  date: string;
-  avatar?: string;
-  /** Highlighted with a badge ring (e.g. notable visitors). */
-  featured?: boolean;
-}
-
 export interface Recommendation {
   id: string;
   name: string;
