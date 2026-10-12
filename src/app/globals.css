@@ -144,11 +144,13 @@
 
   html {
     scroll-padding-top: 6rem;
+    /* Stop the macOS/iOS rubber-band bounce, which drags the sticky navbar (and its blur)
+       away from the top edge. Must be on the root scroller, not body. */
+    overscroll-behavior: none;
   }
 
   body {
     min-height: 100dvh;
-    overscroll-behavior: none;
     background-color: var(--surface);
     color: var(--content);
     padding-left: env(safe-area-inset-left);
