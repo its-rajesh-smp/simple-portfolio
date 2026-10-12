@@ -63,7 +63,6 @@ export const RESUME = {
 /** Paragraphs under the hero tagline; **phrases** render bold. */
 export const HERO_ABOUT = [
   "Currently working as a **full stack engineer** at **VAll**, shipping **AI-driven products**, designing **backend systems**, and managing **infrastructure and deployments** with around **3 years of experience** building **production systems**.",
-  "I've worked across the stack while **mentoring engineers** and improving **system reliability**.",
   "I enjoy building **scalable systems** and breaking them down to understand how they **fail and improve**.",
 ];
 

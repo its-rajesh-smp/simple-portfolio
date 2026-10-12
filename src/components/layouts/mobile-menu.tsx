@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -18,8 +18,28 @@ export function MobileMenu() {
     setOpen(false);
   }
 
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Close on a tap/click outside the menu, or on Escape.
+  useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (event: PointerEvent) => {
+      if (!containerRef.current?.contains(event.target as Node)) setOpen(false);
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
+
   return (
-    <>
+    // Not positioned, so the dropdown still anchors to the navbar.
+    <div ref={containerRef} className="md:hidden">
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
@@ -57,6 +77,6 @@ export function MobileMenu() {
           </motion.ul>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }

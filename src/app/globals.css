@@ -443,6 +443,17 @@
   z-index: 1;
 }
 
+/* The sticky header gets its own snapshot layer above the page reveal. Inside the root
+   snapshot, mobile browsers can misplace sticky elements (especially mid-scroll), which
+   made the header vanish during/after a theme switch. */
+.site-header {
+  view-transition-name: site-header;
+}
+::view-transition-group(site-header) {
+  z-index: 2;
+  animation-duration: 0.9s;
+}
+
 /* Backdrop behind the shrinking old page while switching themes. */
 :root[data-theme-transition="dark"]::view-transition-group(root) {
   background: #05040d;
