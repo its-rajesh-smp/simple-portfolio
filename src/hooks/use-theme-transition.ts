@@ -11,11 +11,14 @@ const EASE_OUT = "cubic-bezier(0.22, 1, 0.36, 1)";
 
 const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+/** Phones/tablets: the full-page snapshot transition can glitch there (e.g. the sticky header vanishing). */
+const isTouchDevice = () => window.matchMedia("(pointer: coarse)").matches;
+
 /**
  * Theme toggle with a dramatic View Transition:
  * - to light: a spinning sunburst bursts from the toggle with a brief glare;
  * - to dark: a circle swallows the page while the old (light) page shrinks, tilts and blurs away.
- * Falls back to an instant switch when unsupported or with reduced motion.
+ * Falls back to an instant switch on touch devices, when unsupported, or with reduced motion.
  */
 export function useThemeTransition() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -25,7 +28,7 @@ export function useThemeTransition() {
       const next = resolvedTheme === "dark" ? "light" : "dark";
       playThemeToggleSound(next);
 
-      if (!document.startViewTransition || prefersReducedMotion()) {
+      if (!document.startViewTransition || prefersReducedMotion() || isTouchDevice()) {
         setTheme(next);
         return;
       }
