@@ -4,8 +4,7 @@ import { RichText } from "@/components/ui/rich-text";
 import type { Experience } from "@/types/portfolio";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import Link from "next/link";
-import { ExperienceLogo } from "./experience-logo";
+import Image from "next/image";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -38,14 +37,15 @@ export function ExperienceItem({ item, open, onToggle }: ExperienceItemProps) {
         aria-controls={panelId}
         className="flex w-full cursor-pointer items-center gap-3 py-3 text-left sm:gap-4"
       >
-        <span className="border-line text-content grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-full border p-[7px]">
-          <ExperienceLogo logo={item.logo} />
+        <span className="border-line h-10 w-10 shrink-0 overflow-hidden rounded-full border">
+          <Image src={item.logoUrl} alt={`${item.org} logo`} width={40} height={40} className="h-full w-full object-cover" />
         </span>
         <span className="min-w-0 flex-1">
           <span className="text-content block text-[15px] leading-snug font-bold">{item.org}</span>
           <span className="text-content-muted mt-0.5 block text-sm leading-snug">{item.role}</span>
-          <span className="mt-2 flex items-center justify-between gap-3 sm:hidden">
+          <span className="mt-2 flex items-center gap-2 sm:hidden">
             <span className="text-content-subtle font-mono text-[9px] tracking-widest uppercase">{item.location}</span>
+            <span className="bg-line h-3 w-px" aria-hidden="true" />
             <span className="text-content-secondary text-[11px] whitespace-nowrap">{item.period}</span>
           </span>
         </span>
@@ -74,13 +74,15 @@ export function ExperienceItem({ item, open, onToggle }: ExperienceItemProps) {
                 ))}
               </ul>
               {item.link && (
-                <Link
+                <a
                   href={item.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group text-content-muted hover:text-content mt-5 inline-flex items-center gap-1 font-mono text-[10px] font-bold tracking-widest uppercase transition-colors"
                 >
                   {item.link.label}
                   <ArrowUpRight size={12} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
+                </a>
               )}
             </div>
           </motion.div>

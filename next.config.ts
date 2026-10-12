@@ -35,6 +35,9 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "res.cloudinary.com" },
+      // Company logos in the Experience section
+      { protocol: "https", hostname: "www.vallindia.com" },
+      { protocol: "https", hostname: "sharpener.blob.core.windows.net" },
     ],
   },
 };

@@ -14,15 +14,14 @@ export interface SkillGroup {
   others: string[];
 }
 
-export type ExperienceLogo = "briefcase" | "github" | "building";
-
 export interface Experience {
   id: string;
   org: string;
   role: string;
   period: string;
   location: string;
-  logo: ExperienceLogo;
+  /** Company logo (remote host must be allowed in next.config `images.remotePatterns`). */
+  logoUrl: string;
   highlights: string[];
   link?: { href: string; label: string };
 }
@@ -62,6 +61,8 @@ export interface Recommendation {
   headline: string;
   /** How they know me. */
   relation: string;
+  image: string;
+  linkedinUrl: string;
   /** Paragraphs of the recommendation. */
   message: string[];
 }

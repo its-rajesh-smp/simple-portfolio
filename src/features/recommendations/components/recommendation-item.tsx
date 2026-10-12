@@ -1,20 +1,26 @@
 import type { Recommendation } from "@/types/portfolio";
+import Image from "next/image";
 
 export function RecommendationItem({ recommendation }: { recommendation: Recommendation }) {
-  const initials = recommendation.name
-    .split(" ")
-    .map((part) => part.charAt(0))
-    .join("")
-    .slice(0, 2);
-
   return (
     <li className="flex gap-3">
-      <span className="bg-surface-strong text-content grid size-8 shrink-0 place-items-center self-start rounded-full text-xs font-semibold">
-        {initials}
-      </span>
+      <Image
+        src={recommendation.image}
+        alt=""
+        width={32}
+        height={32}
+        className="bg-surface-strong size-8 shrink-0 self-start rounded-full object-cover"
+      />
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-baseline gap-x-2">
-          <span className="text-content text-sm font-semibold">{recommendation.name}</span>
+          <a
+            href={recommendation.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-content text-sm font-semibold hover:underline hover:underline-offset-4"
+          >
+            {recommendation.name}
+          </a>
           <span className="text-content-muted text-[10px]">{recommendation.headline}</span>
         </div>
         <p className="text-content-subtle mt-0.5 text-[10px]">{recommendation.relation}</p>

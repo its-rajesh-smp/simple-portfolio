@@ -47,6 +47,8 @@ export const PROFILE = {
   tel: "+918942908195",
   location: "West Bengal, India",
   currentCompany: { name: "VAll", url: "https://vallindia.com/" },
+  /** Shown next to the Experience heading. */
+  yearsOfExperience: 3,
   githubUsername: "its-rajesh-smp",
   footerTagline: "Open to collaborations",
   visitorCount: 1024, // TODO(dummy)
@@ -96,7 +98,8 @@ export const EXPERIENCES: Experience[] = [
     role: "Full Stack Developer",
     period: "Jun 2025 – Present",
     location: "Remote",
-    logo: "building",
+    logoUrl: "https://www.vallindia.com/vall-logo.png",
+    link: { href: "https://vallindia.com/", label: "vallindia.com" },
     highlights: [
       "Building **QuestCraftAI** from scratch, an agentic AI platform serving **40+ NGOs**. Designed and developed a **3-agent** architecture using **React, Node.js, PostgreSQL, pgvector, RAG**, and **OpenAI Agent SDK** to automate internship and quest generation workflows, significantly reducing manual research effort.",
       "Designed and implemented **agentic workflows** using OpenAI Agent Builder, Gemini Gems, and Claude Code, orchestrated via an internal **MCP server**.",
@@ -115,7 +118,8 @@ export const EXPERIENCES: Experience[] = [
     role: "SDE 1",
     period: "Mar 2024 – Jun 2025",
     location: "Bangalore",
-    logo: "briefcase",
+    logoUrl: "https://sharpener.blob.core.windows.net/landing/logo/sharpenerLogo.png",
+    link: { href: "https://www.sharpener.tech/", label: "sharpener.tech" },
     highlights: [
       "Prototyped an **AI assistant** for multilingual conversation support, instant doubt resolution, and mock interviews using **Google TTS**, **Gemini**, and **STT** systems, reducing projected manual support effort by **50%**.",
       "Built **BOMB**, an in-house **Clash of Clans-style** multiplayer strategy game, using Unity and C#. Designed and implemented the **in-game building placement and construction system**, including grid-based interactions and gameplay logic.",
@@ -134,8 +138,9 @@ export const EXPERIENCES: Experience[] = [
     org: "Sharpener",
     role: "SDE Intern",
     period: "Sep 2023 – Feb 2024",
-    location: "Bangalore",
-    logo: "briefcase",
+    location: "Remote",
+    logoUrl: "https://sharpener.blob.core.windows.net/landing/logo/sharpenerLogo.png",
+    link: { href: "https://www.sharpener.tech/", label: "sharpener.tech" },
     highlights: [
       "Automated the mock interview process by enhancing the **appointment booking system** and migrating from Zoom to Google Meet using **Google API**, reducing costs by **60%**. Used **cron** to implement **auto-scheduling**, meeting link generation, and automatic upload of recordings to Google Drive.",
       "Designed a **progress report page** to track student progress across different parameters.",
@@ -153,6 +158,8 @@ export const RECOMMENDATIONS: Recommendation[] = [
     name: "Aneesh Relan",
     headline: "Principal Software Engineer at Atlassian",
     relation: "Senior & mentor at VAll",
+    image: "https://res.cloudinary.com/dtgoeupid/image/upload/v1777426333/aneesh_akvwty.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/aneesh-relan-046737119/",
     message: [
       "I've had the pleasure of working with Rajesh, and what stands out most is his ability to quickly adapt and thrive in new and evolving areas. He has taken on AI-first projects and ramped up impressively, demonstrating strong curiosity and a willingness to learn.",
       "Rajesh is highly dependable when it comes to driving projects end-to-end. He manages multiple features with ownership, handles changing requirements with ease, and consistently delivers with responsibility and focus.",
@@ -164,6 +171,8 @@ export const RECOMMENDATIONS: Recommendation[] = [
     name: "Kapil Mohan",
     headline: "CTO at VAll, ex-LinkedIn",
     relation: "Managed me directly at VAll",
+    image: "https://res.cloudinary.com/dtgoeupid/image/upload/v1777426333/kapil_rsetgh.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/kapilmohan/",
     message: [
       "I had the pleasure of working closely with Rajesh as his manager at VAll. He stood out as a bright software engineer, quick learner, and swift executor. He has a strong bias for action — he looks at problems from multiple angles, evaluates trade-offs across complexity, cost, and maintainability, and persists until he finds a practical path forward. He is always curious, fearless in trying new approaches, and has a rare ability to think in systems rather than just isolated tasks.",
       "One example that stood out was how quickly he picked up AI and agentic application development from scratch, almost entirely on his own, with very little prodding. That combination of self-learning, ownership, speed, and practical problem-solving is what makes him feel like a true 10x engineer.",
@@ -175,6 +184,8 @@ export const RECOMMENDATIONS: Recommendation[] = [
     name: "Suresh A",
     headline: "Founding Engineer at Sharpener",
     relation: "Managed me directly at Sharpener",
+    image: "https://res.cloudinary.com/dtgoeupid/image/upload/v1777426333/suresh_hyzvae.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/suresh-a/",
     message: [
       "I worked with Rajesh when he was an SDE 1 on my team, and he's a really solid engineer.",
       "He has strong problem-solving skills, picks up new concepts quickly, and is comfortable working across the stack. Once he takes ownership of something, you can rely on him to get it done properly without much hand-holding.",
