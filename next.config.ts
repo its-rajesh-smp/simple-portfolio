@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
+import { BLOG_POSTS } from "./src/data/blogs";
+import { RESUME } from "./src/data/portfolio";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // The resume and blog articles live externally (Google Drive / Medium); keep old links working.
+  async redirects() {
+    return [
+      { source: "/resume", destination: RESUME.url, permanent: false },
+      ...BLOG_POSTS.map((post) => ({ source: `/blogs/${post.slug}`, destination: post.externalUrl, permanent: false })),
+    ];
+  },
   async headers() {
     return [
       {

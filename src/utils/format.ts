@@ -6,3 +6,8 @@ export const formatShortDate = (isoDate: string) => shortDate.format(new Date(is
 
 /** "October 1, 2026" */
 export const formatLongDate = (isoDate: string) => longDate.format(new Date(isoDate));
+
+const dayMonthYear = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+
+/** "26 Oct 2026" */
+export const formatDayMonthYear = (isoDate: string) => dayMonthYear.format(new Date(isoDate));

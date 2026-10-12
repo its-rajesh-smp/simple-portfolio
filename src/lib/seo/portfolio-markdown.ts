@@ -17,7 +17,7 @@ export function getPortfolioMarkdown() {
   }).join("\n\n");
 
   const blogs = SORTED_POSTS.map(
-    (post) => `### ${post.title}\n\n${post.description}\n\nTags: ${post.tags.join(", ")}\n\n[Read](${PROFILE.url}/blogs/${post.slug})`,
+    (post) => `### ${post.title}\n\n${post.description}\n\nTags: ${post.tags.join(", ")}\n\n[Read](${post.externalUrl})`,
   ).join("\n\n");
 
   return `---

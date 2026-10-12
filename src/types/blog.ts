@@ -24,8 +24,8 @@ export interface BlogPost {
   publishedAt: string;
   updatedAt?: string;
   readTime: string;
-  /** Original article (e.g. on Medium) when cross-posted. */
-  externalUrl?: string;
+  /** Published article on Medium — blog links open this. */
+  externalUrl: string;
   shortAnswer: string;
   sections: BlogSection[];
 }

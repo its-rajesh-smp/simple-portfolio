@@ -1,11 +1,10 @@
 import type { BlogPost } from "@/types/blog";
 import { formatShortDate } from "@/utils/format";
-import Link from "next/link";
 
 export function PostRow({ post }: { post: BlogPost }) {
   return (
     <li className="border-line border-t">
-      <Link href={`/blogs/${post.slug}`} className="ed-grid group py-6">
+      <a href={post.externalUrl} target="_blank" rel="noopener noreferrer" className="ed-grid group py-6">
         <div className="col-span-12 sm:col-span-3">
           <p className="ed-meta">
             <time dateTime={post.publishedAt}>{formatShortDate(post.publishedAt)}</time>
@@ -18,7 +17,7 @@ export function PostRow({ post }: { post: BlogPost }) {
             {post.category} <span>·</span> {post.readTime}
           </p>
         </div>
-      </Link>
+      </a>
     </li>
   );
 }

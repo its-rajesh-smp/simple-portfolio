@@ -1,9 +1,11 @@
 import { GithubLineIcon, LinkedinLineIcon } from "@/components/icons/line-icons";
 import { PROFILE, SOCIALS } from "@/data/portfolio";
+import { formatDayMonthYear } from "@/utils/format";
 import { Mail } from "lucide-react";
 import { SectionDivider } from "../section-divider";
-import { FriendsList } from "./friends-list";
-import { VisitorCount } from "./visitor-count";
+import { FooterCredit } from "./footer-credit";
+// import { FriendsList } from "./friends-list";
+// import { VisitorCount } from "./visitor-count";
 
 const hrefOf = (kind: string) => SOCIALS.find((social) => social.kind === kind)?.href;
 
@@ -36,17 +38,16 @@ export function Footer() {
       <SectionDivider />
 
       <div className="text-center">
-        <div className="flex items-end justify-between">
+        {/* <div className="flex items-end justify-between">
           <FriendsList />
           <VisitorCount />
-        </div>
-        <p className="text-content-secondary pt-10 text-xs">
-          © {new Date().getFullYear()} Crafted with <span className="text-danger-content">♥</span> by {PROFILE.name}.
-        </p>
+        </div> */}
+        <FooterCredit />
+        <p className="text-content-muted mt-1 text-[10px]">Last updated {formatDayMonthYear(PROFILE.lastUpdatedAt)}</p>
       </div>
 
       {/* Closing band — flush with the very bottom of the page */}
-      <SectionDivider className="mb-0" />
+      <SectionDivider className="mt-6 mb-0" />
     </footer>
   );
 }

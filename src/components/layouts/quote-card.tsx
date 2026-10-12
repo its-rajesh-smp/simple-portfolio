@@ -1,10 +1,19 @@
+"use client";
+
 import { QUOTES } from "@/data/portfolio";
+import { useSyncExternalStore } from "react";
 
-/** Rotates through quotes by day (stable per build/revalidation, no hydration mismatch). */
-const pickQuote = () => QUOTES[Math.floor(Date.now() / 86_400_000) % QUOTES.length];
+const randomIndex = Math.floor(Math.random() * QUOTES.length);
+const subscribe = () => () => {};
 
+/** Server renders the first quote; the client swaps in a random one after hydration. */
 export function QuoteCard() {
-  const quote = pickQuote();
+  const index = useSyncExternalStore(
+    subscribe,
+    () => randomIndex,
+    () => 0,
+  );
+  const quote = QUOTES[index];
 
   return (
     <section id="quotes" aria-label="Quote" className="mx-auto flex max-w-200 flex-col items-center justify-center px-5 sm:px-8 md:px-0">

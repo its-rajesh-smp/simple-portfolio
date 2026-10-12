@@ -1,12 +1,6 @@
 import { ScribbleUnderline } from "@/components/icons/line-icons";
-import { HERO_TECH, PROFILE } from "@/data/portfolio";
-import { Fragment } from "react";
-import { TechChip } from "./tech-chip";
-
-const separator = (index: number) => {
-  if (index === HERO_TECH.length - 1) return null;
-  return index === HERO_TECH.length - 2 ? ", and " : ", ";
-};
+import { RichText } from "@/components/ui/rich-text";
+import { HERO_ABOUT, PROFILE } from "@/data/portfolio";
 
 export function HeroIntro() {
   return (
@@ -21,17 +15,13 @@ export function HeroIntro() {
         </span>
         <span className="text-content-subtle block max-w-full">{PROFILE.title}</span>
       </h1>
-      <p className="text-content-subtle space-y-6 px-1 py-2 pt-5 text-lg leading-8 sm:leading-relaxed">
-        I build modern, interactive web applications using{" "}
-        {HERO_TECH.map((tech, index) => (
-          <Fragment key={tech}>
-            <TechChip name={tech} />
-            {separator(index)}
-          </Fragment>
+      <div className="text-content-muted space-y-3 px-1 pt-5 text-base leading-relaxed">
+        {HERO_ABOUT.map((paragraph) => (
+          <p key={paragraph}>
+            <RichText value={paragraph} boldClassName="text-content font-medium" />
+          </p>
         ))}
-        , with a strong emphasis on clean UI, <span className="text-content font-medium">Performance</span>, and{" "}
-        <span className="text-content font-medium">User Experience</span>
-      </p>
+      </div>
     </div>
   );
 }

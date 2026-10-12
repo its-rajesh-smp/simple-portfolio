@@ -4,8 +4,6 @@ export interface SocialLink {
   kind: SocialKind;
   label: string;
   href: string;
-  /** Screenshot shown in a hover card above the icon (desktop only). */
-  preview?: string;
 }
 
 export interface SkillGroup {
@@ -26,8 +24,6 @@ export interface Experience {
   location: string;
   logo: ExperienceLogo;
   highlights: string[];
-  /** Shows live merged-PR count + latest merged PRs when expanded. */
-  livePrs?: boolean;
   link?: { href: string; label: string };
 }
 
@@ -67,4 +63,15 @@ export interface GuestbookEntry {
   avatar?: string;
   /** Highlighted with a badge ring (e.g. notable visitors). */
   featured?: boolean;
+}
+
+export interface Recommendation {
+  id: string;
+  name: string;
+  /** Current title, e.g. "CTO at VAll". */
+  headline: string;
+  /** How they know me. */
+  relation: string;
+  /** Paragraphs of the recommendation. */
+  message: string[];
 }

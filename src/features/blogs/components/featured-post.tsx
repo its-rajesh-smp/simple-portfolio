@@ -1,12 +1,11 @@
 import type { BlogPost } from "@/types/blog";
 import Image from "next/image";
-import Link from "next/link";
 import { PostMeta } from "./post-meta";
 
 export function FeaturedPost({ post }: { post: BlogPost }) {
   return (
     <article>
-      <Link href={`/blogs/${post.slug}`} className="group ed-stack">
+      <a href={post.externalUrl} target="_blank" rel="noopener noreferrer" className="group ed-stack">
         <figure className="ed-figure">
           <Image
             src={post.image}
@@ -22,7 +21,7 @@ export function FeaturedPost({ post }: { post: BlogPost }) {
           <h3 className="ed-heading-24 group-hover:underline group-hover:decoration-1 group-hover:underline-offset-4">{post.title}</h3>
           <p className="ed-lede">{post.description}</p>
         </div>
-      </Link>
+      </a>
     </article>
   );
 }

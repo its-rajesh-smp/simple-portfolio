@@ -1,14 +1,11 @@
 "use client";
 
-import type { PullRequest } from "@/features/github/types/github";
-import { cn } from "@/lib/utils";
+import { RichText } from "@/components/ui/rich-text";
 import type { Experience } from "@/types/portfolio";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
-import type { ReactNode } from "react";
 import { ExperienceLogo } from "./experience-logo";
-import { LatestMerged } from "./latest-merged";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -16,20 +13,20 @@ interface ExperienceItemProps {
   item: Experience;
   open: boolean;
   onToggle: () => void;
-  mergedCount: number;
-  recentMerged: PullRequest[];
 }
 
-function Highlight({ children }: { children: ReactNode }) {
+function Highlight({ text }: { text: string }) {
   return (
     <li className="text-content-secondary flex gap-3 text-sm leading-relaxed">
       <span className="bg-content-subtle mt-2 size-1 shrink-0 rounded-full" aria-hidden="true" />
-      <span>{children}</span>
+      <span>
+        <RichText value={text} boldClassName="text-content font-semibold" />
+      </span>
     </li>
   );
 }
 
-export function ExperienceItem({ item, open, onToggle, mergedCount, recentMerged }: ExperienceItemProps) {
+export function ExperienceItem({ item, open, onToggle }: ExperienceItemProps) {
   const panelId = `experience-${item.id}`;
 
   return (
@@ -39,10 +36,7 @@ export function ExperienceItem({ item, open, onToggle, mergedCount, recentMerged
         onClick={onToggle}
         aria-expanded={open}
         aria-controls={panelId}
-        className={cn(
-          "hover:bg-surface-strong/15 flex w-full cursor-pointer items-center gap-3 px-4 py-4 text-left transition-colors sm:gap-4 sm:px-6 sm:py-5",
-          open && "bg-surface-strong/10",
-        )}
+        className="flex w-full cursor-pointer items-center gap-3 py-3 text-left sm:gap-4"
       >
         <span className="border-line text-content grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-full border p-[7px]">
           <ExperienceLogo logo={item.logo} />
@@ -71,21 +65,14 @@ export function ExperienceItem({ item, open, onToggle, mergedCount, recentMerged
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1, transition: { height: { duration: 0.3, ease: EASE }, opacity: { duration: 0.25, ease: EASE } } }}
             exit={{ height: 0, opacity: 0, transition: { height: { duration: 0.2, ease: EASE }, opacity: { duration: 0.15, ease: EASE } } }}
-            className="bg-surface-strong/10 overflow-hidden"
+            className="overflow-hidden"
           >
-            <div className="px-4 pb-5 sm:px-6 sm:pb-6 sm:pl-20">
+            <div className="pb-4">
               <ul className="space-y-3">
-                {item.livePrs && mergedCount > 0 && (
-                  <Highlight>
-                    Merged <span className="text-content font-bold">{mergedCount}</span> PRs into live open source codebases —
-                    bug patches, fixes, and UX improvements.
-                  </Highlight>
-                )}
                 {item.highlights.map((highlight) => (
-                  <Highlight key={highlight}>{highlight}</Highlight>
+                  <Highlight key={highlight} text={highlight} />
                 ))}
               </ul>
-              {item.livePrs && recentMerged.length > 0 && <LatestMerged pullRequests={recentMerged} />}
               {item.link && (
                 <Link
                   href={item.link.href}

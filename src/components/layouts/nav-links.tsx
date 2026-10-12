@@ -18,9 +18,15 @@ export function NavLinks() {
         return (
           <li key={link.href} className="relative">
             {active && <span aria-hidden="true" className="bg-content absolute -top-2 left-1/2 size-1 -translate-x-1/2 rounded-full" />}
-            <Link href={link.href} aria-current={active ? "page" : undefined} className={cn("hover:underline")}>
-              {link.label}
-            </Link>
+            {"external" in link ? (
+              <a href={link.href} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                {link.label}
+              </a>
+            ) : (
+              <Link href={link.href} aria-current={active ? "page" : undefined} className={cn("hover:underline")}>
+                {link.label}
+              </Link>
+            )}
           </li>
         );
       })}

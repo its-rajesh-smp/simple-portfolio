@@ -43,9 +43,15 @@ export function MobileMenu() {
           >
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:bg-surface-strong/30 block rounded-lg px-3 py-2 text-sm">
-                  {link.label}
-                </Link>
+                {"external" in link ? (
+                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="hover:bg-surface-strong/30 block rounded-lg px-3 py-2 text-sm">
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link href={link.href} className="hover:bg-surface-strong/30 block rounded-lg px-3 py-2 text-sm">
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </motion.ul>

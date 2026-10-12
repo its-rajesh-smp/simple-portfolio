@@ -1,8 +1,14 @@
 import { parseBold } from "@/utils/rich-text";
 
 /** Renders text containing **bold** markers. */
-export function RichText({ value }: { value: string }) {
+export function RichText({ value, boldClassName }: { value: string; boldClassName?: string }) {
   return parseBold(value).map((segment, index) =>
-    segment.bold ? <strong key={index}>{segment.text}</strong> : segment.text,
+    segment.bold ? (
+      <strong key={index} className={boldClassName}>
+        {segment.text}
+      </strong>
+    ) : (
+      segment.text
+    ),
   );
 }

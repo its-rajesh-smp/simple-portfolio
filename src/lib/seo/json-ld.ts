@@ -116,7 +116,7 @@ export function getBlogIndexJsonLd() {
     blogPost: BLOG_POSTS.map((post) => ({
       "@type": "BlogPosting",
       headline: post.title,
-      url: `${PROFILE.url}/blogs/${post.slug}`,
+      url: post.externalUrl,
       datePublished: post.publishedAt,
       image: post.image,
     })),
