@@ -11,7 +11,7 @@ const pixelArt = "object-cover [image-rendering:pixelated]";
  */
 export function HeroBanner() {
   return (
-    <div data-petal-source className="mask-fade-bottom relative -mx-5 mb-2 aspect-[8/3] sm:-mx-8 sm:aspect-auto sm:h-80 md:-mx-[25px]">
+    <div data-petal-source className="mask-fade-bottom relative -mx-5 mb-2 aspect-[8/3] sm:-mx-8 sm:aspect-auto sm:h-80 md:-mx-[22px]">
       <Image src={PROFILE.heroImage.day} alt="" fill priority unoptimized sizes="850px" className={`${pixelArt} dark:hidden`} />
       <Image src={PROFILE.heroImage.night} alt="" fill priority unoptimized sizes="850px" className={`${pixelArt} hidden dark:block`} />
     </div>

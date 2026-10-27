@@ -10,10 +10,10 @@ import { PROFILE } from "@/data/portfolio";
 import { NOINDEX } from "@/lib/seo/indexing";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
-import { Caveat, Geist, Geist_Mono, Hanken_Grotesk } from "next/font/google";
+import { Caveat, Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
-const hanken = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-hanken" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
@@ -76,7 +76,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${hanken.variable} ${geist.variable} ${geistMono.variable} ${caveat.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${geist.variable} ${geistMono.variable} ${caveat.variable} font-sans antialiased`}>
         <AppProviders>
           <GuideLines />
           <Navbar />

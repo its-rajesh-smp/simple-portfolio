@@ -15,7 +15,7 @@
   --surface-strong: #e5e5e5;
   --surface-float: #fff;
   --surface-inverted: #171717;
-  --content: #171717;
+  --content: #08090a;
   --content-secondary: #525252;
   --content-muted: #737373;
   --content-subtle: #a3a3a3;
@@ -51,7 +51,7 @@
   --terminal-muted: #a3a3a3;
   --shadow-hard: #00000026;
   --elev-float: 0 24px 60px #0000001f;
-  --guide-line: var(--line-strong);
+  --guide-line: var(--surface); /* was var(--line-strong) — lines hidden for now */
 }
 
 .dark {
@@ -61,7 +61,7 @@
   --surface-strong: #404040;
   --surface-float: #262626;
   --surface-inverted: #fff;
-  --content: #fff;
+  --content: #fafafa;
   --content-secondary: #a3a3a3;
   --content-muted: #737373;
   --content-subtle: #525252;
@@ -82,7 +82,7 @@
   --chip-line: #ffffff73;
   --shadow-hard: #161616;
   --elev-float: 0 24px 60px #00000080;
-  --guide-line: #272727;
+  --guide-line: var(--surface); /* was #272727 — lines hidden for now */
 }
 
 @theme inline {
@@ -122,7 +122,7 @@
   --color-ripple: var(--ripple);
   --color-ripple-active: var(--ripple-active);
 
-  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
   --font-geist: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-hand: var(--font-caveat), cursive;

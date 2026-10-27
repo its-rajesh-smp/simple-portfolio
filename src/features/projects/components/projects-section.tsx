@@ -9,7 +9,7 @@ const githubUrl = SOCIALS.find((social) => social.kind === "github")?.href ?? "h
 
 export function ProjectsSection() {
   return (
-    <section id="projects" aria-labelledby="projects-heading" className="mx-auto w-full max-w-200 px-5 sm:px-8 md:px-0">
+    <section id="projects" aria-labelledby="projects-heading" className="mx-auto w-full max-w-178 px-5 sm:px-8 md:px-0">
       <SectionHeading
         id="projects-heading"
         eyebrow="Featured"
@@ -24,10 +24,10 @@ export function ProjectsSection() {
       <div className="mt-8 flex justify-center">
         <Link
           href="/projects"
-          className="btn-chunky border-line-strong text-content-secondary group flex cursor-pointer items-center gap-2 rounded-full border py-2.5 ps-6 pe-5.5 text-sm font-medium"
+          className="btn-chunky border-line-strong text-content group flex cursor-pointer items-center gap-2 rounded-md border py-1.5 ps-3 pe-2.5 text-sm"
         >
           View All
-          <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+          <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
         </Link>
       </div>
     </section>

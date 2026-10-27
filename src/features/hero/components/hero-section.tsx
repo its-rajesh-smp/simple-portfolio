@@ -13,7 +13,7 @@ import { HeroIntro } from "./hero-intro";
 export function HeroSection() {
   return (
     <>
-      <section aria-label="Introduction" className="relative mx-auto w-full max-w-200 px-5 pt-10 sm:px-8 md:px-0">
+      <section aria-label="Introduction" className="relative mx-auto w-full max-w-178 px-5 pt-10 sm:px-8 md:px-0">
         {/* <BlurFade>
           <HeroBanner />
         </BlurFade> */}
