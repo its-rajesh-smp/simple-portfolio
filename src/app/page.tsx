@@ -1,6 +1,7 @@
 import { Content } from "@/components/layouts/content";
 import { SectionDivider } from "@/components/layouts/section-divider";
 import { JsonLd } from "@/components/ui/json-ld";
+import { EducationSection } from "@/features/education/components/education-section";
 import { ExperienceSection } from "@/features/experience/components/experience-section";
 import { HeroSection } from "@/features/hero/components/hero-section";
 import { ProjectsSection } from "@/features/projects/components/projects-section";
@@ -19,6 +20,8 @@ export default function HomePage() {
         <ExperienceSection />
         <SectionDivider />
         <ProjectsSection />
+        <SectionDivider />
+        <EducationSection />
         <SectionDivider />
         <RecommendationsSection />
       </main>

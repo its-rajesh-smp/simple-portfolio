@@ -1,5 +1,5 @@
 import { SORTED_POSTS } from "@/data/blogs";
-import { EXPERIENCES, PROFILE, PROJECTS, SKILL_GROUPS, SOCIALS } from "@/data/portfolio";
+import { EDUCATION, EXPERIENCES, PROFILE, PROJECTS, SKILL_GROUPS, SOCIALS } from "@/data/portfolio";
 
 const list = (items: readonly string[]) => items.map((item) => `- ${item}`).join("\n");
 
@@ -8,6 +8,8 @@ export function getPortfolioMarkdown() {
   const work = EXPERIENCES.map(
     (item) => `### ${item.role}, ${item.org}\n\n${item.period} | ${item.location}\n\n${list(item.highlights)}`,
   ).join("\n\n");
+
+  const education = EDUCATION.map((item) => `### ${item.school}\n\n${item.degree}\n\n${item.period}\n\n${item.href}`).join("\n\n");
 
   const projects = PROJECTS.map((project) => {
     const links = [project.link && `[Website](${project.link})`, project.githubLink && `[Source](${project.githubLink})`]
@@ -52,6 +54,10 @@ ${SKILL_GROUPS.map(({ category, core, others }) => `### ${category}\n\n${[...cor
 ## Experience
 
 ${work}
+
+## Education
+
+${education}
 
 ## Projects
 

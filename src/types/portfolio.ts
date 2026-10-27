@@ -26,6 +26,15 @@ export interface Experience {
   link?: { href: string; label: string };
 }
 
+export interface Education {
+  school: string;
+  href: string;
+  degree: string;
+  period: string;
+  /** School logo (remote host must be allowed in next.config `images.remotePatterns`). Falls back to the initial. */
+  logoUrl?: string;
+}
+
 export type ProjectStatus = "Live" | "Beta" | "Archived";
 
 export interface Project {

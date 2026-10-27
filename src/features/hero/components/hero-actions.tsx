@@ -1,8 +1,11 @@
 "use client";
 
-import { PROFILE, RESUME } from "@/data/portfolio";
+import { SOCIAL_ICONS } from "@/components/icons/social-icons";
+import { PROFILE, RESUME, SOCIALS } from "@/data/portfolio";
 import { track } from "@/lib/analytics";
 import { FileText, Send } from "lucide-react";
+
+const socials = SOCIALS.filter((social) => social.kind !== "email");
 
 export function HeroActions() {
   return (
@@ -23,6 +26,24 @@ export function HeroActions() {
       >
         <Send size={16} aria-hidden="true" /> Get in touch
       </a>
+      <ul className="ml-auto flex gap-2">
+        {socials.map((social) => {
+          const Icon = SOCIAL_ICONS[social.kind];
+          return (
+            <li key={social.kind}>
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer me"
+                aria-label={social.label}
+                className="btn-chunky border-line-strong text-content flex size-8.5 items-center justify-center rounded-md border"
+              >
+                <Icon className="size-5" />
+              </a>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }

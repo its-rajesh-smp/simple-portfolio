@@ -2,6 +2,7 @@
  * Portfolio content. Anything marked `TODO(dummy)` is placeholder content to replace later.
  */
 import type {
+  Education,
   Experience,
   Recommendation,
   Friend,
@@ -45,7 +46,10 @@ export const PROFILE = {
   heroImage: { day: "/hero-pixel-day.gif", night: "/hero-pixel-night.gif" },
   email: "its.rajeshsmp@gmail.com",
   tel: "+918942908195",
+  telDisplay: "+91 89429 08195",
   location: "West Bengal, India",
+  /** IANA zone for the hero's live local-time row. */
+  timeZone: "Asia/Kolkata",
   currentCompany: { name: "VAll", url: "https://vallindia.com/" },
   /** Shown next to the Experience heading. */
   yearsOfExperience: 3,
@@ -148,6 +152,30 @@ export const EXPERIENCES: Experience[] = [
       "**Redesigned** the admin and student dashboards **(31 pages)** using **Tailwind CSS** and **Material UI**.",
       "Delivered multiple end-to-end features, ensuring system reliability and production readiness.",
     ],
+  },
+];
+
+export const EDUCATION: Education[] = [
+  {
+    school: "Sharpener",
+    href: "https://www.sharpener.tech/",
+    degree: "Web Development (MERN)",
+    period: "2022 – 2023",
+    logoUrl: "https://sharpener.blob.core.windows.net/landing/logo/sharpenerLogo.png",
+  },
+  {
+    school: "Raipur Government Polytechnic",
+    href: "https://polytechnic.wbtetsd.gov.in/raipurgovpoly/",
+    degree: "Diploma in Mechanical Engineering",
+    period: "2018 – 2021",
+    // The old Wikipedia logo was deleted; add a working URL here (and its host in next.config).
+  },
+  {
+    school: "Simlapal M.M High School",
+    href: "https://www.justdial.com/Bankura/Simlapal-M-M-High-School-Simlapal/9999P3242-3242-180821025658-N8Y6_BZDET",
+    degree: "Higher Secondary Education (10+2) Science",
+    period: "2018",
+    logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdyjCF6BQdTsrd4Fgmb3viW4WcvzzqX2qIfQ&s",
   },
 ];
 

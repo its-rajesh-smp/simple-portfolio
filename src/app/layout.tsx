@@ -3,7 +3,7 @@ import { Content } from "@/components/layouts/content";
 import { Footer } from "@/components/layouts/footer/footer";
 import { GuideLines } from "@/components/layouts/guide-lines";
 import { Navbar } from "@/components/layouts/navbar";
-import { QuoteCard } from "@/components/layouts/quote-card";
+// import { QuoteCard } from "@/components/layouts/quote-card";
 import { SectionDivider } from "@/components/layouts/section-divider";
 import { AppProviders } from "@/components/providers/app-providers";
 import { PROFILE } from "@/data/portfolio";
@@ -82,8 +82,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Navbar />
           {children}
           <Content>
-            <SectionDivider />
-            <QuoteCard />
+            {/* <SectionDivider />
+            <QuoteCard /> */}
             <SectionDivider />
             <Footer />
           </Content>

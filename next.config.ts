@@ -38,6 +38,8 @@ const nextConfig: NextConfig = {
       // Company logos in the Experience section
       { protocol: "https", hostname: "www.vallindia.com" },
       { protocol: "https", hostname: "sharpener.blob.core.windows.net" },
+      // School logos in the Education section
+      { protocol: "https", hostname: "encrypted-tbn0.gstatic.com" },
     ],
   },
 };
