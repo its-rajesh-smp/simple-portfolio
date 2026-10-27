@@ -51,7 +51,7 @@ export function FloatingDock() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Resume"
-              onClick={() => track("Resume Opened", { source: "Dock" })}
+              onClick={() => track("Resume Downloaded", { source: "Nav Button", link: RESUME.url, name: "Resume" })}
               className={itemClass}
             >
               <FileText className="size-4" />
@@ -68,7 +68,7 @@ export function FloatingDock() {
                   target={external ? "_blank" : undefined}
                   rel={external ? "noopener noreferrer me" : undefined}
                   aria-label={label}
-                  onClick={() => track("Nav Link Clicked", { source: "Dock", name: label })}
+                  onClick={() => track("Nav Link Clicked", { source: "Nav Button", link: href, name: label })}
                   className={itemClass}
                 >
                   <Icon className="size-4" />
@@ -79,7 +79,15 @@ export function FloatingDock() {
           })}
           <Separator />
           <DockIcon>
-            <button type="button" onClick={toggleTheme} aria-label="Toggle theme" className={itemClass}>
+            <button
+              type="button"
+              onClick={(event) => {
+                track("Theme Toggled", { source: "Theme Toggle Button" });
+                toggleTheme(event);
+              }}
+              aria-label="Toggle theme"
+              className={itemClass}
+            >
               <span className="relative block size-4">
                 <Sun className={`${themeIcon} size-4 scale-0 -rotate-[200deg] opacity-0 dark:scale-100 dark:rotate-0 dark:opacity-100`} />
                 <Moon className={`${themeIcon} size-4 scale-100 rotate-0 opacity-100 dark:scale-0 dark:rotate-[200deg] dark:opacity-0`} />

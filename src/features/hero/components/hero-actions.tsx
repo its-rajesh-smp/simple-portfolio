@@ -15,7 +15,7 @@ export function HeroActions() {
         href={RESUME.url}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => track("Resume Opened", { source: "Hero" })}
+        onClick={() => track("Resume Downloaded", { source: "Resume Button" })}
         className="btn-chunky-primary border-line-inverted flex items-center gap-2 rounded-md border py-1.5 ps-2 pe-2.5 text-sm whitespace-nowrap sm:ps-2.5 sm:pe-3"
       >
         <FileText size={16} aria-hidden="true" className="max-[379px]:hidden" /> Resume / CV
@@ -38,6 +38,7 @@ export function HeroActions() {
                 target="_blank"
                 rel="noopener noreferrer me"
                 aria-label={social.label}
+                onClick={() => track("Nav Link Clicked", { source: "Hero Social", link: social.href, name: social.label })}
                 className="btn-chunky border-line-strong text-content flex size-8.5 items-center justify-center rounded-md border"
               >
                 {/* Lucide's 2px stroke reads heavier than the Phosphor GitHub mark; thin it to match. */}
