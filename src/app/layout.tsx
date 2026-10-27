@@ -77,7 +77,8 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${geist.variable} ${geistMono.variable} ${caveat.variable} font-sans antialiased`}>
+      {/* suppressHydrationWarning: browser extensions add attributes to <body> (e.g. style="cursor:auto") before hydration */}
+      <body suppressHydrationWarning className={`${inter.variable} ${geist.variable} ${geistMono.variable} ${caveat.variable} font-sans antialiased`}>
         <AppProviders>
           <GuideLines />
           {/* <Navbar /> */}
