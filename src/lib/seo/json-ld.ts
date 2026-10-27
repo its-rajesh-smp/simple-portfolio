@@ -1,4 +1,4 @@
-import { PROFILE, PROJECTS, SOCIALS } from "@/data/portfolio";
+import { EDUCATION, PROFILE, PROJECTS, SOCIALS } from "@/data/portfolio";
 
 const ALTERNATE_NAMES = PROFILE.alternateNames;
 
@@ -41,9 +41,8 @@ const person = {
     "Agentic AI",
     "Open Source",
   ],
-  sameAs: SOCIALS.filter((social) => social.kind !== "email").map(
-    (social) => social.href,
-  ),
+  alumniOf: EDUCATION.map((item) => ({ "@type": "EducationalOrganization", name: item.school, url: item.href })),
+  sameAs: [...SOCIALS.filter((social) => social.kind !== "email").map((social) => social.href), PROFILE.mediumUrl],
 };
 
 const projectList = {

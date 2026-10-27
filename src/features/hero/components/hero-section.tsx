@@ -20,7 +20,7 @@ export function HeroSection() {
         <BlurFade delay={BLUR_FADE_STEP * 2}>
           {/* <HeroAvatar /> */}
           <span className="bg-brand flex size-25 shrink-0 overflow-hidden rounded-full">
-            <Image src={PROFILE.avatarUrl} alt={PROFILE.handle} width={100} height={100} priority className="h-full w-full object-cover" />
+            <Image src={PROFILE.avatarUrl} alt={PROFILE.name} width={100} height={100} priority className="h-full w-full object-cover" />
           </span>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_STEP * 3}>
