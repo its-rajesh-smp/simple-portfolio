@@ -1,0 +1,19 @@
+import { BLUR_FADE_STEP, BlurFade } from "@/components/ui/blur-fade";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { SKILL_GROUPS } from "@/data/portfolio";
+import { SkillGroup } from "./skill-group";
+
+export function TechStackSection() {
+  return (
+    <section aria-labelledby="tech-stack-heading" className="mx-auto w-full max-w-178 px-5 sm:px-8 md:px-0">
+      <SectionHeading id="tech-stack-heading" eyebrow="Expertise" title="Tech Stack & Tools" />
+      <div className="flex flex-col gap-4">
+        {SKILL_GROUPS.map((group, index) => (
+          <BlurFade key={group.category} inView delay={BLUR_FADE_STEP * (index + 1)}>
+            <SkillGroup group={group} />
+          </BlurFade>
+        ))}
+      </div>
+    </section>
+  );
+}

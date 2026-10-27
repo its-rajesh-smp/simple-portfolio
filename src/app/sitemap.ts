@@ -1,25 +1,18 @@
-import { DATA } from "@/data/resume";
+import { PROFILE } from "@/data/portfolio";
 import type { MetadataRoute } from "next";
+
+const lastModified = new Date(PROFILE.lastUpdatedAt);
+const page = (path: string, priority: number, changeFrequency: "weekly" | "monthly" = "monthly") => ({
+  url: `${PROFILE.url}${path}`,
+  lastModified,
+  changeFrequency,
+  priority,
+});
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    {
-      url: DATA.url,
-      lastModified: new Date("2026-04-24"),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-    {
-      url: `${DATA.url}/markdown`,
-      lastModified: new Date("2026-04-24"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${DATA.url}/llms.txt`,
-      lastModified: new Date("2026-04-24"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
+    page("", 1),
+    page("/markdown", 0.5),
+    page("/llms.txt", 0.5),
   ];
 }
