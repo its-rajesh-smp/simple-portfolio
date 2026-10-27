@@ -1,8 +1,9 @@
-import { BottomFade } from "@/components/layouts/bottom-fade";
+// import { BottomFade } from "@/components/layouts/bottom-fade";
 import { Content } from "@/components/layouts/content";
+import { FloatingDock } from "@/components/layouts/dock/floating-dock";
 import { Footer } from "@/components/layouts/footer/footer";
 import { GuideLines } from "@/components/layouts/guide-lines";
-import { Navbar } from "@/components/layouts/navbar";
+// import { Navbar } from "@/components/layouts/navbar";
 // import { QuoteCard } from "@/components/layouts/quote-card";
 import { SectionDivider } from "@/components/layouts/section-divider";
 import { AppProviders } from "@/components/providers/app-providers";
@@ -79,15 +80,17 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${inter.variable} ${geist.variable} ${geistMono.variable} ${caveat.variable} font-sans antialiased`}>
         <AppProviders>
           <GuideLines />
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
-          <Content>
+          {/* Bottom padding keeps the footer clear of the floating dock */}
+          <Content className="pb-24">
             {/* <SectionDivider />
             <QuoteCard /> */}
             <SectionDivider />
             <Footer />
           </Content>
-          <BottomFade />
+          {/* <BottomFade /> */}
+          <FloatingDock />
         </AppProviders>
         <Analytics />
       </body>

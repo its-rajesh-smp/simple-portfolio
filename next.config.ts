@@ -1,14 +1,17 @@
 import type { NextConfig } from "next";
 import { BLOG_POSTS } from "./src/data/blogs";
-import { RESUME } from "./src/data/portfolio";
+import { PROFILE, RESUME } from "./src/data/portfolio";
 import { CONTENT_SIGNAL, NOINDEX, X_ROBOTS_TAG } from "./src/lib/seo/indexing";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  // The resume and blog articles live externally (Google Drive / Medium); keep old links working.
+  // The resume and blogs live externally (Google Drive / Medium); keep old links working.
+  // /projects was folded into the homepage section.
   async redirects() {
     return [
       { source: "/resume", destination: RESUME.url, permanent: false },
+      { source: "/blogs", destination: PROFILE.mediumUrl, permanent: false },
+      { source: "/projects", destination: "/#projects", permanent: false },
       ...BLOG_POSTS.map((post) => ({ source: `/blogs/${post.slug}`, destination: post.externalUrl, permanent: false })),
     ];
   },

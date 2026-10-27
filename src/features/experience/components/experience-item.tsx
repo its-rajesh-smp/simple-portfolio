@@ -2,7 +2,7 @@
 
 import { RichText } from "@/components/ui/rich-text";
 import type { Experience } from "@/types/portfolio";
-import { ArrowUpRight, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 
@@ -30,18 +30,32 @@ export function ExperienceItem({ item, open, onToggle }: ExperienceItemProps) {
 
   return (
     <div>
-      <button
-        type="button"
-        onClick={onToggle}
-        aria-expanded={open}
-        aria-controls={panelId}
-        className="flex w-full cursor-pointer items-center gap-3 py-3 text-left sm:gap-4"
-      >
-        <span className="border-line h-10 w-10 shrink-0 overflow-hidden rounded-full border bg-white">
+      {/* The whole row toggles (a full-size button behind the content); only the name is a link on top of it. */}
+      <div className="relative flex w-full items-start gap-3 py-3 text-left sm:items-center sm:gap-4">
+        <button
+          type="button"
+          onClick={onToggle}
+          aria-expanded={open}
+          aria-controls={panelId}
+          aria-label={`${open ? "Hide" : "Show"} ${item.org} details`}
+          className="absolute inset-0 cursor-pointer"
+        />
+        <span className="border-line pointer-events-none h-10 w-10 shrink-0 overflow-hidden rounded-full border bg-white">
           <Image src={item.logoUrl} alt={`${item.org} logo`} width={40} height={40} className="h-full w-full object-cover" />
         </span>
-        <span className="min-w-0 flex-1">
-          <span className="text-content block text-base leading-snug font-bold">{item.org}</span>
+        <span className="pointer-events-none min-w-0 flex-1 [&_a]:pointer-events-auto">
+          {item.link ? (
+            <a
+              href={item.link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-content relative z-10 block w-fit text-base leading-snug font-bold hover:underline hover:underline-offset-4"
+            >
+              {item.org}
+            </a>
+          ) : (
+            <span className="text-content block text-base leading-snug font-bold">{item.org}</span>
+          )}
           <span className="text-content-muted mt-0.5 block text-[15px] leading-snug">{item.role}</span>
           <span className="mt-2 flex items-center gap-2 sm:hidden">
             <span className="text-content-subtle font-mono text-[10px] tracking-widest uppercase">{item.location}</span>
@@ -49,14 +63,14 @@ export function ExperienceItem({ item, open, onToggle }: ExperienceItemProps) {
             <span className="text-content-secondary text-xs whitespace-nowrap">{item.period}</span>
           </span>
         </span>
-        <span className="hidden shrink-0 flex-col items-end text-right sm:flex">
+        <span className="pointer-events-none hidden shrink-0 flex-col items-end text-right sm:flex">
           <span className="text-content-secondary text-[15px] whitespace-nowrap">{item.period}</span>
           <span className="text-content-subtle mt-0.5 font-mono text-[11px] tracking-widest uppercase">{item.location}</span>
         </span>
-        <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2, ease: EASE }} className="text-content-muted shrink-0">
+        <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2, ease: EASE }} className="text-content-muted pointer-events-none shrink-0 self-center">
           <ChevronDown size={16} />
         </motion.span>
-      </button>
+      </div>
 
       <AnimatePresence initial={false}>
         {open && (
@@ -73,17 +87,6 @@ export function ExperienceItem({ item, open, onToggle }: ExperienceItemProps) {
                   <Highlight key={highlight} text={highlight} />
                 ))}
               </ul>
-              {item.link && (
-                <a
-                  href={item.link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group text-content-muted hover:text-content mt-5 inline-flex items-center gap-1 font-mono text-[11px] font-bold tracking-widest uppercase transition-colors"
-                >
-                  {item.link.label}
-                  <ArrowUpRight size={12} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </a>
-              )}
             </div>
           </motion.div>
         )}

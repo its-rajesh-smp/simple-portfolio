@@ -1,7 +1,8 @@
 "use client";
 
+import { LinkedinLineIcon } from "@/components/icons/line-icons";
 import type { Recommendation } from "@/types/portfolio";
-import { ArrowUpRight, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 
@@ -19,28 +20,36 @@ export function RecommendationItem({ recommendation, open, onToggle }: Recommend
 
   return (
     <div>
-      <button
-        type="button"
-        onClick={onToggle}
-        aria-expanded={open}
-        aria-controls={panelId}
-        className="flex w-full cursor-pointer items-center gap-3 py-3 text-left sm:gap-4"
-      >
-        <span className="border-line bg-surface-strong h-10 w-10 shrink-0 overflow-hidden rounded-full border">
+      {/* The whole row toggles (a full-size button behind the content); only the name is a link on top of it. */}
+      <div className="relative flex w-full items-start gap-3 py-3 text-left sm:items-center sm:gap-4">
+        <button
+          type="button"
+          onClick={onToggle}
+          aria-expanded={open}
+          aria-controls={panelId}
+          aria-label={`${open ? "Hide" : "Show"} ${recommendation.name}'s recommendation`}
+          className="absolute inset-0 cursor-pointer"
+        />
+        <span className="border-line bg-surface-strong pointer-events-none h-10 w-10 shrink-0 overflow-hidden rounded-full border">
           <Image src={recommendation.image} alt="" width={40} height={40} className="h-full w-full object-cover" />
         </span>
-        <span className="min-w-0 flex-1">
-          <span className="text-content block text-base leading-snug font-bold">{recommendation.name}</span>
+        <span className="pointer-events-none min-w-0 flex-1">
+          <a
+            href={recommendation.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-content pointer-events-auto relative z-10 flex w-fit items-center gap-1.5 text-base leading-snug font-bold hover:underline hover:underline-offset-4"
+          >
+            {recommendation.name}
+            <LinkedinLineIcon className="size-4 shrink-0 text-blue-500" />
+          </a>
           <span className="text-content-muted mt-0.5 block text-[15px] leading-snug">{recommendation.headline}</span>
-          <span className="text-content-subtle mt-2 block font-mono text-[10px] tracking-widest uppercase sm:hidden">{recommendation.relation}</span>
+          <span className="text-content-muted mt-1 block text-sm">{recommendation.relation}</span>
         </span>
-        <span className="text-content-subtle hidden shrink-0 text-right font-mono text-[11px] tracking-widest uppercase sm:block">
-          {recommendation.relation}
-        </span>
-        <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2, ease: EASE }} className="text-content-muted shrink-0">
+        <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2, ease: EASE }} className="text-content-muted pointer-events-none shrink-0 self-center">
           <ChevronDown size={16} />
         </motion.span>
-      </button>
+      </div>
 
       <AnimatePresence initial={false}>
         {open && (
@@ -51,22 +60,16 @@ export function RecommendationItem({ recommendation, open, onToggle }: Recommend
             exit={{ height: 0, opacity: 0, transition: { height: { duration: 0.2, ease: EASE }, opacity: { duration: 0.15, ease: EASE } } }}
             className="overflow-hidden"
           >
-            <div className="pb-4">
-              <div className="text-content-secondary space-y-3 text-[15px] leading-relaxed">
-                {recommendation.message.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-              <a
-                href={recommendation.linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group text-content-muted hover:text-content mt-5 inline-flex items-center gap-1 font-mono text-[11px] font-bold tracking-widest uppercase transition-colors"
-              >
-                LinkedIn profile
-                <ArrowUpRight size={12} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
-            </div>
+            {/* Like v1: a divider, smaller muted text indented under the name, wrapped in quotes. */}
+            <blockquote className="text-content-muted mb-4 space-y-6 border-t pt-4 text-sm leading-6 sm:ml-14">
+              {recommendation.message.map((paragraph, index, all) => (
+                <p key={paragraph}>
+                  {index === 0 && "\" "}
+                  {paragraph}
+                  {index === all.length - 1 && " \""}
+                </p>
+              ))}
+            </blockquote>
           </motion.div>
         )}
       </AnimatePresence>

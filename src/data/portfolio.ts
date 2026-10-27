@@ -54,6 +54,8 @@ export const PROFILE = {
   /** Shown next to the Experience heading. */
   yearsOfExperience: 3,
   githubUsername: "its-rajesh-smp",
+  /** Blogs live on Medium; /blogs redirects here. */
+  mediumUrl: "https://medium.com/@its.rajeshsmp",
   footerTagline: "Open to collaborations",
   visitorCount: 1024, // TODO(dummy)
   lastUpdatedAt: "2026-10-26",
@@ -189,7 +191,8 @@ export const RECOMMENDATIONS: Recommendation[] = [
     linkedinUrl: "https://www.linkedin.com/in/aneesh-relan-046737119/",
     message: [
       "I've had the pleasure of working with Rajesh, and what stands out most is his ability to quickly adapt and thrive in new and evolving areas. He has taken on AI-first projects and ramped up impressively, demonstrating strong curiosity and a willingness to learn.",
-      "Rajesh is highly dependable when it comes to driving projects end-to-end. He manages multiple features with ownership, handles changing requirements with ease, and consistently delivers with responsibility and focus.",
+      "Rajesh is highly dependable when it comes to driving projects end-to-end.",
+      "He manages multiple features with ownership, handles changing requirements with ease, and consistently delivers with responsibility and focus.",
       "He would be a valuable asset to any team looking for someone who combines adaptability, learning agility, and execution excellence.",
     ],
   },
@@ -216,7 +219,8 @@ export const RECOMMENDATIONS: Recommendation[] = [
     message: [
       "I worked with Rajesh when he was an SDE 1 on my team, and he's a really solid engineer.",
       "He has strong problem-solving skills, picks up new concepts quickly, and is comfortable working across the stack. Once he takes ownership of something, you can rely on him to get it done properly without much hand-holding.",
-      "He's sharp, consistent, and keeps improving his technical skills with every task. Would definitely recommend him for any engineering role.",
+      "He's sharp, consistent, and keeps improving his technical skills with every task.",
+      "Would definitely recommend him for any engineering role.",
     ],
   },
 ];

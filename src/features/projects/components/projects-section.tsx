@@ -1,8 +1,8 @@
 import { ArrowLink } from "@/components/ui/arrow-link";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { FEATURED_PROJECT_COUNT, PROJECTS, SOCIALS } from "@/data/portfolio";
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+// import { ArrowUpRight } from "lucide-react";
+// import Link from "next/link";
 import { ProjectGrid } from "./project-grid";
 
 const githubUrl = SOCIALS.find((social) => social.kind === "github")?.href ?? "https://github.com";
@@ -21,6 +21,7 @@ export function ProjectsSection() {
         }
       />
       <ProjectGrid projects={PROJECTS.slice(0, FEATURED_PROJECT_COUNT)} />
+      {/* /projects was removed — the grid above already lists every project.
       <div className="mt-8 flex justify-center">
         <Link
           href="/projects"
@@ -29,7 +30,7 @@ export function ProjectsSection() {
           View All
           <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 }

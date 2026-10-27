@@ -1,6 +1,4 @@
-import { SORTED_POSTS as BLOG_POSTS } from "@/data/blogs";
 import { PROFILE, PROJECTS, SOCIALS } from "@/data/portfolio";
-import type { BlogPost } from "@/types/blog";
 
 const ALTERNATE_NAMES = PROFILE.alternateNames;
 
@@ -108,51 +106,7 @@ export function getHomeJsonLd() {
   };
 }
 
-export function getBlogIndexJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    name: `Blogs by ${PROFILE.name}`,
-    url: `${PROFILE.url}/blogs`,
-    author: person,
-    blogPost: BLOG_POSTS.map((post) => ({
-      "@type": "BlogPosting",
-      headline: post.title,
-      url: post.externalUrl,
-      datePublished: post.publishedAt,
-      image: post.image,
-    })),
-  };
-}
-
-export function getBlogPostJsonLd(post: BlogPost) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.description,
-    image: post.image,
-    datePublished: post.publishedAt,
-    ...(post.updatedAt && { dateModified: post.updatedAt }),
-    url: `${PROFILE.url}/blogs/${post.slug}`,
-    keywords: post.tags.join(", "),
-    author: person,
-    ...(post.externalUrl && { sameAs: post.externalUrl }),
-  };
-}
-
 /** Safe JSON-LD serialisation for <script> (escapes `<`, per Next.js docs). */
 export function serializeJsonLd(data: unknown) {
   return JSON.stringify(data).replace(/</g, "\\u003c");
-}
-
-export function getProjectsJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: `Projects by ${PROFILE.name}`,
-    url: `${PROFILE.url}/projects`,
-    author: person,
-    mainEntity: projectList,
-  };
 }

@@ -12,8 +12,6 @@ const page = (path: string, priority: number, changeFrequency: "weekly" | "month
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     page("", 1),
-    page("/projects", 0.9),
-    page("/blogs", 0.9, "weekly"),
     page("/markdown", 0.5),
     page("/llms.txt", 0.5),
   ];
