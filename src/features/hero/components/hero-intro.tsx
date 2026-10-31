@@ -1,6 +1,10 @@
 // import { ScribbleUnderline } from "@/components/icons/line-icons";
+import { ClaudeIcon, OpenAIIcon } from "@/components/icons/tech-icons";
 import { RichText } from "@/components/ui/rich-text";
 import { HERO_ABOUT, PROFILE } from "@/data/portfolio";
+
+/** Bold phrases in HERO_ABOUT that get a logo in front. */
+const HERO_ICONS = { "Claude Code": ClaudeIcon, Codex: OpenAIIcon };
 
 export function HeroIntro() {
   return (
@@ -18,7 +22,7 @@ export function HeroIntro() {
       <div className="text-content-muted space-y-3 px-1 pt-5 text-base leading-relaxed sm:text-lg">
         {HERO_ABOUT.map((paragraph) => (
           <p key={paragraph}>
-            <RichText value={paragraph} boldClassName="text-content font-medium" />
+            <RichText value={paragraph} boldClassName="text-content font-medium" icons={HERO_ICONS} />
           </p>
         ))}
       </div>
