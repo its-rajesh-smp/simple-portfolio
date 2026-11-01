@@ -74,7 +74,7 @@ export const PROFILE = {
 
 export const RESUME = {
   /** Google Drive share link — the Resume nav tab, hero button and /resume redirect all open this. */
-  url: "https://drive.google.com/file/d/1Ij65Dnh4Bc6eH9dNZU8fhnmVKOvfFccf/view?usp=sharing",
+  url: "https://drive.google.com/file/d/1cmMBk3PRCUhnRylpNONHXtMh-nQK83Ey/view?usp=sharing",
 } as const;
 
 /** Paragraphs under the hero tagline; **phrases** render bold. */
