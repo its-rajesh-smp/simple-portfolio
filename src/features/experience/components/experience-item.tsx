@@ -1,9 +1,10 @@
 "use client";
 
 import { RichText } from "@/components/ui/rich-text";
+import { CollapsiblePanel } from "@/components/ui/collapsible-panel";
 import type { Experience } from "@/types/portfolio";
 import { ChevronDown } from "lucide-react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import Image from "next/image";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -72,25 +73,15 @@ export function ExperienceItem({ item, open, onToggle }: ExperienceItemProps) {
         </motion.span>
       </div>
 
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            id={panelId}
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1, transition: { height: { duration: 0.3, ease: EASE }, opacity: { duration: 0.25, ease: EASE } } }}
-            exit={{ height: 0, opacity: 0, transition: { height: { duration: 0.2, ease: EASE }, opacity: { duration: 0.15, ease: EASE } } }}
-            className="overflow-hidden"
-          >
-            <div className="pb-4">
-              <ul className="space-y-3">
-                {item.highlights.map((highlight) => (
-                  <Highlight key={highlight} text={highlight} />
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <CollapsiblePanel id={panelId} open={open}>
+        <div className="pb-4">
+          <ul className="space-y-3">
+            {item.highlights.map((highlight) => (
+              <Highlight key={highlight} text={highlight} />
+            ))}
+          </ul>
+        </div>
+      </CollapsiblePanel>
     </div>
   );
 }

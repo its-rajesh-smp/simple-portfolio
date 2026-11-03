@@ -1,9 +1,10 @@
 "use client";
 
 import { LinkedinLineIcon } from "@/components/icons/line-icons";
+import { CollapsiblePanel } from "@/components/ui/collapsible-panel";
 import type { Recommendation } from "@/types/portfolio";
 import { ChevronDown } from "lucide-react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import Image from "next/image";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -51,28 +52,18 @@ export function RecommendationItem({ recommendation, open, onToggle }: Recommend
         </motion.span>
       </div>
 
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            id={panelId}
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1, transition: { height: { duration: 0.3, ease: EASE }, opacity: { duration: 0.25, ease: EASE } } }}
-            exit={{ height: 0, opacity: 0, transition: { height: { duration: 0.2, ease: EASE }, opacity: { duration: 0.15, ease: EASE } } }}
-            className="overflow-hidden"
-          >
-            {/* Like v1: a divider, smaller muted text indented under the name, wrapped in quotes. */}
-            <blockquote className="text-content-muted mb-4 space-y-6 border-t pt-4 text-sm leading-6 sm:ml-14">
-              {recommendation.message.map((paragraph, index, all) => (
-                <p key={paragraph}>
-                  {index === 0 && "\" "}
-                  {paragraph}
-                  {index === all.length - 1 && " \""}
-                </p>
-              ))}
-            </blockquote>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <CollapsiblePanel id={panelId} open={open}>
+        {/* Like v1: a divider, smaller muted text indented under the name, wrapped in quotes. */}
+        <blockquote className="text-content-muted mb-4 space-y-6 border-t pt-4 text-sm leading-6 sm:ml-14">
+          {recommendation.message.map((paragraph, index, all) => (
+            <p key={paragraph}>
+              {index === 0 && "\" "}
+              {paragraph}
+              {index === all.length - 1 && " \""}
+            </p>
+          ))}
+        </blockquote>
+      </CollapsiblePanel>
     </div>
   );
 }
