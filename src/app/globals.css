@@ -51,7 +51,7 @@
   --terminal-muted: #a3a3a3;
   --shadow-hard: #00000026;
   --elev-float: 0 24px 60px #0000001f;
-  --guide-line: var(--surface); /* was var(--line-strong) — lines hidden for now */
+  --guide-line: transparent; /* was var(--line-strong) — lines hidden for now */
 }
 
 .dark {
@@ -82,7 +82,7 @@
   --chip-line: #ffffff73;
   --shadow-hard: #161616;
   --elev-float: 0 24px 60px #00000080;
-  --guide-line: var(--surface); /* was #272727 — lines hidden for now */
+  --guide-line: transparent; /* was #272727 — lines hidden for now */
 }
 
 @theme inline {

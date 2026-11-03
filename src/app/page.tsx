@@ -1,4 +1,5 @@
 import { Content } from "@/components/layouts/content";
+import { HeroSky } from "@/components/layouts/hero-sky";
 import { SectionDivider } from "@/components/layouts/section-divider";
 import { SectionRail } from "@/components/layouts/section-rail";
 import { JsonLd } from "@/components/ui/json-ld";
@@ -23,6 +24,7 @@ export default function HomePage() {
   return (
     <>
       {/* Outside <Content> so the md+ zoom doesn't skew its fixed positioning */}
+      <HeroSky />
       <SectionRail sections={SECTIONS} />
       <Content>
         <main id="main">
