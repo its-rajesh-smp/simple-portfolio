@@ -120,7 +120,8 @@ export const EXPERIENCES: Experience[] = [
     highlights: [
       "Established a reusable **design system** and **design skill** for the Ocean Friends **React Native** based mobile app and migrated **20+** screens; the system has since been adopted across other modules serving **7,000+** therapists and **20,000+** parents.",
       "Automated **EAS OTA** updates and version deployment through **GitHub Actions**, streamlining the mobile release workflow and app versioning. Set up multiple channels **(staging, early-access, production)** to make deployments reliable.",
-      "Building reliable **E2E app tests with Maestro**, covering **50+** test cases, and setting up infrastructure to run them before every PR merge to prevent bugs.",
+      "Led **E2E mobile testing with Maestro**, writing **50+** test cases and setting up **CI** to run them on every PR before merge, catching bugs before they reach production.",
+      "Implemented an in-app **feature flag system** for early-access releases to clinicians, centers, and their patients, now used by **50k** users and other teams.",
     ],
   },
   {
