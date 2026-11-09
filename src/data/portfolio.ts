@@ -328,17 +328,17 @@ export const PROJECTS: Project[] = [
     githubLink: "https://github.com/its-rajesh-smp/phasetype",
   },
   {
-    slug: "profilepad",
-    name: "ProfilePad",
-    tagline: "Portfolio Builder",
+    slug: "fitx",
+    name: "FitX",
+    tagline: "AI Personal Trainer",
     description:
-      "Create and manage professional portfolio websites with templates, real-time editing, and SEO built in.",
+      "Chat with an AI trainer to get a weekly workout plan, then change it just by asking. Tracks progress and remembers you.",
     image:
-      "https://res.cloudinary.com/dtgoeupid/image/upload/v1778432506/ProfilePad-05-10-2026_10_27_PM_wkfsbs.png",
-    frame: "from-sky-200 via-indigo-300 to-violet-400",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Firebase"],
+      "https://res.cloudinary.com/dtgoeupid/image/upload/v1794248354/hero_of2oaq.png",
+    frame: "from-orange-200 via-rose-200 to-pink-300",
+    tech: ["React", "TypeScript", "Express", "PostgreSQL", "OpenAI Agents SDK"],
     status: "Beta",
-    githubLink: "https://github.com/its-rajesh-smp/profilepad-new",
+    githubLink: "https://github.com/its-rajesh-smp/fitx",
   },
   {
     slug: "blinkit-clone",
